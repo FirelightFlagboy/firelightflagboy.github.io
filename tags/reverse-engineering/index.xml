@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reverse engineering on My blog</title>
+    <link>/tags/reverse-engineering/</link>
+    <description>Recent content in reverse engineering on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 02 Aug 2020 15:06:27 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Snowcrash - Level03</title>
+      <link>/posts/snowcrash/level03/</link>
+      <pubDate>Sun, 02 Aug 2020 15:06:27 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level03/</guid>
+      <description>On the Home directory of level03 we have an executable file with the setuid file permission set
+$ ls -l total 12 -rwsr-sr-x 1 flag03 level03 8627 Mar 5 2016 level03 Analyzing level03 By using the debugger gdb, we can disassemble level03 and inspect his ASM code.
+$ gdb level03 -q Reading symbols from level03...done. Dump of assembler code for function main: (gdb) disas main ... 0x080484f7 &amp;lt;+83&amp;gt;:	mov DWORD PTR [esp],0x80485e0 0x080484fe &amp;lt;+90&amp;gt;:	call 0x80483b0 &amp;lt;system@plt&amp;gt; 0x08048503 &amp;lt;+95&amp;gt;:	leave 0x08048504 &amp;lt;+96&amp;gt;:	ret End of assembler dump.</description>
+    </item>
+    
+  </channel>
+</rss>

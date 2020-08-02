@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unix on My blog</title>
+    <link>/tags/unix/</link>
+    <description>Recent content in unix on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 02 Aug 2020 17:02:49 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is File Permission</title>
+      <link>/posts/glossary/file_permission/</link>
+      <pubDate>Sun, 02 Aug 2020 17:02:49 +0200</pubDate>
+      
+      <guid>/posts/glossary/file_permission/</guid>
+      <description>Each file as his own permission set.
+It allow to
+ control the ability of the users to view, change, navigate, and execute the contents of the file system
+ Notation for Unix system permission can be see in its symbolic notation using ls -l
+$ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1st column is used to represent the file type and his permission.</description>
+    </item>
+    
+  </channel>
+</rss>
