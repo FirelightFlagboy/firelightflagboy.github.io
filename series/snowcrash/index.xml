@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>snowcrash on My blog</title>
+    <link>/series/snowcrash/</link>
+    <description>Recent content in snowcrash on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 27 Jul 2020 22:51:34 +0200</lastBuildDate>
+    
+	<atom:link href="/series/snowcrash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Snowcrash - Level00</title>
+      <link>/posts/snowcrash/level00/</link>
+      <pubDate>Mon, 27 Jul 2020 22:51:34 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level00/</guid>
+      <description>on connection to level00, we arrive on a empty home directory
+An interesting file because we don&amp;rsquo;t have any file present in the home directory, we search for file related to the user flag00 our target.
+first we search for with flag00 as owner
+$ find / -user flag00 2&amp;gt;/dev/null /usr/sbin/john /rofs/usr/sbin/john Cesar, my old friend The file /usr/sbin/john contain a odd string but its not our password. The filename john refer to a tool to find weak passwords of your users.</description>
+    </item>
+    
+    <item>
+      <title>Snowcrash</title>
+      <link>/posts/snowcrash/</link>
+      <pubDate>Mon, 27 Jul 2020 22:43:44 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/</guid>
+      <description>Introduction Snowcrash is a VM in the style of a CTF.
+You have 14 level to complete and get each flags
+Summary  Level00: you lost something ? Level01 Level02 Level03 Level04 Level05 Level06 Level07 Level08 Level09 Level10 Level11 Level12 Level13 Level14  </description>
+    </item>
+    
+  </channel>
+</rss>

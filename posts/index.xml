@@ -1,0 +1,235 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on My blog</title>
+        <link>/posts/</link>
+        <description>Recent content in Posts on My blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Tue, 28 Jul 2020 22:10:15 +0200</lastBuildDate>
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>What is Rainbow table</title>
+            <link>/posts/glossary/rainbow_table/</link>
+            <pubDate>Tue, 28 Jul 2020 22:10:15 +0200</pubDate>
+            
+            <guid>/posts/glossary/rainbow_table/</guid>
+            <description>A Rainbow table is a table of precomputed-hash values generated from hash function. It is generaly used to crack password.
+Source  wikipedia  </description>
+            <content type="html"><![CDATA[<p>A <strong>Rainbow table</strong> is a table of precomputed-hash values generated from <a href="/posts/glossary/hash_function">hash function</a>.
+It is generaly used to crack password.</p>
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Rainbow_table">wikipedia</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>What is Brute Force Attack</title>
+            <link>/posts/glossary/brute_force/</link>
+            <pubDate>Tue, 28 Jul 2020 22:10:10 +0200</pubDate>
+            
+            <guid>/posts/glossary/brute_force/</guid>
+            <description>In cryptography, a brute force attack is when an attacker submit as many as possible passwords with the hope to guess the right password
+Source  wikipedia  </description>
+            <content type="html"><![CDATA[<p>In cryptography, a <strong>brute force attack</strong> is when an attacker submit as many as possible passwords
+with the hope to guess the right password</p>
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Brute-force_attack">wikipedia</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>What is Hash Function</title>
+            <link>/posts/glossary/hash_function/</link>
+            <pubDate>Tue, 28 Jul 2020 21:48:30 +0200</pubDate>
+            
+            <guid>/posts/glossary/hash_function/</guid>
+            <description>an hash function is a function that can take data of arbitrary size and output data to fixed size. the output of an hash function is called:
+ hash value hashes digest  For example a hash function can be used to map name to index in a fixed-size table ( hash table ) we call this process hashing
+Source  wikipedia  </description>
+            <content type="html"><![CDATA[<p>an <strong>hash function</strong> is a function that can take data of <strong>arbitrary size</strong> and output data to <strong>fixed size</strong>.
+the output of an hash function is called:</p>
+<ul>
+<li>hash value</li>
+<li>hashes</li>
+<li>digest</li>
+</ul>
+<p>For example a <strong>hash function</strong> can be used to map name to index in a fixed-size table ( hash table ) we call this process hashing</p>
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Hash_function">wikipedia</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>What is Rot Permutation</title>
+            <link>/posts/glossary/rot_permutation/</link>
+            <pubDate>Tue, 28 Jul 2020 18:38:17 +0200</pubDate>
+            
+            <guid>/posts/glossary/rot_permutation/</guid>
+            <description>a Rot Permutation or Cesar Permutation is a method to transform a phrase into another by permuting char with another n-th letter
+generally we add the amount of rotation to the function name:
+ rotXX | rot-XX where XX is the rotation count
+ Example     1 5 10 13 26 &amp;hellip;     a b f k n a &amp;hellip;   b c g l o b &amp;hellip;   c d h m p c &amp;hellip;   &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip;    with rot13 hello world become uryyb jbeyq</description>
+            <content type="html"><![CDATA[<p>a Rot Permutation or Cesar Permutation is a method to transform a phrase into another
+by permuting char with another n-th letter</p>
+<p>generally we add the amount of rotation to the function name:</p>
+<blockquote>
+<p>rotXX | rot-XX where XX is the rotation count</p>
+</blockquote>
+<h2 id="example">Example</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>5</th>
+<th>10</th>
+<th>13</th>
+<th>26</th>
+<th>&hellip;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>b</td>
+<td>f</td>
+<td>k</td>
+<td>n</td>
+<td>a</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>b</td>
+<td>c</td>
+<td>g</td>
+<td>l</td>
+<td>o</td>
+<td>b</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>c</td>
+<td>d</td>
+<td>h</td>
+<td>m</td>
+<td>p</td>
+<td>c</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table>
+<p>with rot13 <code>hello world</code> become <code>uryyb jbeyq</code></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>What is Ctf</title>
+            <link>/posts/glossary/ctf/</link>
+            <pubDate>Mon, 27 Jul 2020 23:14:17 +0200</pubDate>
+            
+            <guid>/posts/glossary/ctf/</guid>
+            <description>CTF stand for Capture The Flag(s).
+It&amp;rsquo;s a type of game/exercise were you, the player need to find the flag.
+The flag is generally a string, but it can represented in other way.</description>
+            <content type="html"><![CDATA[<p>CTF stand for Capture The Flag(s).</p>
+<p>It&rsquo;s a type of game/exercise were you, the player need to find the flag.</p>
+<p>The flag is generally a string, but it can represented in other way.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>What is Vm</title>
+            <link>/posts/glossary/vm/</link>
+            <pubDate>Mon, 27 Jul 2020 23:03:11 +0200</pubDate>
+            
+            <guid>/posts/glossary/vm/</guid>
+            <description>VM stand for Virtual Machine, it&amp;rsquo;s a &amp;ldquo;machine&amp;rdquo; that will be run inside another machine. Crazy right ?
+To use a virtual Machine we some software like VirtualBox or VMWare</description>
+            <content type="html"><![CDATA[<p>VM stand for Virtual Machine, it&rsquo;s a &ldquo;machine&rdquo; that will be run inside another machine.
+Crazy right ?</p>
+<p>To use a virtual Machine we some software like VirtualBox or VMWare</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Snowcrash - Level00</title>
+            <link>/posts/snowcrash/level00/</link>
+            <pubDate>Mon, 27 Jul 2020 22:51:34 +0200</pubDate>
+            
+            <guid>/posts/snowcrash/level00/</guid>
+            <description>on connection to level00, we arrive on a empty home directory
+An interesting file because we don&amp;rsquo;t have any file present in the home directory, we search for file related to the user flag00 our target.
+first we search for with flag00 as owner
+$ find / -user flag00 2&amp;gt;/dev/null /usr/sbin/john /rofs/usr/sbin/john Cesar, my old friend The file /usr/sbin/john contain a odd string but its not our password. The filename john refer to a tool to find weak passwords of your users.</description>
+            <content type="html"><![CDATA[<p>on connection to level00, we arrive on a empty home directory</p>
+<h2 id="an-interesting-file">An interesting file</h2>
+<p>because we don&rsquo;t have any file present in the home directory, we search for file related to the user <strong>flag00</strong> our target.</p>
+<p>first we search for with <strong>flag00</strong> as owner</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ find / -user flag00 2&gt;/dev/null
+/usr/sbin/john
+/rofs/usr/sbin/john
+</code></pre></div><h2 id="cesar-my-old-friend">Cesar, my old friend</h2>
+<p>The file <code>/usr/sbin/john</code> contain a odd string but its not our password.
+The filename <code>john</code> refer to <em>a tool to find weak passwords of your users</em>.</p>
+<p>So the string we found must be decoded first, I go to <a href="https://www.dcode.fr/chiffre-rot">dcode root-n</a> to try the <a href="/posts/glossary/root_permutation">root permutation</a> method.</p>
+<p>With an automatic decode we found an interesting string.</p>
+<p>We connect to <strong>flag00</strong> using <code>su flag00</code> with the string, and voila we can get the flag</p>
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://www.dcode.fr">dcode.fr</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Snowcrash</title>
+            <link>/posts/snowcrash/</link>
+            <pubDate>Mon, 27 Jul 2020 22:43:44 +0200</pubDate>
+            
+            <guid>/posts/snowcrash/</guid>
+            <description>Introduction Snowcrash is a VM in the style of a CTF.
+You have 14 level to complete and get each flags
+Summary  Level00: you lost something ? Level01 Level02 Level03 Level04 Level05 Level06 Level07 Level08 Level09 Level10 Level11 Level12 Level13 Level14  </description>
+            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Snowcrash is a <a href="/posts/glossary/vm">VM</a> in the style of a <a href="/posts/glossary/ctf">CTF</a>.</p>
+<p>You have 14 level to complete and get each flags</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li><a href="/posts/snowcrash/level00">Level00</a>: you lost something ?</li>
+<li><a href="/posts/snowcrash/level01">Level01</a></li>
+<li><a href="/posts/snowcrash/level02">Level02</a></li>
+<li><a href="/posts/snowcrash/level03">Level03</a></li>
+<li><a href="/posts/snowcrash/level04">Level04</a></li>
+<li><a href="/posts/snowcrash/level05">Level05</a></li>
+<li><a href="/posts/snowcrash/level06">Level06</a></li>
+<li><a href="/posts/snowcrash/level07">Level07</a></li>
+<li><a href="/posts/snowcrash/level08">Level08</a></li>
+<li><a href="/posts/snowcrash/level09">Level09</a></li>
+<li><a href="/posts/snowcrash/level10">Level10</a></li>
+<li><a href="/posts/snowcrash/level11">Level11</a></li>
+<li><a href="/posts/snowcrash/level12">Level12</a></li>
+<li><a href="/posts/snowcrash/level13">Level13</a></li>
+<li><a href="/posts/snowcrash/level14">Level14</a></li>
+</ul>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

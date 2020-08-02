@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on My blog</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 28 Jul 2020 22:10:15 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cryptography</title>
+      <link>/tags/cryptography/</link>
+      <pubDate>Tue, 28 Jul 2020 22:10:15 +0200</pubDate>
+      
+      <guid>/tags/cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>exploit</title>
+      <link>/tags/exploit/</link>
+      <pubDate>Tue, 28 Jul 2020 22:10:10 +0200</pubDate>
+      
+      <guid>/tags/exploit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encoding</title>
+      <link>/tags/encoding/</link>
+      <pubDate>Tue, 28 Jul 2020 18:38:17 +0200</pubDate>
+      
+      <guid>/tags/encoding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualization</title>
+      <link>/tags/virtualization/</link>
+      <pubDate>Mon, 27 Jul 2020 23:03:11 +0200</pubDate>
+      
+      <guid>/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CTF</title>
+      <link>/tags/ctf/</link>
+      <pubDate>Mon, 27 Jul 2020 22:43:44 +0200</pubDate>
+      
+      <guid>/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>introduction</title>
+      <link>/tags/introduction/</link>
+      <pubDate>Mon, 27 Jul 2020 11:08:35 +0200</pubDate>
+      
+      <guid>/tags/introduction/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
