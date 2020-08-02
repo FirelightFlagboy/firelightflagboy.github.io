@@ -197,6 +197,30 @@ flag03
         </item>
         
         <item>
+            <title>Snowcrash - Level02</title>
+            <link>/posts/snowcrash/level02/</link>
+            <pubDate>Fri, 31 Jul 2020 19:28:20 +0200</pubDate>
+            
+            <guid>/posts/snowcrash/level02/</guid>
+            <description>$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains tcp packets. I will use Wireshark to read the file
+just by looking at the tcp stream, we see that the user as enter a password ( but beware of special chars )
+we can use that password to connect as flag02
+What is Wireshark Wireshark is a packet analyzer tool used for network analysis</description>
+            <content type="html"><![CDATA[<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ file level02.pcap
+level02.pcap: tcpdump capture file <span style="color:#f92672">(</span>little-endian<span style="color:#f92672">)</span> - version 2.4 <span style="color:#f92672">(</span>Ethernet, capture length 16777216<span style="color:#f92672">)</span>
+</code></pre></div><p><code>level02.pcap</code> is a file that contains tcp packets. I will use <strong>Wireshark</strong> to read the file</p>
+
+    <img src="img/wireshark.png"  class="left"  />
+
+
+<p>just by looking at the <strong>tcp stream</strong>, we see that the user as enter a password ( but beware of special chars )</p>
+<p>we can use that password to connect as <code>flag02</code></p>
+<h2 id="what-is-wireshark">What is Wireshark</h2>
+<p><strong>Wireshark</strong> is a packet analyzer tool used for network analysis</p>
+]]></content>
+        </item>
+        
+        <item>
             <title>What is Rainbow table</title>
             <link>/posts/glossary/rainbow_table/</link>
             <pubDate>Tue, 28 Jul 2020 22:10:15 +0200</pubDate>
@@ -251,6 +275,37 @@ the output of an hash function is called:</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Hash_function">wikipedia</a></li>
 </ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Snowcrash - Level01</title>
+            <link>/posts/snowcrash/level01/</link>
+            <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
+            
+            <guid>/posts/snowcrash/level01/</guid>
+            <description>when looking the file /etc/passwd, we see that the user flag01 has is hash password written in the deprecated password column
+$ grep flag01 /etc/passwd flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash It exist some tools to decrypt hash that used different attack method like brute force or wordlist. I will use john for this level.
+we extract the line that contain the hash to password.txt
+$ ssh -p 4242 level01@snowcrash grep flag01 /etc/passwd &amp;gt; password.txt [ .</description>
+            <content type="html"><![CDATA[<p>when looking the file <code>/etc/passwd</code>, we see that the user <strong>flag01</strong> has is <a href="/posts/glossary/hash_function">hash</a> password written in the <em>deprecated password column</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ grep flag01 /etc/passwd
+flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
+</code></pre></div><p>It exist some tools to decrypt hash that used different attack method like <a href="/posts/glossary/brute_force">brute force</a> or <a href="/posts/glossary/ranbow_table">wordlist</a>.
+I will use <code>john</code> for this level.</p>
+<p>we extract the line that contain the hash to <code>password.txt</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ssh -p <span style="color:#ae81ff">4242</span> level01@snowcrash grep flag01 /etc/passwd &gt; password.txt
+<span style="color:#f92672">[</span> ... output omitted ... <span style="color:#f92672">]</span>
+</code></pre></div><p>then we execute <code>john</code> to decrypt the password</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ /usr/sbin/john password.txt
+Using default input encoding: UTF-8
+<span style="color:#f92672">[</span> ... output omitted ... <span style="color:#f92672">]</span>
+1g 0:00:00:00 DONE 2/3 <span style="color:#f92672">(</span>2020-08-02 14:13<span style="color:#f92672">)</span> 10.00g/s 89740p/s 89740c/s 89740C/s 123456..nutmegs
+Use the <span style="color:#e6db74">&#34;--show&#34;</span> option to display all of the cracked passwords reliably
+</code></pre></div><p>and that its, we get the password to connect to <code>flag01</code> and get the flag</p>
+<h2 id="more-about-how-linux-save-password-of-users">More about how linux save password of users</h2>
+<p>the older version of linux was storing the password in the file <code>/etc/passwd</code>.
+now linux store user account and password separately in <code>/etc/passwd</code> and <code>/etc/shadow</code> respectively</p>
 ]]></content>
         </item>
         

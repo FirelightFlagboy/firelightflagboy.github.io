@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>network on My blog</title>
+    <link>/tags/network/</link>
+    <description>Recent content in network on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 31 Jul 2020 19:28:20 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Snowcrash - Level02</title>
+      <link>/posts/snowcrash/level02/</link>
+      <pubDate>Fri, 31 Jul 2020 19:28:20 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level02/</guid>
+      <description>$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains tcp packets. I will use Wireshark to read the file
+just by looking at the tcp stream, we see that the user as enter a password ( but beware of special chars )
+we can use that password to connect as flag02
+What is Wireshark Wireshark is a packet analyzer tool used for network analysis</description>
+    </item>
+    
+  </channel>
+</rss>

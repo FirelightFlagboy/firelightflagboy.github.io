@@ -78,6 +78,16 @@
   </url>
   
   <url>
+    <loc>/tags/network/</loc>
+    <lastmod>2020-07-31T19:28:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/snowcrash/level02/</loc>
+    <lastmod>2020-07-31T19:28:20+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/cryptography/</loc>
     <lastmod>2020-07-28T22:10:15+02:00</lastmod>
   </url>
@@ -95,6 +105,16 @@
   <url>
     <loc>/posts/glossary/hash_function/</loc>
     <lastmod>2020-07-28T21:48:30+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/exploit/</loc>
+    <lastmod>2020-07-28T21:36:02+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/snowcrash/level01/</loc>
+    <lastmod>2020-07-28T21:36:02+02:00</lastmod>
   </url>
   
   <url>
@@ -120,11 +140,6 @@
   <url>
     <loc>/posts/glossary/vm/</loc>
     <lastmod>2020-07-27T23:03:11+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/exploit/</loc>
-    <lastmod>2020-07-27T22:51:34+02:00</lastmod>
   </url>
   
   <url>
