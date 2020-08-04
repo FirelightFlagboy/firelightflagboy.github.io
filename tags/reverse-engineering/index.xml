@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 02 Aug 2020 15:06:27 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2020 15:53:09 +0200</lastBuildDate>
     
 	<atom:link href="/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Snowcrash - Level08</title>
+      <link>/posts/snowcrash/level08/</link>
+      <pubDate>Mon, 03 Aug 2020 15:53:09 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level08/</guid>
+      <description>On the home dir, we have 2 file level08 with is following pseudo-code and token who is only readable be flag08
+$ ls -l total 16 -rwsr-s---+ 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &amp;#34;%s [file to read]\n&amp;#34;, argv[0]); } needle = strstr(argv[1], &amp;#34;token&amp;#34;); if (needle !</description>
+    </item>
+    
+    <item>
+      <title>Snowcrash - Level07</title>
+      <link>/posts/snowcrash/level07/</link>
+      <pubDate>Mon, 03 Aug 2020 15:52:09 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level07/</guid>
+      <description>On the home directory, we have a file level07 with the following pseudo-code
+int main() { char *cmd; asprintf(&amp;amp;cmd, &amp;#34;/bin/echo %s &amp;#34;, getenv(&amp;#34;LOGNAME&amp;#34;)) return system(cmd); } Explenation level07 retrieve the value LOGNAME from the env table,
+then concat the string at the end of /bin/echo  and execute it
+ Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the env table  system(char *command) executes a command specified in command by calling /bin/sh -c command</description>
+    </item>
     
     <item>
       <title>Snowcrash - Level03</title>
@@ -20,7 +42,7 @@
       <guid>/posts/snowcrash/level03/</guid>
       <description>On the Home directory of level03 we have an executable file with the setuid file permission set
 $ ls -l total 12 -rwsr-sr-x 1 flag03 level03 8627 Mar 5 2016 level03 Analyzing level03 By using the debugger gdb, we can disassemble level03 and inspect his ASM code.
-$ gdb level03 -q Reading symbols from level03...done. Dump of assembler code for function main: (gdb) disas main ... 0x080484f7 &amp;lt;+83&amp;gt;:	mov DWORD PTR [esp],0x80485e0 0x080484fe &amp;lt;+90&amp;gt;:	call 0x80483b0 &amp;lt;system@plt&amp;gt; 0x08048503 &amp;lt;+95&amp;gt;:	leave 0x08048504 &amp;lt;+96&amp;gt;:	ret End of assembler dump.</description>
+1 2 3 4 5 6 7 8 9 10 11 12  $ gdb level03 -q Reading symbols from level03...done. Dump of assembler code for function main: (gdb) disas main .</description>
     </item>
     
   </channel>

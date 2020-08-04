@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 02 Aug 2020 17:02:58 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2020 18:26:16 +0200</lastBuildDate>
     
 	<atom:link href="/category/glossary/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What is Symlink</title>
+      <link>/posts/glossary/symlink/</link>
+      <pubDate>Mon, 03 Aug 2020 18:26:16 +0200</pubDate>
+      
+      <guid>/posts/glossary/symlink/</guid>
+      <description>A symbolink link is a file that contains a reference to another file.
+That reference take form as a path in its absolute or relative form.
+A symlink may contains a path that point to nothing
+Synonym  symlink soft link  </description>
+    </item>
     
     <item>
       <title>What is Environment Table</title>
