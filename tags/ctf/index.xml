@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CTF on My blog</title>
+    <title>ctf on My blog</title>
     <link>/tags/ctf/</link>
-    <description>Recent content in CTF on My blog</description>
+    <description>Recent content in ctf on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 27 Jul 2020 22:43:44 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2020 14:23:18 +0200</lastBuildDate>
     
 	<atom:link href="/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What is TOCTOU</title>
+      <link>/posts/glossary/toctou/</link>
+      <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
+      
+      <guid>/posts/glossary/toctou/</guid>
+      <description>TOCTOU mean Time-of-Check to Time-of-Use. It&amp;rsquo;s a bug were it involve checking the state of the system and using the result
+Example if (access(&amp;#34;file&amp;#34;, W_OK) != 0) { exit(1); } fd = open(&amp;#34;file&amp;#34;, O_WRONLY); write(fd, buffer, sizeof(buffer)); Here an attacker can create a symlink after the access but before the open call, resulting in a malicious file to be open.
+Synonyms  TOCTTOU TOC/TOU  Source  wikipedia  </description>
+    </item>
+    
+    <item>
+      <title>What is Ctf</title>
+      <link>/posts/glossary/ctf/</link>
+      <pubDate>Mon, 27 Jul 2020 23:14:17 +0200</pubDate>
+      
+      <guid>/posts/glossary/ctf/</guid>
+      <description>CTF stand for Capture The Flag(s).
+It&amp;rsquo;s a type of game/exercise were you, the player need to find the flag.
+The flag is generally a string, but it can represented in other way.</description>
+    </item>
     
     <item>
       <title>Snowcrash</title>

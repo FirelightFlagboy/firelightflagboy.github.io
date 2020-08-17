@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 03 Aug 2020 15:52:09 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2020 15:57:10 +0200</lastBuildDate>
     
 	<atom:link href="/tags/arbitrary-code-execution/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Snowcrash - Level12</title>
+      <link>/posts/snowcrash/level12/</link>
+      <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level12/</guid>
+      <description>On our home directory, we have access to a perl script.
+The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub t { $nn = $_[1]; $xx = $_[0]; $xx =~ tr/a-z/A-Z/; $xx =~ s/\s.*//; @output = `egrep &amp;#34;^$xx&amp;#34; /tmp/xd 2&amp;gt;&amp;amp;1`; foreach $line (@output) { ($f, $s) = split(/:/, $line); if($s =~ $nn) { return 1; } } return 0; } sub n { if($_[0] == 1) { print(&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Snowcrash - Level11</title>
+      <link>/posts/snowcrash/level11/</link>
+      <pubDate>Mon, 03 Aug 2020 15:56:10 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level11/</guid>
+      <description>On connection we have access to a lua script that is already running.
+The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) local server = assert(socket.bind(&amp;#34;127.0.0.1&amp;#34;, 5151)) function hash(pass) prog = io.popen(&amp;#34;echo &amp;#34;..pass..&amp;#34; | sha1sum&amp;#34;, &amp;#34;r&amp;#34;) data = prog:read(&amp;#34;*all&amp;#34;) prog:close() data = string.sub(data, 1, 40) return data end while 1 do local client = server:accept() client:send(&amp;#34;Password: &amp;#34;) client:settimeout(60) local l, err = client:receive() if not err then print(&amp;#34;trying &amp;#34; .. l) local h = hash(l) if h ~= &amp;#34;f05d1d066fb246efe0c6f7d095f909a7a0cf34a0&amp;#34; then client:send(&amp;#34;Erf nope.</description>
+    </item>
     
     <item>
       <title>Snowcrash - Level07</title>
