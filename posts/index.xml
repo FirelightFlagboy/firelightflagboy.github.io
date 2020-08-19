@@ -6,8 +6,305 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 17 Aug 2020 14:23:18 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 18 Aug 2020 11:24:50 +0200</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to create a Minecraft server using Docker</title>
+            <link>/posts/docker-minecraft/</link>
+            <pubDate>Tue, 18 Aug 2020 11:24:50 +0200</pubDate>
+            
+            <guid>/posts/docker-minecraft/</guid>
+            <description>Introduction I want to create a Minecraft server using docker.
+For this tutorial, I&amp;rsquo;ll use Minecraft version 1.16.1.
+The goal of this tutorial:
+ Create a Minecraft server Use Docker to run the server in a container Being able to select the version of the server  The API Minecraft has an API to access and retrieve every available version.
+The version manifest is available here, as you can see it&amp;rsquo;s a plain json file that contains all versions published.</description>
+            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>I want to create a Minecraft server using docker.<br>
+For this tutorial, I&rsquo;ll use Minecraft version <strong>1.16.1</strong>.</p>
+<p>The goal of this tutorial:</p>
+<ul>
+<li>Create a Minecraft server</li>
+<li>Use Docker to run the server in a container</li>
+<li>Being able to select the version of the server</li>
+</ul>
+<h2 id="the-api">The API</h2>
+<p>Minecraft has an <strong>API</strong> to access and retrieve every available version.</p>
+<p>The version manifest is available <a href="https://launchermeta.mojang.com/mc/game/version_manifest.json">here</a>,
+as you can see it&rsquo;s a plain json file that contains all versions published.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+    <span style="color:#f92672">&#34;latest&#34;</span>: {
+        <span style="color:#f92672">&#34;release&#34;</span>: <span style="color:#e6db74">&#34;1.16.2&#34;</span>,
+        <span style="color:#f92672">&#34;snapshot&#34;</span>: <span style="color:#e6db74">&#34;1.16.2&#34;</span>
+    },
+    <span style="color:#f92672">&#34;versions&#34;</span>: [
+        <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">...</span>
+        {
+            <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;1.16.1&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;release&#34;</span>,
+            <span style="color:#f92672">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;https://launchermeta.mojang.com/v1/packages/007e584150d3eb937762a491c340732d01cce945/1.16.1.json&#34;</span>,
+            <span style="color:#f92672">&#34;time&#34;</span>: <span style="color:#e6db74">&#34;2020-08-14T14:41:00+00:00&#34;</span>,
+            <span style="color:#f92672">&#34;releaseTime&#34;</span>: <span style="color:#e6db74">&#34;2020-06-24T10:31:40+00:00&#34;</span>
+        },
+        <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">...</span>
+    ]
+}
+</code></pre></div><p>If we follow the <a href="https://launchermeta.mojang.com/v1/packages/007e584150d3eb937762a491c340732d01cce945/1.16.1.json">link</a>
+in the <code>url</code> of the element with <code>id: 1.16.1</code>, we get the following <code>JSON</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+    <span style="color:#f92672">&#34;arguments&#34;</span>: {<span style="color:#960050;background-color:#1e0010">/*...*/</span>},
+    <span style="color:#f92672">&#34;assetIndex&#34;</span>: {<span style="color:#960050;background-color:#1e0010">/*...*/</span>},
+    <span style="color:#f92672">&#34;assets&#34;</span>: <span style="color:#e6db74">&#34;1.16&#34;</span>,
+    <span style="color:#f92672">&#34;downloads&#34;</span>: {
+        <span style="color:#f92672">&#34;client&#34;</span>: {<span style="color:#960050;background-color:#1e0010">/*...*/</span>},
+        <span style="color:#f92672">&#34;client_mappings&#34;</span>: {<span style="color:#960050;background-color:#1e0010">/*...*/</span>},
+        <span style="color:#f92672">&#34;server&#34;</span>: {
+            <span style="color:#f92672">&#34;sha1&#34;</span>: <span style="color:#e6db74">&#34;a412fd69db1f81db3f511c1463fd304675244077&#34;</span>,
+            <span style="color:#f92672">&#34;size&#34;</span>: <span style="color:#ae81ff">37968964</span>,
+            <span style="color:#f92672">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;https://launcher.mojang.com/v1/objects/a412fd69db1f81db3f511c1463fd304675244077/server.jar&#34;</span>
+        },
+        <span style="color:#f92672">&#34;server_mappings&#34;</span>: {<span style="color:#960050;background-color:#1e0010">/*...*/</span>}
+    },
+    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;1.16.1&#34;</span>,
+    <span style="color:#f92672">&#34;libraries&#34;</span>: [<span style="color:#960050;background-color:#1e0010">/*...*/</span>],
+    <span style="color:#f92672">&#34;logging&#34;</span>: {<span style="color:#960050;background-color:#1e0010">/*...*/</span>},
+    <span style="color:#f92672">&#34;mainClass&#34;</span>: <span style="color:#e6db74">&#34;net.minecraft.client.main.Main&#34;</span>,
+    <span style="color:#f92672">&#34;minimumLauncherVersion&#34;</span>: <span style="color:#ae81ff">21</span>,
+    <span style="color:#f92672">&#34;releaseTime&#34;</span>: <span style="color:#e6db74">&#34;2020-06-24T10:31:40+00:00&#34;</span>,
+    <span style="color:#f92672">&#34;time&#34;</span>: <span style="color:#e6db74">&#34;2020-06-24T10:31:40+00:00&#34;</span>,
+    <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;release&#34;</span>
+}
+</code></pre></div><p>Again, if we follow the link in <code>downloads.server.url</code>, we download the jar file of the server</p>
+<h2 id="downloading-the-server-jar-file">Downloading the server jar file</h2>
+<p>To download the server file and also selecting the server version,
+I will use a script to automate that action.</p>
+<p>The script need to be able to:</p>
+<ul>
+<li>Listing the available version</li>
+<li>Selected a version or use the latest as default</li>
+<li>Download the server file</li>
+</ul>
+<h3 id="the-option">The option</h3>
+<p>First we need to be able to configure which server version to download.
+I will put all these options on the <a href="/posts/glossary/cli.md">CLI</a> and using the module <strong>argparse</strong> to manage the options.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> argparse <span style="color:#f92672">import</span> ArgumentParser
+
+LATEST_RELEASE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;last-release&#34;</span>
+LATEST_SNAPSHOT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;last-snapshot&#34;</span>
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">parseArgs</span>():
+    parser <span style="color:#f92672">=</span> ArgumentParser()
+    parser<span style="color:#f92672">.</span>add_argument(
+        <span style="color:#e6db74">&#34;--version&#34;</span>, <span style="color:#e6db74">&#34;-v&#34;</span>,
+        help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;the version of the minecraft server to download, you can use {} or {} to download the latest release / snapshot&#34;</span><span style="color:#f92672">.</span>format(
+            LATEST_RELEASE, LATEST_SNAPSHOT),
+        required<span style="color:#f92672">=</span>False,
+        default<span style="color:#f92672">=</span>LATEST_RELEASE)
+    parser<span style="color:#f92672">.</span>add_argument(
+        <span style="color:#e6db74">&#34;--list&#34;</span>, <span style="color:#e6db74">&#34;-l&#34;</span>, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list the available version&#34;</span>, choices<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;release&#34;</span>, <span style="color:#e6db74">&#34;snapshot&#34;</span>], default<span style="color:#f92672">=</span>None)
+    parser<span style="color:#f92672">.</span>add_argument(
+        <span style="color:#e6db74">&#34;--out&#34;</span>, <span style="color:#e6db74">&#34;-o&#34;</span>, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;output destination of the server file&#34;</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;server.jar&#34;</span>)
+    <span style="color:#66d9ef">return</span> parser<span style="color:#f92672">.</span>parse_args()
+</code></pre></div><p>In summary, we have:</p>
+<ul>
+<li><code>--list</code> to list the available version</li>
+<li><code>--out</code> to change the output path for the server file</li>
+<li><code>--version</code> to select a version</li>
+</ul>
+<h3 id="listing-the-versions">Listing the versions</h3>
+<p>It can be quite tedious to enter the right version name,
+that why we added the <code>--list</code> option.</p>
+<p>Now we just need to implement the option behavior</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> json
+<span style="color:#f92672">import</span> logging <span style="color:#f92672">as</span> log
+<span style="color:#f92672">from</span> urllib.request <span style="color:#f92672">import</span> urlopen
+
+VERSION_MANIFEST_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://launchermeta.mojang.com/mc/game/version_manifest.json&#34;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">loadManifest</span>():
+    <span style="color:#66d9ef">return</span> json<span style="color:#f92672">.</span>load(
+        urlopen(VERSION_MANIFEST_URL))
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getVersionList</span>(manifest, t):
+    <span style="color:#e6db74">&#34;&#34;&#34; Generate an array of all available version &#34;&#34;&#34;</span>
+    v <span style="color:#f92672">=</span> filter(<span style="color:#66d9ef">lambda</span> entry: entry[<span style="color:#e6db74">&#34;type&#34;</span>] <span style="color:#f92672">==</span> t, manifest[<span style="color:#e6db74">&#34;versions&#34;</span>])
+    m <span style="color:#f92672">=</span> map(<span style="color:#66d9ef">lambda</span> entry: entry[<span style="color:#e6db74">&#34;id&#34;</span>], v)
+    <span style="color:#66d9ef">return</span> list(m)
+
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    log<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>log<span style="color:#f92672">.</span>INFO)
+    args <span style="color:#f92672">=</span> parseArgs()
+    manifest <span style="color:#f92672">=</span> loadManifest()
+    <span style="color:#66d9ef">if</span> args<span style="color:#f92672">.</span>list <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> None:
+        log<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;available {} versions: {}&#34;</span><span style="color:#f92672">.</span>format(
+            args<span style="color:#f92672">.</span>list, getVersionList(manifest, args<span style="color:#f92672">.</span>list)))
+        exit(<span style="color:#ae81ff">0</span>)
+</code></pre></div><ol>
+<li>We retrieve all the version in the manifest at <code>VERSION_MANIFEST_URL</code></li>
+<li>We retrieve every <code>id</code> in <code>manifest[&quot;versions&quot;]</code></li>
+</ol>
+<p>With that done, we get the following output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ python3 serverdl.py -l release
+INFO:root:available release versions: <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;1.16.2&#39;</span>, <span style="color:#e6db74">&#39;1.16.1&#39;</span>, <span style="color:#e6db74">&#39;1.16&#39;</span>, <span style="color:#e6db74">&#39;1.15.2&#39;</span>, <span style="color:#e6db74">&#39;1.15.1&#39;</span>, <span style="color:#e6db74">&#39;1.15&#39;</span>, <span style="color:#e6db74">&#39;1.14.4&#39;</span>, <span style="color:#e6db74">&#39;1.14.3&#39;</span>, <span style="color:#e6db74">&#39;1.14.2&#39;</span>, <span style="color:#e6db74">&#39;1.14.1&#39;</span>, <span style="color:#e6db74">&#39;1.14&#39;</span>, <span style="color:#e6db74">&#39;1.13.2&#39;</span>, <span style="color:#e6db74">&#39;1.13.1&#39;</span>, <span style="color:#e6db74">&#39;1.13&#39;</span>, <span style="color:#e6db74">&#39;1.12.2&#39;</span>, <span style="color:#e6db74">&#39;1.12.1&#39;</span>, <span style="color:#e6db74">&#39;1.12&#39;</span>, <span style="color:#e6db74">&#39;1.11.2&#39;</span>, <span style="color:#e6db74">&#39;1.11.1&#39;</span>, <span style="color:#e6db74">&#39;1.11&#39;</span>, <span style="color:#e6db74">&#39;1.10.2&#39;</span>, <span style="color:#e6db74">&#39;1.10.1&#39;</span>, <span style="color:#e6db74">&#39;1.10&#39;</span>, <span style="color:#e6db74">&#39;1.9.4&#39;</span>, <span style="color:#e6db74">&#39;1.9.3&#39;</span>, <span style="color:#e6db74">&#39;1.9.2&#39;</span>, <span style="color:#e6db74">&#39;1.9.1&#39;</span>, <span style="color:#e6db74">&#39;1.9&#39;</span>, <span style="color:#e6db74">&#39;1.8.9&#39;</span>, <span style="color:#e6db74">&#39;1.8.8&#39;</span>, <span style="color:#e6db74">&#39;1.8.7&#39;</span>, <span style="color:#e6db74">&#39;1.8.6&#39;</span>, <span style="color:#e6db74">&#39;1.8.5&#39;</span>, <span style="color:#e6db74">&#39;1.8.4&#39;</span>, <span style="color:#e6db74">&#39;1.8.3&#39;</span>, <span style="color:#e6db74">&#39;1.8.2&#39;</span>, <span style="color:#e6db74">&#39;1.8.1&#39;</span>, <span style="color:#e6db74">&#39;1.8&#39;</span>, <span style="color:#e6db74">&#39;1.7.10&#39;</span>, <span style="color:#e6db74">&#39;1.7.9&#39;</span>, <span style="color:#e6db74">&#39;1.7.8&#39;</span>, <span style="color:#e6db74">&#39;1.7.7&#39;</span>, <span style="color:#e6db74">&#39;1.7.6&#39;</span>, <span style="color:#e6db74">&#39;1.7.5&#39;</span>, <span style="color:#e6db74">&#39;1.7.4&#39;</span>, <span style="color:#e6db74">&#39;1.7.3&#39;</span>, <span style="color:#e6db74">&#39;1.7.2&#39;</span>, <span style="color:#e6db74">&#39;1.6.4&#39;</span>, <span style="color:#e6db74">&#39;1.6.2&#39;</span>, <span style="color:#e6db74">&#39;1.6.1&#39;</span>, <span style="color:#e6db74">&#39;1.5.2&#39;</span>, <span style="color:#e6db74">&#39;1.5.1&#39;</span>, <span style="color:#e6db74">&#39;1.4.7&#39;</span>, <span style="color:#e6db74">&#39;1.4.5&#39;</span>, <span style="color:#e6db74">&#39;1.4.6&#39;</span>, <span style="color:#e6db74">&#39;1.4.4&#39;</span>, <span style="color:#e6db74">&#39;1.4.2&#39;</span>, <span style="color:#e6db74">&#39;1.3.2&#39;</span>, <span style="color:#e6db74">&#39;1.3.1&#39;</span>, <span style="color:#e6db74">&#39;1.2.5&#39;</span>, <span style="color:#e6db74">&#39;1.2.4&#39;</span>, <span style="color:#e6db74">&#39;1.2.3&#39;</span>, <span style="color:#e6db74">&#39;1.2.2&#39;</span>, <span style="color:#e6db74">&#39;1.2.1&#39;</span>, <span style="color:#e6db74">&#39;1.1&#39;</span>, <span style="color:#e6db74">&#39;1.0&#39;</span><span style="color:#f92672">]</span>
+</code></pre></div><h3 id="selecting-the-version">Selecting the version</h3>
+<p>Now that we are able to known which version is available, we need to implement the behavior
+of the <code>--version</code> option</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">standardizeVersion</span>(version, manifest):
+    <span style="color:#e6db74">&#34;&#34;&#34; Standardize LATEST_{RELEASE,SNAPSHOT} into the corresponding version &#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">if</span> version <span style="color:#f92672">==</span> LATEST_RELEASE:
+        <span style="color:#66d9ef">return</span> manifest[<span style="color:#e6db74">&#34;latest&#34;</span>][<span style="color:#e6db74">&#34;release&#34;</span>]
+    <span style="color:#66d9ef">if</span> version <span style="color:#f92672">==</span> LATEST_SNAPSHOT:
+        <span style="color:#66d9ef">return</span> manifest[<span style="color:#e6db74">&#34;latest&#34;</span>][<span style="color:#e6db74">&#34;snapshot&#34;</span>]
+    <span style="color:#66d9ef">return</span> version
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findVersionEntry</span>(version, manifest):
+    <span style="color:#e6db74">&#34;&#34;&#34; Find the corresponding entry for the version in the manifest &#34;&#34;&#34;</span>
+    v <span style="color:#f92672">=</span> standardizeVersion(version, manifest)
+    versions <span style="color:#f92672">=</span> manifest[<span style="color:#e6db74">&#34;versions&#34;</span>]
+    <span style="color:#66d9ef">for</span> entry <span style="color:#f92672">in</span> versions:
+        <span style="color:#66d9ef">if</span> entry[<span style="color:#e6db74">&#34;id&#34;</span>] <span style="color:#f92672">==</span> v:
+            <span style="color:#66d9ef">return</span> entry
+    <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(
+        <span style="color:#e6db74">&#34;version {} not found in manifest&#34;</span><span style="color:#f92672">.</span>format(version))
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    <span style="color:#75715e"># ...</span>
+    v <span style="color:#f92672">=</span> standardizeVersion(args<span style="color:#f92672">.</span>version, manifest)
+    log<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;selected version: {}&#34;</span><span style="color:#f92672">.</span>format(v))
+    versionEnt <span style="color:#f92672">=</span> findVersionEntry(v, manifest)
+    log<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;found entry with id {}&#34;</span><span style="color:#f92672">.</span>format(versionEnt[<span style="color:#e6db74">&#34;id&#34;</span>]))
+</code></pre></div><h3 id="download-the-server">Download the server</h3>
+<p>To download the server file, we need first to load the version specific <strong>JSON</strong> then download the server.</p>
+<p>The <strong>JSON</strong> contain a <code>sha1</code> properties to check the fingerprints of the file that we downloaded,
+so I added <code>checkServerChecksum()</code> to check the file integrity.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> json
+<span style="color:#f92672">import</span> logging <span style="color:#f92672">as</span> log
+<span style="color:#f92672">from</span> urllib.request <span style="color:#f92672">import</span> urlopen, urlretrieve
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">loadVersionEntry</span>(entry):
+    log<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#34;version entry: {}&#34;</span><span style="color:#f92672">.</span>format(entry[<span style="color:#e6db74">&#34;url&#34;</span>]))
+    <span style="color:#66d9ef">return</span> json<span style="color:#f92672">.</span>load(urlopen(entry[<span style="color:#e6db74">&#34;url&#34;</span>]))
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">downloadEntry</span>(entry, destination):
+    url <span style="color:#f92672">=</span> entry[<span style="color:#e6db74">&#34;downloads&#34;</span>][<span style="color:#e6db74">&#34;server&#34;</span>][<span style="color:#e6db74">&#34;url&#34;</span>]
+    log<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#34;server download: {}&#34;</span><span style="color:#f92672">.</span>format(url))
+    <span style="color:#66d9ef">return</span> urlretrieve(url, destination)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">checkServerChecksum</span>(entry, serverpath):
+    <span style="color:#f92672">import</span> hashlib
+    hash_sha1 <span style="color:#f92672">=</span> hashlib<span style="color:#f92672">.</span>sha1()
+    <span style="color:#66d9ef">with</span> open(serverpath, <span style="color:#e6db74">&#39;rb&#39;</span>) <span style="color:#66d9ef">as</span> f:
+        <span style="color:#66d9ef">for</span> chunk <span style="color:#f92672">in</span> iter(<span style="color:#66d9ef">lambda</span>: f<span style="color:#f92672">.</span>read(<span style="color:#ae81ff">4096</span>), <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;&#39;</span>):
+            hash_sha1<span style="color:#f92672">.</span>update(chunk)
+    <span style="color:#66d9ef">if</span> entry[<span style="color:#e6db74">&#34;downloads&#34;</span>][<span style="color:#e6db74">&#34;server&#34;</span>][<span style="color:#e6db74">&#34;sha1&#34;</span>] <span style="color:#f92672">!=</span> hash_sha1<span style="color:#f92672">.</span>hexdigest():
+        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;{} did not match sha1 ( {} != {} )&#34;</span><span style="color:#f92672">.</span>format(
+            serverpath, entry[<span style="color:#e6db74">&#34;downloads&#34;</span>][<span style="color:#e6db74">&#34;server&#34;</span>][<span style="color:#e6db74">&#34;sha1&#34;</span>], hash_sha1<span style="color:#f92672">.</span>hexdigest()))
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    <span style="color:#75715e"># ...</span>
+    ent <span style="color:#f92672">=</span> loadVersionEntry(versionEnt)
+    log<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;successfully load version entry&#34;</span>)
+    log<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;downloading server: {} b&#34;</span><span style="color:#f92672">.</span>format(
+        ent[<span style="color:#e6db74">&#34;downloads&#34;</span>][<span style="color:#e6db74">&#34;server&#34;</span>][<span style="color:#e6db74">&#34;size&#34;</span>]))
+    downloadEntry(ent, args<span style="color:#f92672">.</span>out)
+    log<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;checking server fingerprint&#34;</span>)
+    checkServerChecksum(ent, args<span style="color:#f92672">.</span>out)
+    log<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;done, the file was downloaded at {}&#34;</span><span style="color:#f92672">.</span>format(args<span style="color:#f92672">.</span>out))
+</code></pre></div><p>That it&rsquo;s, we finish the script that download the server file.</p>
+<p>the script is available <a href="https://gitlab.com/firelight.flagboy/docker-minecraft/-/blob/master/serverdl.py">here</a></p>
+<h2 id="creating-the-container">Creating the container</h2>
+<p>To create the container, I use a Dockerfile to install and setup everything needed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Docker" data-lang="Docker"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apk update <span style="color:#f92672">&amp;&amp;</span> apk add python3 openjdk8-jre-base<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> serverdl.py /usr/sbin/.<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> adduser -S -u <span style="color:#ae81ff">42</span> minecraft <span style="color:#f92672">&amp;&amp;</span> mkdir -p /home/minecraft/server <span style="color:#f92672">&amp;&amp;</span> chown -R minecraft /home/minecraft<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> minecraft</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /home/minecraft/server</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>42:42 server.properties .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ARG</span> VERSION<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>.16.1<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> python3 /usr/sbin/serverdl.py -v $VERSION -o server-$VERSION.jar <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;eula=true&#34;</span> &gt; eula.txt<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENV</span> VERSION <span style="color:#e6db74">${</span>VERSION<span style="color:#e6db74">}</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENV</span> MIN_MEM 1024M<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENV</span> MAX_MEM 2048M<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> java -Xms$MIN_MEM -Xmx$MAX_MEM -jar server-$VERSION.jar<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>You can change the version using the <code>--build-arg</code> option when building the container.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker build --build-arg VERSION<span style="color:#f92672">=</span>1.5.2 -t minecraft .
+</code></pre></div><p>You can change the memory settings by using <code>--env</code> option when running the container.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run --env MAX_MEM<span style="color:#f92672">=</span>4096M minecraft
+</code></pre></div><h3 id="building-the-container">Building the container</h3>
+<p>To build the server, we do as follows (if you to specify the server version see <code>--build-arg</code>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ docker build -t minecraft .
+Sending build context to Docker daemon  9.206MB
+<span style="color:#f92672">[</span> ... output omitted ... <span style="color:#f92672">]</span>
+Successfully tagged minecraft:latest
+</code></pre></div><h3 id="running-the-container">Running the container</h3>
+<p>To run the server, we do as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ docker run --rm -dit --name minecraft -p 25565:25565 minecraft
+9db734f4c923905f21e374d0c9d6aaa9be8f8b68aa039a2823cb0ca79b303f1e
+$ docker container logs -f minecraft
+<span style="color:#f92672">[</span> ... output omitted ... <span style="color:#f92672">]</span>
+<span style="color:#f92672">[</span>13:17:46<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Worker-Main-6/INFO<span style="color:#f92672">]</span>: Loaded <span style="color:#ae81ff">7</span> recipes
+<span style="color:#f92672">[</span>13:17:47<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Worker-Main-6/INFO<span style="color:#f92672">]</span>: Loaded <span style="color:#ae81ff">927</span> advancements
+<span style="color:#f92672">[</span>13:17:48<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Starting minecraft server version 1.16.1
+<span style="color:#f92672">[</span>13:17:48<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Loading properties
+<span style="color:#f92672">[</span>13:17:48<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Default game type: SURVIVAL
+<span style="color:#f92672">[</span>13:17:48<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Generating keypair
+<span style="color:#f92672">[</span>13:17:48<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Starting Minecraft server on *:25565
+<span style="color:#f92672">[</span>13:17:48<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Using epoll channel type
+<span style="color:#f92672">[</span>13:17:48<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Preparing level <span style="color:#e6db74">&#34;world&#34;</span>
+<span style="color:#f92672">[</span>13:17:55<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Preparing start region <span style="color:#66d9ef">for</span> dimension minecraft:overworld
+<span style="color:#f92672">[</span>13:17:55<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Worker-Main-4/INFO<span style="color:#f92672">]</span>: Preparing spawn area: 0%
+<span style="color:#f92672">[</span> ... output omitted ... <span style="color:#f92672">]</span>
+<span style="color:#f92672">[</span>13:18:14<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Worker-Main-6/INFO<span style="color:#f92672">]</span>: Preparing spawn area: 93%
+<span style="color:#f92672">[</span>13:18:15<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Time elapsed: <span style="color:#ae81ff">19857</span> ms
+<span style="color:#f92672">[</span>13:18:15<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Server thread/INFO<span style="color:#f92672">]</span>: Done <span style="color:#f92672">(</span>26.520s<span style="color:#f92672">)</span>! For help, type <span style="color:#e6db74">&#34;help&#34;</span>
+</code></pre></div><p>The option <code>-p 25565:25565</code> here is important,
+it allows docker to map the host port <code>25565</code> to the container post <code>25565</code>.
+Without that we&rsquo;ll be getting connection error.</p>
+<h2 id="connecting-in-the-server">Connecting in the server</h2>
+<p>We can now connect to the server using the address localhost.</p>
+<p>On connection the server log as intended that a new user is now connected, we can also enter command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">$ docker attach minecraft
+[ ... output omited ... ]
+[13:30:53] [User Authenticator #6/INFO]: UUID of player user is [ ... output omitted ... ]
+[13:30:53] [Server thread/INFO]: user[/172.17.0.1:52670] logged in with entity id 1470 at (194.09004571731342, 68.0, 210.94037651394027)
+[13:30:53] [Server thread/INFO]: user joined the game
+/say hello from server
+[13:31:08] [Server thread/INFO]: [Server] hello from server
+</code></pre></div><p><img src="img/server_cap.png" alt="server cap"></p>
+<h2 id="summary">Summary</h2>
+<p>We achieve to create a Minecraft server that run on a docker container and automate the download of the server file.
+We can also select the version of that server.</p>
+<p>The repository is available <a href="https://gitlab.com/firelight.flagboy/docker-minecraft">here</a></p>
+<h3 id="what-we-can-improve">What we can improve</h3>
+<p>The docker setup is not complete.</p>
+<p>We miss some configuration, like:</p>
+<ul>
+<li>setting the <strong>ops</strong> / <strong>whitelist</strong> / <strong>banlist</strong> file</li>
+<li>including a specific map</li>
+</ul>
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://minecraft.gamepedia.com/Tutorials/Setting_up_a_server">minecraft gamepedia</a></li>
+<li><a href="https://minecraft.net">minecraft</a></li>
+<li><a href="https://docs.docker.com/engine/reference/builder/">dockerfile reference</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>What is TOCTOU</title>
