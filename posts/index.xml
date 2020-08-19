@@ -1884,27 +1884,27 @@ cdiiddwpgswtgt
             <guid>/posts/snowcrash/</guid>
             <description>Introduction Snowcrash is a VM in the style of a CTF.
 You have 14 level to complete and get each flags
-Summary  Level00: you lost something ? Level01: john, can you give me the flag ? Level02: I want a soda with my shark. Level03: Echo from the past Level04 Level05 Level06 Level07 Level08 Level09 Level10 Level11 Level12 Level13 Level14  </description>
+Summary  Level00: You lost something ? Level01: John, can you give me the flag ? Level02: I want a soda with my shark. Level03: Echo from the past. Level04: I found a Perl. Level05: A fight in the arena. Level06: Replace the elephant. Level07: You can&amp;rsquo;t log me. Level08: Can you read a link ?</description>
             <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>Snowcrash is a <a href="/posts/glossary/vm">VM</a> in the style of a <a href="/posts/glossary/ctf">CTF</a>.</p>
 <p>You have 14 level to complete and get each flags</p>
 <h2 id="summary">Summary</h2>
 <ul>
-<li><a href="/posts/snowcrash/level00">Level00</a>: you lost something ?</li>
-<li><a href="/posts/snowcrash/level01">Level01</a>: john, can you give me the flag ?</li>
+<li><a href="/posts/snowcrash/level00">Level00</a>: You lost something ?</li>
+<li><a href="/posts/snowcrash/level01">Level01</a>: John, can you give me the flag ?</li>
 <li><a href="/posts/snowcrash/level02">Level02</a>: I want a soda with my shark.</li>
-<li><a href="/posts/snowcrash/level03">Level03</a>: Echo from the past</li>
-<li><a href="/posts/snowcrash/level04">Level04</a></li>
-<li><a href="/posts/snowcrash/level05">Level05</a></li>
-<li><a href="/posts/snowcrash/level06">Level06</a></li>
-<li><a href="/posts/snowcrash/level07">Level07</a></li>
-<li><a href="/posts/snowcrash/level08">Level08</a></li>
-<li><a href="/posts/snowcrash/level09">Level09</a></li>
-<li><a href="/posts/snowcrash/level10">Level10</a></li>
-<li><a href="/posts/snowcrash/level11">Level11</a></li>
-<li><a href="/posts/snowcrash/level12">Level12</a></li>
-<li><a href="/posts/snowcrash/level13">Level13</a></li>
-<li><a href="/posts/snowcrash/level14">Level14</a></li>
+<li><a href="/posts/snowcrash/level03">Level03</a>: Echo from the past.</li>
+<li><a href="/posts/snowcrash/level04">Level04</a>: I found a Perl.</li>
+<li><a href="/posts/snowcrash/level05">Level05</a>: A fight in the arena.</li>
+<li><a href="/posts/snowcrash/level06">Level06</a>: Replace the elephant.</li>
+<li><a href="/posts/snowcrash/level07">Level07</a>: You can&rsquo;t log me.</li>
+<li><a href="/posts/snowcrash/level08">Level08</a>: Can you read a link ?</li>
+<li><a href="/posts/snowcrash/level09">Level09</a>: That escalated quickly</li>
+<li><a href="/posts/snowcrash/level10">Level10</a>: I request the flag.</li>
+<li><a href="/posts/snowcrash/level11">Level11</a>: Sorry, wrong password !</li>
+<li><a href="/posts/snowcrash/level12">Level12</a>: Grep 101</li>
+<li><a href="/posts/snowcrash/level13">Level13</a>: Jump, Jump</li>
+<li><a href="/posts/snowcrash/level14">Level14</a>: I get the flag.</li>
 </ul>
 ]]></content>
         </item>
