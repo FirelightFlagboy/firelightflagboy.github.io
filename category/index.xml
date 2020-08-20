@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 18 Aug 2020 11:24:50 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
     
 	<atom:link href="/category/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Glossary</title>
+      <link>/category/glossary/</link>
+      <pubDate>Thu, 20 Aug 2020 12:04:27 +0200</pubDate>
+      
+      <guid>/category/glossary/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>networking</title>
@@ -18,15 +27,6 @@
       <pubDate>Tue, 18 Aug 2020 11:24:50 +0200</pubDate>
       
       <guid>/category/networking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Glossary</title>
-      <link>/category/glossary/</link>
-      <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
-      
-      <guid>/category/glossary/</guid>
       <description></description>
     </item>
     

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 17 Aug 2020 14:23:18 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
     
 	<atom:link href="/category/glossary/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What is ACL</title>
+      <link>/posts/glossary/acl/</link>
+      <pubDate>Thu, 20 Aug 2020 12:04:27 +0200</pubDate>
+      
+      <guid>/posts/glossary/acl/</guid>
+      <description>ACL for Access Control List is a list of permission. That list can specify whom have access to the file and the operations permitted on it.
+ACL can be retrieved using the command getfacl, here is the following output of that command:
+getfacl: Removing leading &amp;#39;/&amp;#39; from absolute path names # file: opt/openarenaserver # owner: root # group: root user::rwx user:level05:rwx user:flag05:rwx group::r-x mask::rwx other::r-x default:user::rwx default:user:level05:rwx default:user:flag05:rwx default:group::r-x default:mask::rwx default:other::r-x Source  Wikipedia  </description>
+    </item>
     
     <item>
       <title>What is TOCTOU</title>

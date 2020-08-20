@@ -10,7 +10,7 @@
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>ACL</title>
+            <title>What is ACL</title>
             <link>/posts/glossary/acl/</link>
             <pubDate>Thu, 20 Aug 2020 12:04:27 +0200</pubDate>
             
