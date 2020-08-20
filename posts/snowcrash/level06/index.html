@@ -7,7 +7,7 @@
 <meta name="author" content="florian ">
 <meta name="description" content="On the home directory, we have 2 files level06.php with the following content and level06 which is a wrapper around level06.php to run it as the user flag06, thanks to his setuid
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  #!/usr/bin/php &amp;lt;?php function y($m) { $m = preg_replace(&amp;#34;/\./&amp;#34;, &amp;#34; x &amp;#34;, $m); $m = preg_replace(&amp;#34;/@/&amp;#34;, &amp;#34; y&amp;#34;, $m); return $m; } function x($y, $z) { $a = file_get_contents($y); $a = preg_replace(&amp;#34;/(\[x (." />
-<meta name="keywords" content=", exploit, php, arbitrary code execution" />
+<meta name="keywords" content=", Exploit, PHP, Arbitrary Code Execution, Regex" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/snowcrash/level06/" />
@@ -43,7 +43,7 @@
 
 
 
-<meta itemprop="keywords" content="exploit,php,arbitrary code execution," />
+<meta itemprop="keywords" content="Exploit,PHP,Arbitrary Code Execution,Regex," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
@@ -61,7 +61,7 @@
 <meta property="og:url" content="/posts/snowcrash/level06/" />
 <meta property="og:image" content=""/>
 <meta property="article:published_time" content="2020-08-03T15:44:15+02:00" />
-<meta property="article:modified_time" content="2020-08-03T15:44:15+02:00" /><meta property="og:site_name" content="My blog" /><meta property="og:see_also" content="/posts/snowcrash/level14/" /><meta property="og:see_also" content="/posts/snowcrash/level13/" /><meta property="og:see_also" content="/posts/snowcrash/level12/" /><meta property="og:see_also" content="/posts/snowcrash/level11/" /><meta property="og:see_also" content="/posts/snowcrash/level10/" /><meta property="og:see_also" content="/posts/snowcrash/level09/" />
+<meta property="article:modified_time" content="2020-08-03T15:44:15+02:00" /><meta property="og:site_name" content="My blog" />
 
 
 
@@ -201,12 +201,12 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>($ar
 <p>On the script, only the function <strong>x</strong> is interesting because of the <code>preg_replace</code> with the <strong>eval flag</strong> (<code>\e</code>) on (line 11).</p>
 <p>The <strong>eval flag</strong> on <code>preg_replace</code> &hellip;</p>
 <blockquote>
-<p>does normal substitution of backreferences in the replacement string, evaluates it as PHP code, and uses the result for replacing the search string</p>
+<p>Does normal substitution of backreferences in the replacement string, evaluates it as PHP code, and uses the result for replacing the search string.</p>
 </blockquote>
 <h2 id="malicious-file">Malicious file</h2>
 <p>For the exploit to work, our payload need to be matched in the 2nd group of the regex pattern <code>/(\[x (.*)\])/e</code></p>
 <p>I came with the following result</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[x ${`echo current user $(id) 1&gt;&amp;2`}]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[x ${`echo current user $(id) 1&gt;&amp;2`}]
 </code></pre></div><p>and get as output</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -225,10 +225,10 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>($ar
 </div><p>See the output of our command on line 2</p>
 <h2 id="source">Source</h2>
 <ul>
-<li><a href="https://www.php.net/manual/en/language.types.string.php#language.types.string.parsing.simple">php string variable parsing</a></li>
-<li><a href="https://www.php.net/manual/en/function.preg-replace.php">preg replace</a></li>
-<li><a href="https://www.php.net/manual/en/reference.pcre.pattern.modifiers.php#reference.pcre.pattern.modifiers.eval">preg replace eval</a></li>
-<li><a href="http://www.madirish.net/402">exploiting php pcre func</a></li>
+<li><a href="https://www.php.net/manual/en/language.types.string.php#language.types.string.parsing.simple">PHP string variable parsing</a></li>
+<li><a href="https://www.php.net/manual/en/function.preg-replace.php">Preg replace</a></li>
+<li><a href="https://www.php.net/manual/en/reference.pcre.pattern.modifiers.php#reference.pcre.pattern.modifiers.eval">Preg replace eval</a></li>
+<li><a href="http://www.madirish.net/402">exploiting PHP PCRE function</a></li>
 </ul>
 
       </div>
@@ -241,7 +241,7 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>($ar
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="tags/exploit/">exploit</a></span><span class="tag"><a href="tags/php/">php</a></span><span class="tag"><a href="tags/arbitrary-code-execution/">arbitrary code execution</a></span>
+          </svg><span class="tag"><a href="tags/exploit/">Exploit</a></span><span class="tag"><a href="tags/php/">PHP</a></span><span class="tag"><a href="tags/arbitrary-code-execution/">Arbitrary Code Execution</a></span><span class="tag"><a href="tags/regex/">Regex</a></span>
         </p>
 
       <p>

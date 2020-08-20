@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 18 Aug 2020 11:24:50 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>System</title>
+      <link>/tags/system/</link>
+      <pubDate>Thu, 20 Aug 2020 12:04:27 +0200</pubDate>
+      
+      <guid>/tags/system/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>docker</title>
@@ -58,7 +67,7 @@
     </item>
     
     <item>
-      <title>ctf</title>
+      <title>CTF</title>
       <link>/tags/ctf/</link>
       <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
       
@@ -67,7 +76,7 @@
     </item>
     
     <item>
-      <title>exploit</title>
+      <title>Exploit</title>
       <link>/tags/exploit/</link>
       <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
       
@@ -76,7 +85,7 @@
     </item>
     
     <item>
-      <title>toctou</title>
+      <title>TOCTOU</title>
       <link>/tags/toctou/</link>
       <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
       
@@ -85,16 +94,34 @@
     </item>
     
     <item>
-      <title>system</title>
-      <link>/tags/system/</link>
+      <title>File</title>
+      <link>/tags/file/</link>
       <pubDate>Mon, 03 Aug 2020 18:26:16 +0200</pubDate>
       
-      <guid>/tags/system/</guid>
+      <guid>/tags/file/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>reverse engineering</title>
+      <title>ASM</title>
+      <link>/tags/asm/</link>
+      <pubDate>Mon, 03 Aug 2020 15:59:10 +0200</pubDate>
+      
+      <guid>/tags/asm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>/tags/c/</link>
+      <pubDate>Mon, 03 Aug 2020 15:59:10 +0200</pubDate>
+      
+      <guid>/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reverse Engineering</title>
       <link>/tags/reverse-engineering/</link>
       <pubDate>Mon, 03 Aug 2020 15:59:10 +0200</pubDate>
       
@@ -103,7 +130,7 @@
     </item>
     
     <item>
-      <title>arbitrary code execution</title>
+      <title>Arbitrary Code Execution</title>
       <link>/tags/arbitrary-code-execution/</link>
       <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
       
@@ -112,16 +139,43 @@
     </item>
     
     <item>
-      <title>shell script</title>
+      <title>Perl</title>
+      <link>/tags/perl/</link>
+      <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
+      
+      <guid>/tags/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell Script</title>
       <link>/tags/shell-script/</link>
-      <pubDate>Mon, 03 Aug 2020 15:52:09 +0200</pubDate>
+      <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
       
       <guid>/tags/shell-script/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>php</title>
+      <title>LUA</title>
+      <link>/tags/lua/</link>
+      <pubDate>Mon, 03 Aug 2020 15:56:10 +0200</pubDate>
+      
+      <guid>/tags/lua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forensic</title>
+      <link>/tags/forensic/</link>
+      <pubDate>Mon, 03 Aug 2020 15:54:09 +0200</pubDate>
+      
+      <guid>/tags/forensic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
       <link>/tags/php/</link>
       <pubDate>Mon, 03 Aug 2020 15:44:15 +0200</pubDate>
       
@@ -130,7 +184,16 @@
     </item>
     
     <item>
-      <title>binary</title>
+      <title>Regex</title>
+      <link>/tags/regex/</link>
+      <pubDate>Mon, 03 Aug 2020 15:44:15 +0200</pubDate>
+      
+      <guid>/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BINARY</title>
       <link>/tags/binary/</link>
       <pubDate>Sun, 02 Aug 2020 17:02:58 +0200</pubDate>
       
@@ -139,16 +202,7 @@
     </item>
     
     <item>
-      <title>file</title>
-      <link>/tags/file/</link>
-      <pubDate>Sun, 02 Aug 2020 17:02:49 +0200</pubDate>
-      
-      <guid>/tags/file/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>unix</title>
+      <title>UNIX</title>
       <link>/tags/unix/</link>
       <pubDate>Sun, 02 Aug 2020 17:02:49 +0200</pubDate>
       
@@ -157,16 +211,7 @@
     </item>
     
     <item>
-      <title>network</title>
-      <link>/tags/network/</link>
-      <pubDate>Fri, 31 Jul 2020 19:28:20 +0200</pubDate>
-      
-      <guid>/tags/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cryptography</title>
+      <title>Cryptography</title>
       <link>/tags/cryptography/</link>
       <pubDate>Tue, 28 Jul 2020 22:10:15 +0200</pubDate>
       
@@ -175,7 +220,34 @@
     </item>
     
     <item>
-      <title>encoding</title>
+      <title>Admin Sys</title>
+      <link>/tags/admin-sys/</link>
+      <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
+      
+      <guid>/tags/admin-sys/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cracking</title>
+      <link>/tags/cracking/</link>
+      <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
+      
+      <guid>/tags/cracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>/tags/ssh/</link>
+      <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
+      
+      <guid>/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Encoding</title>
       <link>/tags/encoding/</link>
       <pubDate>Tue, 28 Jul 2020 18:38:17 +0200</pubDate>
       
@@ -184,7 +256,16 @@
     </item>
     
     <item>
-      <title>virtualization</title>
+      <title>OS</title>
+      <link>/tags/os/</link>
+      <pubDate>Mon, 27 Jul 2020 23:03:11 +0200</pubDate>
+      
+      <guid>/tags/os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtualization</title>
       <link>/tags/virtualization/</link>
       <pubDate>Mon, 27 Jul 2020 23:03:11 +0200</pubDate>
       

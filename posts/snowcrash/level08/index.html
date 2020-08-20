@@ -5,9 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="florian ">
-<meta name="description" content="On the home dir, we have 2 file level08 with is following pseudo-code and token who is only readable be flag08
-$ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &amp;#34;%s [file to read]\n&amp;#34;, argv[0]); } needle = strstr(argv[1], &amp;#34;token&amp;#34;); if (needle !" />
-<meta name="keywords" content=", exploit, reverse engineering" />
+<meta name="description" content="On the home DIR, we have 2 files level08 with is following pseudo-code and token who is only readable be flag08.
+$ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token The Pseudo Code Here is the pseudo code for the file level08:
+int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &amp;#34;%s [file to read]\n&amp;#34;, argv[0]); } needle = strstr(argv[1], &amp;#34;token&amp;#34;); if (needle !" />
+<meta name="keywords" content=", Exploit, Reverse Engineering, Shell Script" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/snowcrash/level08/" />
@@ -34,34 +35,37 @@ $ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw---
 
 
 <meta itemprop="name" content="Snowcrash - Level08">
-<meta itemprop="description" content="On the home dir, we have 2 file level08 with is following pseudo-code and token who is only readable be flag08
-$ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &#34;%s [file to read]\n&#34;, argv[0]); } needle = strstr(argv[1], &#34;token&#34;); if (needle !">
+<meta itemprop="description" content="On the home DIR, we have 2 files level08 with is following pseudo-code and token who is only readable be flag08.
+$ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token The Pseudo Code Here is the pseudo code for the file level08:
+int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &#34;%s [file to read]\n&#34;, argv[0]); } needle = strstr(argv[1], &#34;token&#34;); if (needle !">
 <meta itemprop="datePublished" content="2020-08-03T15:53:09+02:00" />
 <meta itemprop="dateModified" content="2020-08-03T15:53:09+02:00" />
-<meta itemprop="wordCount" content="199">
+<meta itemprop="wordCount" content="210">
 <meta itemprop="image" content=""/>
 
 
 
-<meta itemprop="keywords" content="exploit,reverse engineering," />
+<meta itemprop="keywords" content="Exploit,Reverse Engineering,Shell Script," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="Snowcrash - Level08"/>
-<meta name="twitter:description" content="On the home dir, we have 2 file level08 with is following pseudo-code and token who is only readable be flag08
-$ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &#34;%s [file to read]\n&#34;, argv[0]); } needle = strstr(argv[1], &#34;token&#34;); if (needle !"/>
+<meta name="twitter:description" content="On the home DIR, we have 2 files level08 with is following pseudo-code and token who is only readable be flag08.
+$ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token The Pseudo Code Here is the pseudo code for the file level08:
+int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &#34;%s [file to read]\n&#34;, argv[0]); } needle = strstr(argv[1], &#34;token&#34;); if (needle !"/>
 
 
 
     <meta property="og:title" content="Snowcrash - Level08" />
-<meta property="og:description" content="On the home dir, we have 2 file level08 with is following pseudo-code and token who is only readable be flag08
-$ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &#34;%s [file to read]\n&#34;, argv[0]); } needle = strstr(argv[1], &#34;token&#34;); if (needle !" />
+<meta property="og:description" content="On the home DIR, we have 2 files level08 with is following pseudo-code and token who is only readable be flag08.
+$ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token The Pseudo Code Here is the pseudo code for the file level08:
+int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &#34;%s [file to read]\n&#34;, argv[0]); } needle = strstr(argv[1], &#34;token&#34;); if (needle !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/snowcrash/level08/" />
 <meta property="og:image" content=""/>
 <meta property="article:published_time" content="2020-08-03T15:53:09+02:00" />
-<meta property="article:modified_time" content="2020-08-03T15:53:09+02:00" /><meta property="og:site_name" content="My blog" /><meta property="og:see_also" content="/posts/snowcrash/level14/" /><meta property="og:see_also" content="/posts/snowcrash/level13/" /><meta property="og:see_also" content="/posts/snowcrash/level12/" /><meta property="og:see_also" content="/posts/snowcrash/level11/" /><meta property="og:see_also" content="/posts/snowcrash/level10/" /><meta property="og:see_also" content="/posts/snowcrash/level09/" />
+<meta property="article:modified_time" content="2020-08-03T15:53:09+02:00" /><meta property="og:site_name" content="My blog" />
 
 
 
@@ -151,12 +155,14 @@ $ ls -l total 16 -rwsr-s---&#43; 1 flag08 level08 8617 Mar 5 2016 level08 -rw---
       
 
       <div class="post-content">
-        <p>On the home dir, we have 2 file <code>level08</code> with is following pseudo-code and <code>token</code> who is only readable be <strong>flag08</strong></p>
+        <p>On the home DIR, we have 2 files <code>level08</code> with is following pseudo-code and <code>token</code> who is only readable be <strong>flag08</strong>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ls -l
 total <span style="color:#ae81ff">16</span>
 -rwsr-s---+ <span style="color:#ae81ff">1</span> flag08 level08 <span style="color:#ae81ff">8617</span> Mar  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2016</span> level08
 -rw-------  <span style="color:#ae81ff">1</span> flag08 flag08    <span style="color:#ae81ff">26</span> Mar  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2016</span> token
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc,<span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>argv)
+</code></pre></div><h2 id="the-pseudo-code">The Pseudo Code</h2>
+<p>Here is the pseudo code for the file <code>level08</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc,<span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>argv)
 {
   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>needle;
   <span style="color:#66d9ef">int</span> fd;
@@ -182,11 +188,11 @@ total <span style="color:#ae81ff">16</span>
 }
 </code></pre></div><h2 id="explanation">Explanation</h2>
 <p><code>level08</code> take a file as argument<br>
-check if the argument doesn&rsquo;t contains the string <code>token</code><br>
-then open/read the file</p>
+check if the argument doesn&rsquo;t contain the string <code>token</code><br>
+then open/read the file.</p>
 <h2 id="counter-the-filename-check">Counter the filename check</h2>
-<p>to counter the filename check on <code>level08</code> we have access in linux to <a href="/posts/glossary/symlink">symbolic link</a>.<br>
-We just have to create a link to the file <code>~/token</code> with a name that doesn&rsquo;t not contains the string <code>token</code></p>
+<p>To counter the filename check on <code>level08</code> we have access in Linux to <a href="/posts/glossary/symlink">symbolic link</a>.<br>
+We just have to create a link to the file <code>~/token</code> with a name that doesn&rsquo;t contain the string <code>token</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ln -s ~/token /tmp/foo
 $ ./level08 /tmp/foo
 <span style="color:#f92672">[</span> ... output omitted ... <span style="color:#f92672">]</span>
@@ -201,7 +207,7 @@ $ ./level08 /tmp/foo
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="tags/exploit/">exploit</a></span><span class="tag"><a href="tags/reverse-engineering/">reverse engineering</a></span>
+          </svg><span class="tag"><a href="tags/exploit/">Exploit</a></span><span class="tag"><a href="tags/reverse-engineering/">Reverse Engineering</a></span><span class="tag"><a href="tags/shell-script/">Shell Script</a></span>
         </p>
 
       <p>
@@ -212,7 +218,7 @@ $ ./level08 /tmp/foo
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        199 Words
+        210 Words
       </p>
 
       <p>

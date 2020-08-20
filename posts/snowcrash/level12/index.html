@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="florian ">
-<meta name="description" content="On our home directory, we have access to a perl script.
+<meta name="description" content="On our home directory, we have access to a Perl script.
 The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub t { $nn = $_[1]; $xx = $_[0]; $xx =~ tr/a-z/A-Z/; $xx =~ s/\s.*//; @output = `egrep &amp;#34;^$xx&amp;#34; /tmp/xd 2&amp;gt;&amp;amp;1`; foreach $line (@output) { ($f, $s) = split(/:/, $line); if($s =~ $nn) { return 1; } } return 0; } sub n { if($_[0] == 1) { print(&amp;#34;." />
-<meta name="keywords" content=", exploit, arbitrary code execution" />
+<meta name="keywords" content=", Exploit, Arbitrary Code Execution, Perl, Shell Script, Networking" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/snowcrash/level12/" />
@@ -34,34 +34,34 @@ The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &amp;#3
 
 
 <meta itemprop="name" content="Snowcrash - Level12">
-<meta itemprop="description" content="On our home directory, we have access to a perl script.
+<meta itemprop="description" content="On our home directory, we have access to a Perl script.
 The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &#34;Content-type: text/html\n\n&#34;; sub t { $nn = $_[1]; $xx = $_[0]; $xx =~ tr/a-z/A-Z/; $xx =~ s/\s.*//; @output = `egrep &#34;^$xx&#34; /tmp/xd 2&gt;&amp;1`; foreach $line (@output) { ($f, $s) = split(/:/, $line); if($s =~ $nn) { return 1; } } return 0; } sub n { if($_[0] == 1) { print(&#34;.">
 <meta itemprop="datePublished" content="2020-08-03T15:57:10+02:00" />
 <meta itemprop="dateModified" content="2020-08-03T15:57:10+02:00" />
-<meta itemprop="wordCount" content="265">
+<meta itemprop="wordCount" content="264">
 <meta itemprop="image" content=""/>
 
 
 
-<meta itemprop="keywords" content="exploit,arbitrary code execution," />
+<meta itemprop="keywords" content="Exploit,Arbitrary Code Execution,Perl,Shell Script,Networking," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="Snowcrash - Level12"/>
-<meta name="twitter:description" content="On our home directory, we have access to a perl script.
+<meta name="twitter:description" content="On our home directory, we have access to a Perl script.
 The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &#34;Content-type: text/html\n\n&#34;; sub t { $nn = $_[1]; $xx = $_[0]; $xx =~ tr/a-z/A-Z/; $xx =~ s/\s.*//; @output = `egrep &#34;^$xx&#34; /tmp/xd 2&gt;&amp;1`; foreach $line (@output) { ($f, $s) = split(/:/, $line); if($s =~ $nn) { return 1; } } return 0; } sub n { if($_[0] == 1) { print(&#34;."/>
 
 
 
     <meta property="og:title" content="Snowcrash - Level12" />
-<meta property="og:description" content="On our home directory, we have access to a perl script.
+<meta property="og:description" content="On our home directory, we have access to a Perl script.
 The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &#34;Content-type: text/html\n\n&#34;; sub t { $nn = $_[1]; $xx = $_[0]; $xx =~ tr/a-z/A-Z/; $xx =~ s/\s.*//; @output = `egrep &#34;^$xx&#34; /tmp/xd 2&gt;&amp;1`; foreach $line (@output) { ($f, $s) = split(/:/, $line); if($s =~ $nn) { return 1; } } return 0; } sub n { if($_[0] == 1) { print(&#34;." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/snowcrash/level12/" />
 <meta property="og:image" content=""/>
 <meta property="article:published_time" content="2020-08-03T15:57:10+02:00" />
-<meta property="article:modified_time" content="2020-08-03T15:57:10+02:00" /><meta property="og:site_name" content="My blog" /><meta property="og:see_also" content="/posts/snowcrash/level14/" /><meta property="og:see_also" content="/posts/snowcrash/level13/" /><meta property="og:see_also" content="/posts/snowcrash/level11/" /><meta property="og:see_also" content="/posts/snowcrash/level10/" /><meta property="og:see_also" content="/posts/snowcrash/level09/" />
+<meta property="article:modified_time" content="2020-08-03T15:57:10+02:00" /><meta property="og:site_name" content="My blog" />
 
 
 
@@ -151,7 +151,7 @@ The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &#34;Co
       
 
       <div class="post-content">
-        <p>On our home directory, we have access to a perl script.</p>
+        <p>On our home directory, we have access to a Perl script.</p>
 <h2 id="the-script">The script</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#75715e">#!/usr/bin/env perl</span>
 <span style="color:#75715e"># localhost:4646</span>
@@ -220,7 +220,7 @@ n(t(param(<span style="color:#e6db74">&#34;x&#34;</span>), param(<span style="co
 </div>
 </div><p>The flaw is located on the function <code>t()</code> at the <strong>line 6</strong>,
 were a shell command is executed using the first parameter of <code>t()</code> alias <code>x</code>.</p>
-<p>The argument <code>xx</code> is some what sanitize, all letter become uppercase letter,
+<p>The argument <code>xx</code> is somewhat sanitized, all letter become uppercase letter,
 everything after the first <em>space</em> char is strip.</p>
 <h2 id="the-solution">The Solution</h2>
 <p>For the solution, I create a file <code>LVL10</code> (The uppercase name is important)
@@ -247,7 +247,7 @@ Check flag.Here is your token : <span style="color:#f92672">[</span> ... output 
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="tags/exploit/">exploit</a></span><span class="tag"><a href="tags/arbitrary-code-execution/">arbitrary code execution</a></span>
+          </svg><span class="tag"><a href="tags/exploit/">Exploit</a></span><span class="tag"><a href="tags/arbitrary-code-execution/">Arbitrary Code Execution</a></span><span class="tag"><a href="tags/perl/">Perl</a></span><span class="tag"><a href="tags/shell-script/">Shell Script</a></span><span class="tag"><a href="tags/networking/">Networking</a></span>
         </p>
 
       <p>
@@ -258,7 +258,7 @@ Check flag.Here is your token : <span style="color:#f92672">[</span> ... output 
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        265 Words
+        264 Words
       </p>
 
       <p>

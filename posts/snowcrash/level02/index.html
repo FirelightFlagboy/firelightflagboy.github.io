@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="florian ">
-<meta name="description" content="$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains tcp packets. I will use Wireshark to read the file
-just by looking at the tcp stream, we see that the user as enter a password ( but beware of special chars )
-we can use that password to connect as flag02
-What is Wireshark Wireshark is a packet analyzer tool used for network analysis" />
-<meta name="keywords" content=", exploit, network" />
+<meta name="description" content="On our home directory, we only have the file level02.pcap
+$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains TCP packets. I will use Wireshark to read the file.
+just by looking at the TCP stream, we see that the user as entered a password (but beware of special chars)
+we can use that password to connect as flag02" />
+<meta name="keywords" content=", Exploit, Networking" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/snowcrash/level02/" />
@@ -36,40 +36,40 @@ What is Wireshark Wireshark is a packet analyzer tool used for network analysis"
 
 
 <meta itemprop="name" content="Snowcrash - Level02">
-<meta itemprop="description" content="$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains tcp packets. I will use Wireshark to read the file
-just by looking at the tcp stream, we see that the user as enter a password ( but beware of special chars )
-we can use that password to connect as flag02
-What is Wireshark Wireshark is a packet analyzer tool used for network analysis">
+<meta itemprop="description" content="On our home directory, we only have the file level02.pcap
+$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains TCP packets. I will use Wireshark to read the file.
+just by looking at the TCP stream, we see that the user as entered a password (but beware of special chars)
+we can use that password to connect as flag02">
 <meta itemprop="datePublished" content="2020-07-31T19:28:20+02:00" />
 <meta itemprop="dateModified" content="2020-07-31T19:28:20+02:00" />
-<meta itemprop="wordCount" content="76">
+<meta itemprop="wordCount" content="71">
 <meta itemprop="image" content=""/>
 
 
 
-<meta itemprop="keywords" content="exploit,network," />
+<meta itemprop="keywords" content="Exploit,Networking," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="Snowcrash - Level02"/>
-<meta name="twitter:description" content="$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains tcp packets. I will use Wireshark to read the file
-just by looking at the tcp stream, we see that the user as enter a password ( but beware of special chars )
-we can use that password to connect as flag02
-What is Wireshark Wireshark is a packet analyzer tool used for network analysis"/>
+<meta name="twitter:description" content="On our home directory, we only have the file level02.pcap
+$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains TCP packets. I will use Wireshark to read the file.
+just by looking at the TCP stream, we see that the user as entered a password (but beware of special chars)
+we can use that password to connect as flag02"/>
 
 
 
     <meta property="og:title" content="Snowcrash - Level02" />
-<meta property="og:description" content="$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains tcp packets. I will use Wireshark to read the file
-just by looking at the tcp stream, we see that the user as enter a password ( but beware of special chars )
-we can use that password to connect as flag02
-What is Wireshark Wireshark is a packet analyzer tool used for network analysis" />
+<meta property="og:description" content="On our home directory, we only have the file level02.pcap
+$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains TCP packets. I will use Wireshark to read the file.
+just by looking at the TCP stream, we see that the user as entered a password (but beware of special chars)
+we can use that password to connect as flag02" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/snowcrash/level02/" />
 <meta property="og:image" content=""/>
 <meta property="article:published_time" content="2020-07-31T19:28:20+02:00" />
-<meta property="article:modified_time" content="2020-07-31T19:28:20+02:00" /><meta property="og:site_name" content="My blog" /><meta property="og:see_also" content="/posts/snowcrash/level14/" /><meta property="og:see_also" content="/posts/snowcrash/level13/" /><meta property="og:see_also" content="/posts/snowcrash/level12/" /><meta property="og:see_also" content="/posts/snowcrash/level11/" /><meta property="og:see_also" content="/posts/snowcrash/level10/" /><meta property="og:see_also" content="/posts/snowcrash/level09/" />
+<meta property="article:modified_time" content="2020-07-31T19:28:20+02:00" /><meta property="og:site_name" content="My blog" />
 
 
 
@@ -159,17 +159,16 @@ What is Wireshark Wireshark is a packet analyzer tool used for network analysis"
       
 
       <div class="post-content">
-        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ file level02.pcap
+        <p>On our home directory, we only have the file <code>level02.pcap</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ file level02.pcap
 level02.pcap: tcpdump capture file <span style="color:#f92672">(</span>little-endian<span style="color:#f92672">)</span> - version 2.4 <span style="color:#f92672">(</span>Ethernet, capture length 16777216<span style="color:#f92672">)</span>
-</code></pre></div><p><code>level02.pcap</code> is a file that contains tcp packets. I will use <strong>Wireshark</strong> to read the file</p>
+</code></pre></div><p><code>level02.pcap</code> is a file that contains TCP packets. I will use <strong><a href="/posts/glossary/wireshark">Wireshark</a></strong> to read the file.</p>
 
     <img src="img/wireshark.png"  class="left"  />
 
 
-<p>just by looking at the <strong>tcp stream</strong>, we see that the user as enter a password ( but beware of special chars )</p>
+<p>just by looking at the <strong>TCP stream</strong>, we see that the user as entered a password (but beware of special chars)</p>
 <p>we can use that password to connect as <code>flag02</code></p>
-<h2 id="what-is-wireshark">What is Wireshark</h2>
-<p><strong>Wireshark</strong> is a packet analyzer tool used for network analysis</p>
 
       </div>
     </article>
@@ -181,7 +180,7 @@ level02.pcap: tcpdump capture file <span style="color:#f92672">(</span>little-en
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="tags/exploit/">exploit</a></span><span class="tag"><a href="tags/network/">network</a></span>
+          </svg><span class="tag"><a href="tags/exploit/">Exploit</a></span><span class="tag"><a href="tags/networking/">Networking</a></span>
         </p>
 
       <p>
@@ -192,7 +191,7 @@ level02.pcap: tcpdump capture file <span style="color:#f92672">(</span>little-en
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        76 Words
+        71 Words
       </p>
 
       <p>

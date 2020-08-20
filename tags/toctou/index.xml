@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>toctou on My blog</title>
+    <title>TOCTOU on My blog</title>
     <link>/tags/toctou/</link>
-    <description>Recent content in toctou on My blog</description>
+    <description>Recent content in TOCTOU on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
@@ -18,9 +18,9 @@
       <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
       
       <guid>/posts/glossary/toctou/</guid>
-      <description>TOCTOU mean Time-of-Check to Time-of-Use. It&amp;rsquo;s a bug were it involve checking the state of the system and using the result
+      <description>TOCTOU mean Time-of-Check to Time-of-Use. It&amp;rsquo;s a bug where it involves checking the state of the system and using the result.
 Example if (access(&amp;#34;file&amp;#34;, W_OK) != 0) { exit(1); } fd = open(&amp;#34;file&amp;#34;, O_WRONLY); write(fd, buffer, sizeof(buffer)); Here an attacker can create a symlink after the access but before the open call, resulting in a malicious file to be open.
-Synonyms  TOCTTOU TOC/TOU  Source  wikipedia  </description>
+Synonyms  TOCTTOU TOC/TOU  Source  Wikipedia  </description>
     </item>
     
     <item>
@@ -30,7 +30,8 @@ Synonyms  TOCTTOU TOC/TOU  Source  wikipedia  </description>
       
       <guid>/posts/snowcrash/level10/</guid>
       <description>On connection, we are greeted by the 2 following file.
-$ ls -l total 16 -rwsr-sr-x+ 1 flag10 level10 10817 Mar 5 2016 level10 -rw------- 1 flag10 flag10 26 Mar 5 2016 token Pseudo code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49  int main(int argc, char **argv) { char *host; char *file; int socketfd; int fd; int rc; char buffer [4096]; sockaddr_in addr; if (argc &amp;lt; 3) { errx(1, &amp;#34;%s file host\n\tsends file to host if you have access to it\n&amp;#34;, argv[0]); } file = argv[1]; host = argv[2]; if (access(argv[1], R_OK) == 0) { printf(&amp;#34;Connecting to %s:6969 .</description>
+$ ls -l total 16 -rwsr-sr-x+ 1 flag10 level10 10817 Mar 5 2016 level10 -rw------- 1 flag10 flag10 26 Mar 5 2016 token Pseudo code The following Pseudo code is generated from level10
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49  int main(int argc, char **argv) { char *host; char *file; int socketfd; int fd; int rc; char buffer [4096]; sockaddr_in addr; if (argc &amp;lt; 3) { errx(1, &amp;#34;%s file host\n\tsends file to host if you have access to it\n&amp;#34;, argv[0]); } file = argv[1]; host = argv[2]; if (access(argv[1], R_OK) == 0) { printf(&amp;#34;Connecting to %s:6969 .</description>
     </item>
     
   </channel>

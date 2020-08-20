@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="florian ">
 <meta name="description" content="Each file as his own permission set.
-It allow to
+It allows to
  control the ability of the users to view, change, navigate, and execute the contents of the file system
- Notation for Unix system permission can be see in its symbolic notation using ls -l
+ Notation for Unix system Permission can be seen in its symbolic notation using ls -l
 $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1st column is used to represent the file type and his permission." />
-<meta name="keywords" content=", file, unix" />
+<meta name="keywords" content=", File, UNIX" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/glossary/file_permission/" />
@@ -38,9 +38,9 @@ $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1
 
 <meta itemprop="name" content="What is File Permission">
 <meta itemprop="description" content="Each file as his own permission set.
-It allow to
+It allows to
  control the ability of the users to view, change, navigate, and execute the contents of the file system
- Notation for Unix system permission can be see in its symbolic notation using ls -l
+ Notation for Unix system Permission can be seen in its symbolic notation using ls -l
 $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1st column is used to represent the file type and his permission.">
 <meta itemprop="datePublished" content="2020-08-02T17:02:49+02:00" />
 <meta itemprop="dateModified" content="2020-08-02T17:02:49+02:00" />
@@ -49,25 +49,25 @@ $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1
 
 
 
-<meta itemprop="keywords" content="file,unix," />
+<meta itemprop="keywords" content="File,UNIX," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="What is File Permission"/>
 <meta name="twitter:description" content="Each file as his own permission set.
-It allow to
+It allows to
  control the ability of the users to view, change, navigate, and execute the contents of the file system
- Notation for Unix system permission can be see in its symbolic notation using ls -l
+ Notation for Unix system Permission can be seen in its symbolic notation using ls -l
 $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1st column is used to represent the file type and his permission."/>
 
 
 
     <meta property="og:title" content="What is File Permission" />
 <meta property="og:description" content="Each file as his own permission set.
-It allow to
+It allows to
  control the ability of the users to view, change, navigate, and execute the contents of the file system
- Notation for Unix system permission can be see in its symbolic notation using ls -l
+ Notation for Unix system Permission can be seen in its symbolic notation using ls -l
 $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1st column is used to represent the file type and his permission." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/glossary/file_permission/" />
@@ -163,29 +163,29 @@ $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1
 
       <div class="post-content">
         <p>Each file as his own permission set.<br>
-It allow to</p>
+It allows to</p>
 <blockquote>
 <p>control the ability of the users to view, change, navigate, and execute the contents of the file system</p>
 </blockquote>
 <h2 id="notation-for-unix-system">Notation for Unix system</h2>
-<p>permission can be see in its symbolic notation using <code>ls -l</code></p>
+<p>Permission can be seen in its symbolic notation using <code>ls -l</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ls -l
 total <span style="color:#ae81ff">16</span>
 -rw-rw-r-- <span style="color:#ae81ff">1</span> level03 level03    <span style="color:#ae81ff">0</span> Aug  <span style="color:#ae81ff">2</span> 17:22 foo
 </code></pre></div><p>with <code>ls -l</code> the 1st column is used to represent the file type and his permission.</p>
-<pre><code>[-][rw-rw-r--]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[-][rw-rw-r--]
  ^  ^
  │  │
  │  └─ file permission
  └─ file type
-</code></pre><p>the file permission group is composed of 3 triad each one represented one group:<br>
+</code></pre></div><p>The file permission group is composed of 3 triads each one represented one group:<br>
 <code>User</code> / <code>Group</code> / <code>Other</code></p>
-<pre><code>[rw-][rw-][r--]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[rw-][rw-][r--]
  ^    ^    ^
  │    │    └─ Other
  │    └─ Group
  └─ User
-</code></pre><table>
+</code></pre></div><table>
 <thead>
 <tr>
 <th>Letter</th>
@@ -197,27 +197,27 @@ total <span style="color:#ae81ff">16</span>
 <tr>
 <td>r</td>
 <td>1st letter of each triad</td>
-<td>allow the triad&rsquo;s group to <strong>READ</strong> the file</td>
+<td>allows the triad&rsquo;s group to <strong>READ</strong> the file</td>
 </tr>
 <tr>
 <td>w</td>
 <td>2nd letter of each triad</td>
-<td>allow the triad&rsquo;s group to <strong>MODIFY</strong> the file</td>
+<td>allows the triad&rsquo;s group to <strong>MODIFY</strong> the file</td>
 </tr>
 <tr>
 <td>x</td>
 <td>3rd letter of each triad</td>
-<td>allow the triad&rsquo;s group to <strong>EXECUTE</strong> the file</td>
+<td>allows the triad&rsquo;s group to <strong>EXECUTE</strong> the file</td>
 </tr>
 <tr>
 <td>s</td>
 <td>3rd letter of <code>User</code> triad</td>
-<td>allow the user to run the file with the system permissions of the <strong>OWNER</strong></td>
+<td>allows the user to run the file with the system permissions of the <strong>OWNER</strong></td>
 </tr>
 <tr>
 <td>s</td>
 <td>3rd letter of <code>Group</code> triad</td>
-<td>allow the user to run the file with the system permissions of the <strong>GROUP</strong></td>
+<td>allows the user to run the file with the system permissions of the <strong>GROUP</strong></td>
 </tr>
 <tr>
 <td>t</td>
@@ -249,9 +249,9 @@ total <span style="color:#ae81ff">16</span>
 </ul>
 <h2 id="source">Source</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/File_system_permissions">file permission - wiki</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Setuid">Setuid &amp; Setgid - wiki</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Sticky_bit">Sticky bit - wiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/File_system_permissions">file permission — wiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Setuid">Setuid &amp; Setgid — wiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sticky_bit">Sticky bit — wiki</a></li>
 </ul>
 
       </div>
@@ -264,7 +264,7 @@ total <span style="color:#ae81ff">16</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="tags/file/">file</a></span><span class="tag"><a href="tags/unix/">unix</a></span>
+          </svg><span class="tag"><a href="tags/file/">File</a></span><span class="tag"><a href="tags/unix/">UNIX</a></span>
         </p>
 
       <p>

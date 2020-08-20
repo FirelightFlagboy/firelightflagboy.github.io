@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="florian ">
-<meta name="description" content="on connection, we have 2 file level09 and token
-first token is readable but it contain some non-printable char,
+<meta name="description" content="On connection, we have 2 files level09 and token.
+First token is readable but it contains some non-printable char,
 $ cat f4kmm6p|=�p�n��DB�Du{�� $ xxd token 0000000: 6634 6b6d 6d36 707c 3d82 7f70 826e 8382 f4kmm6p|=..p.n.. 0000010: 4442 8344 757b 7f8c 890a DB.Du{.... on the other hand, level09 require an argument.
-$ ./level09 You need to provied only one arg. The argument is transformed into another string
+$ ./level09 You need to provied only one arg. The argument is transformed into another string.
 $ ./level09 aaaaa abcde $ ." />
-<meta name="keywords" content=", exploit" />
+<meta name="keywords" content=", Exploit, Forensic, Python, Reverse Engineering" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/snowcrash/level09/" />
@@ -37,10 +37,10 @@ $ ./level09 aaaaa abcde $ ." />
 
 
 <meta itemprop="name" content="Snowcrash - Level09">
-<meta itemprop="description" content="on connection, we have 2 file level09 and token
-first token is readable but it contain some non-printable char,
+<meta itemprop="description" content="On connection, we have 2 files level09 and token.
+First token is readable but it contains some non-printable char,
 $ cat f4kmm6p|=�p�n��DB�Du{�� $ xxd token 0000000: 6634 6b6d 6d36 707c 3d82 7f70 826e 8382 f4kmm6p|=..p.n.. 0000010: 4442 8344 757b 7f8c 890a DB.Du{.... on the other hand, level09 require an argument.
-$ ./level09 You need to provied only one arg. The argument is transformed into another string
+$ ./level09 You need to provied only one arg. The argument is transformed into another string.
 $ ./level09 aaaaa abcde $ .">
 <meta itemprop="datePublished" content="2020-08-03T15:54:09+02:00" />
 <meta itemprop="dateModified" content="2020-08-03T15:54:09+02:00" />
@@ -49,31 +49,31 @@ $ ./level09 aaaaa abcde $ .">
 
 
 
-<meta itemprop="keywords" content="exploit," />
+<meta itemprop="keywords" content="Exploit,Forensic,Python,Reverse Engineering," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="Snowcrash - Level09"/>
-<meta name="twitter:description" content="on connection, we have 2 file level09 and token
-first token is readable but it contain some non-printable char,
+<meta name="twitter:description" content="On connection, we have 2 files level09 and token.
+First token is readable but it contains some non-printable char,
 $ cat f4kmm6p|=�p�n��DB�Du{�� $ xxd token 0000000: 6634 6b6d 6d36 707c 3d82 7f70 826e 8382 f4kmm6p|=..p.n.. 0000010: 4442 8344 757b 7f8c 890a DB.Du{.... on the other hand, level09 require an argument.
-$ ./level09 You need to provied only one arg. The argument is transformed into another string
+$ ./level09 You need to provied only one arg. The argument is transformed into another string.
 $ ./level09 aaaaa abcde $ ."/>
 
 
 
     <meta property="og:title" content="Snowcrash - Level09" />
-<meta property="og:description" content="on connection, we have 2 file level09 and token
-first token is readable but it contain some non-printable char,
+<meta property="og:description" content="On connection, we have 2 files level09 and token.
+First token is readable but it contains some non-printable char,
 $ cat f4kmm6p|=�p�n��DB�Du{�� $ xxd token 0000000: 6634 6b6d 6d36 707c 3d82 7f70 826e 8382 f4kmm6p|=..p.n.. 0000010: 4442 8344 757b 7f8c 890a DB.Du{.... on the other hand, level09 require an argument.
-$ ./level09 You need to provied only one arg. The argument is transformed into another string
+$ ./level09 You need to provied only one arg. The argument is transformed into another string.
 $ ./level09 aaaaa abcde $ ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/snowcrash/level09/" />
 <meta property="og:image" content=""/>
 <meta property="article:published_time" content="2020-08-03T15:54:09+02:00" />
-<meta property="article:modified_time" content="2020-08-03T15:54:09+02:00" /><meta property="og:site_name" content="My blog" /><meta property="og:see_also" content="/posts/snowcrash/level14/" /><meta property="og:see_also" content="/posts/snowcrash/level13/" /><meta property="og:see_also" content="/posts/snowcrash/level12/" /><meta property="og:see_also" content="/posts/snowcrash/level11/" /><meta property="og:see_also" content="/posts/snowcrash/level10/" />
+<meta property="article:modified_time" content="2020-08-03T15:54:09+02:00" /><meta property="og:site_name" content="My blog" />
 
 
 
@@ -163,8 +163,8 @@ $ ./level09 aaaaa abcde $ ." />
       
 
       <div class="post-content">
-        <p>on connection, we have 2 file <code>level09</code> and <code>token</code></p>
-<p>first <code>token</code> is readable but it contain some non-printable char,</p>
+        <p>On connection, we have 2 files <code>level09</code> and <code>token</code>.</p>
+<p>First <code>token</code> is readable but it contains some non-printable char,</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cat
 f4kmm6p|<span style="color:#f92672">=</span>�p�n��DB�Du<span style="color:#f92672">{</span>��
 $ xxd token
@@ -173,7 +173,7 @@ $ xxd token
 </code></pre></div><p>on the other hand, <code>level09</code> require an argument.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./level09
 You need to provied only one arg.
-</code></pre></div><p>The argument is transformed into another string</p>
+</code></pre></div><p>The argument is transformed into another string.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./level09 aaaaa
 abcde
 $ ./level09 <span style="color:#66d9ef">$(</span>python -c <span style="color:#e6db74">&#39;print(&#34;a&#34;*26)&#39;</span><span style="color:#66d9ef">)</span>
@@ -181,7 +181,7 @@ abcdefghijklmnopqrstuvwxyz
 $ ./level09 <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>python -c <span style="color:#e6db74">&#39;print(&#34;hello\x05world&#34;)&#39;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
 hfnos
 <span style="color:#f92672">}</span>vzun
-</code></pre></div><p>with the following output we can determine how <code>level09</code> work.<br>
+</code></pre></div><p>With the following output we can determine how <code>level09</code> work.<br>
 <code>level09</code> transform our argument by adding to any char its index value in the string.</p>
 <h2 id="game-breaker">Game breaker</h2>
 <p>To decode <code>token</code>, we need to write a script who does the opposite of <code>level09</code>.</p>
@@ -214,7 +214,7 @@ abcdef
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="tags/exploit/">exploit</a></span>
+          </svg><span class="tag"><a href="tags/exploit/">Exploit</a></span><span class="tag"><a href="tags/forensic/">Forensic</a></span><span class="tag"><a href="tags/python/">Python</a></span><span class="tag"><a href="tags/reverse-engineering/">Reverse Engineering</a></span>
         </p>
 
       <p>

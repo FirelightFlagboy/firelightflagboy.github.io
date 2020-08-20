@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/glossary/acl/</loc>
+    <lastmod>2020-08-20T12:04:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-08-20T12:04:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-08-20T12:04:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/system/</loc>
+    <lastmod>2020-08-20T12:04:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-08-20T12:04:27+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/category/</loc>
     <lastmod>2020-08-18T11:24:50+02:00</lastmod>
   </url>
@@ -28,11 +53,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-08-18T11:24:50+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/networking/</loc>
     <lastmod>2020-08-18T11:24:50+02:00</lastmod>
   </url>
@@ -43,17 +63,7 @@
   </url>
   
   <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-08-18T11:24:50+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/python/</loc>
-    <lastmod>2020-08-18T11:24:50+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-08-18T11:24:50+02:00</lastmod>
   </url>
   
@@ -83,13 +93,23 @@
   </url>
   
   <url>
-    <loc>/tags/system/</loc>
+    <loc>/tags/file/</loc>
     <lastmod>2020-08-03T18:26:16+02:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/glossary/symlink/</loc>
     <lastmod>2020-08-03T18:26:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/asm/</loc>
+    <lastmod>2020-08-03T15:59:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/c/</loc>
+    <lastmod>2020-08-03T15:59:10+02:00</lastmod>
   </url>
   
   <url>
@@ -128,8 +148,23 @@
   </url>
   
   <url>
+    <loc>/tags/perl/</loc>
+    <lastmod>2020-08-03T15:57:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/shell-script/</loc>
+    <lastmod>2020-08-03T15:57:10+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/snowcrash/level12/</loc>
     <lastmod>2020-08-03T15:57:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/lua/</loc>
+    <lastmod>2020-08-03T15:56:10+02:00</lastmod>
   </url>
   
   <url>
@@ -143,6 +178,11 @@
   </url>
   
   <url>
+    <loc>/tags/forensic/</loc>
+    <lastmod>2020-08-03T15:54:09+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/snowcrash/level09/</loc>
     <lastmod>2020-08-03T15:54:09+02:00</lastmod>
   </url>
@@ -153,17 +193,17 @@
   </url>
   
   <url>
-    <loc>/tags/shell-script/</loc>
-    <lastmod>2020-08-03T15:52:09+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/snowcrash/level07/</loc>
     <lastmod>2020-08-03T15:52:09+02:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/php/</loc>
+    <lastmod>2020-08-03T15:44:15+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/regex/</loc>
     <lastmod>2020-08-03T15:44:15+02:00</lastmod>
   </url>
   
@@ -193,11 +233,6 @@
   </url>
   
   <url>
-    <loc>/tags/file/</loc>
-    <lastmod>2020-08-02T17:02:49+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/unix/</loc>
     <lastmod>2020-08-02T17:02:49+02:00</lastmod>
   </url>
@@ -210,11 +245,6 @@
   <url>
     <loc>/posts/snowcrash/level03/</loc>
     <lastmod>2020-08-02T15:06:27+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/network/</loc>
-    <lastmod>2020-07-31T19:28:20+02:00</lastmod>
   </url>
   
   <url>
@@ -243,7 +273,22 @@
   </url>
   
   <url>
+    <loc>/tags/admin-sys/</loc>
+    <lastmod>2020-07-28T21:36:02+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/cracking/</loc>
+    <lastmod>2020-07-28T21:36:02+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/snowcrash/level01/</loc>
+    <lastmod>2020-07-28T21:36:02+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ssh/</loc>
     <lastmod>2020-07-28T21:36:02+02:00</lastmod>
   </url>
   
@@ -260,6 +305,11 @@
   <url>
     <loc>/posts/glossary/ctf/</loc>
     <lastmod>2020-07-27T23:14:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/os/</loc>
+    <lastmod>2020-07-27T23:03:11+02:00</lastmod>
   </url>
   
   <url>

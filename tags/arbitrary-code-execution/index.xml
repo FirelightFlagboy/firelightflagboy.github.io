@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>arbitrary code execution on My blog</title>
+    <title>Arbitrary Code Execution on My blog</title>
     <link>/tags/arbitrary-code-execution/</link>
-    <description>Recent content in arbitrary code execution on My blog</description>
+    <description>Recent content in Arbitrary Code Execution on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
       
       <guid>/posts/snowcrash/level12/</guid>
-      <description>On our home directory, we have access to a perl script.
+      <description>On our home directory, we have access to a Perl script.
 The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub t { $nn = $_[1]; $xx = $_[0]; $xx =~ tr/a-z/A-Z/; $xx =~ s/\s.*//; @output = `egrep &amp;#34;^$xx&amp;#34; /tmp/xd 2&amp;gt;&amp;amp;1`; foreach $line (@output) { ($f, $s) = split(/:/, $line); if($s =~ $nn) { return 1; } } return 0; } sub n { if($_[0] == 1) { print(&amp;#34;.</description>
     </item>
     
@@ -28,8 +28,8 @@ The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &amp;#3
       <pubDate>Mon, 03 Aug 2020 15:56:10 +0200</pubDate>
       
       <guid>/posts/snowcrash/level11/</guid>
-      <description>On connection we have access to a lua script that is already running.
-The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) local server = assert(socket.bind(&amp;#34;127.0.0.1&amp;#34;, 5151)) function hash(pass) prog = io.popen(&amp;#34;echo &amp;#34;..pass..&amp;#34; | sha1sum&amp;#34;, &amp;#34;r&amp;#34;) data = prog:read(&amp;#34;*all&amp;#34;) prog:close() data = string.sub(data, 1, 40) return data end while 1 do local client = server:accept() client:send(&amp;#34;Password: &amp;#34;) client:settimeout(60) local l, err = client:receive() if not err then print(&amp;#34;trying &amp;#34; .. l) local h = hash(l) if h ~= &amp;#34;f05d1d066fb246efe0c6f7d095f909a7a0cf34a0&amp;#34; then client:send(&amp;#34;Erf nope.</description>
+      <description>On connection, we have access to a LUA script that is already running and its content is located in level11.lua.
+The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) local server = assert(socket.bind(&amp;#34;127.0.0.1&amp;#34;, 5151)) function hash(pass) prog = io.popen(&amp;#34;echo &amp;#34;..pass..&amp;#34; | sha1sum&amp;#34;, &amp;#34;r&amp;#34;) data = prog:read(&amp;#34;*all&amp;#34;) prog:close() data = string.sub(data, 1, 40) return data end while 1 do local client = server:accept() client:send(&amp;#34;Password: &amp;#34;) client:settimeout(60) local l, err = client:receive() if not err then print(&amp;#34;trying &amp;#34; .</description>
     </item>
     
     <item>
@@ -39,9 +39,9 @@ The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) l
       
       <guid>/posts/snowcrash/level07/</guid>
       <description>On the home directory, we have a file level07 with the following pseudo-code
-int main() { char *cmd; asprintf(&amp;amp;cmd, &amp;#34;/bin/echo %s &amp;#34;, getenv(&amp;#34;LOGNAME&amp;#34;)) return system(cmd); } Explenation level07 retrieve the value LOGNAME from the env table,
-then concat the string at the end of /bin/echo  and execute it
- Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the env table  system(char *command) executes a command specified in command by calling /bin/sh -c command</description>
+int main() { char *cmd; asprintf(&amp;amp;cmd, &amp;#34;/bin/echo %s &amp;#34;, getenv(&amp;#34;LOGNAME&amp;#34;)) return system(cmd); } Explanation level07 retrieve the value LOGNAME from the env table,
+then join the string at the end of /bin/echo and execute it
+ Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the Env table  system(char *command) executes a command specified in command by calling /bin/sh -c command</description>
     </item>
     
     <item>

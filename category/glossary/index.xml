@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>glossary on My blog</title>
+    <title>Glossary on My blog</title>
     <link>/category/glossary/</link>
-    <description>Recent content in glossary on My blog</description>
+    <description>Recent content in Glossary on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
@@ -18,9 +18,9 @@
       <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
       
       <guid>/posts/glossary/toctou/</guid>
-      <description>TOCTOU mean Time-of-Check to Time-of-Use. It&amp;rsquo;s a bug were it involve checking the state of the system and using the result
+      <description>TOCTOU mean Time-of-Check to Time-of-Use. It&amp;rsquo;s a bug where it involves checking the state of the system and using the result.
 Example if (access(&amp;#34;file&amp;#34;, W_OK) != 0) { exit(1); } fd = open(&amp;#34;file&amp;#34;, O_WRONLY); write(fd, buffer, sizeof(buffer)); Here an attacker can create a symlink after the access but before the open call, resulting in a malicious file to be open.
-Synonyms  TOCTTOU TOC/TOU  Source  wikipedia  </description>
+Synonyms  TOCTTOU TOC/TOU  Source  Wikipedia  </description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@ Synonyms  TOCTTOU TOC/TOU  Source  wikipedia  </description>
       <pubDate>Mon, 03 Aug 2020 18:26:16 +0200</pubDate>
       
       <guid>/posts/glossary/symlink/</guid>
-      <description>A symbolink link is a file that contains a reference to another file.
+      <description>A symbolic link is a file that contains a reference to another file.
 That reference take form as a path in its absolute or relative form.
 A symlink may contains a path that point to nothing
 Synonym  symlink soft link  </description>
@@ -42,7 +42,7 @@ Synonym  symlink soft link  </description>
       
       <guid>/posts/glossary/env_table/</guid>
       <description>An Environment Table is a table that is accessible by each process
-Some Environment variable to know about    name description     PATH used to list each directory to search for binary   HOME a directory to be consider as the home directory of the current user   PWD the current working directory    Source  wikipedia  </description>
+Some Environment variable to know about    name description     PATH used to list each directory to search for binary   HOME a directory to be considered as the home directory of the current user   PWD the current working directory    Source  Wikipedia  </description>
     </item>
     
     <item>
@@ -52,9 +52,9 @@ Some Environment variable to know about    name description     PATH used to lis
       
       <guid>/posts/glossary/file_permission/</guid>
       <description>Each file as his own permission set.
-It allow to
+It allows to
  control the ability of the users to view, change, navigate, and execute the contents of the file system
- Notation for Unix system permission can be see in its symbolic notation using ls -l
+ Notation for Unix system Permission can be seen in its symbolic notation using ls -l
 $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1st column is used to represent the file type and his permission.</description>
     </item>
     
@@ -64,8 +64,8 @@ $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1
       <pubDate>Tue, 28 Jul 2020 22:10:15 +0200</pubDate>
       
       <guid>/posts/glossary/rainbow_table/</guid>
-      <description>A Rainbow table is a table of precomputed-hash values generated from hash function. It is generaly used to crack password.
-Source  wikipedia  </description>
+      <description>A Rainbow table is a table of precomputed-hash values generated from hash function. It is generally used to crack password.
+Source  Wikipedia  </description>
     </item>
     
     <item>
@@ -75,7 +75,7 @@ Source  wikipedia  </description>
       
       <guid>/posts/glossary/brute_force/</guid>
       <description>In cryptography, a brute force attack is when an attacker submit as many as possible passwords with the hope to guess the right password
-Source  wikipedia  </description>
+Source  Wikipedia  </description>
     </item>
     
     <item>
@@ -84,9 +84,9 @@ Source  wikipedia  </description>
       <pubDate>Tue, 28 Jul 2020 21:48:30 +0200</pubDate>
       
       <guid>/posts/glossary/hash_function/</guid>
-      <description>an hash function is a function that can take data of arbitrary size and output data to fixed size. the output of an hash function is called:
- hash value hashes digest  For example a hash function can be used to map name to index in a fixed-size table ( hash table ) we call this process hashing
-Source  wikipedia  </description>
+      <description>A hash function is a function that can take data of arbitrary size and output data to fixed size. The output of a hash function is called:
+ hash value hashes digest  For example a hash function can be used to map name to index in a fixed-size table (hash table) we call this process hashing
+Source  Wikipedia  </description>
     </item>
     
     <item>
@@ -95,10 +95,10 @@ Source  wikipedia  </description>
       <pubDate>Tue, 28 Jul 2020 18:38:17 +0200</pubDate>
       
       <guid>/posts/glossary/rot_permutation/</guid>
-      <description>a Rot Permutation or Cesar Permutation is a method to transform a phrase into another by permuting char with another n-th letter
+      <description>A Rot Permutation or Cesar Permutation is a method to transform a phrase into another by permuting char with another nth letter
 generally we add the amount of rotation to the function name:
  rotXX | rot-XX where XX is the rotation count
- Example     1 5 10 13 26 &amp;hellip;     a b f k n a &amp;hellip;   b c g l o b &amp;hellip;   c d h m p c &amp;hellip;   &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip;    with rot13 hello world become uryyb jbeyq</description>
+ Example     1 5 10 13 26 &amp;hellip;     a b f k n a &amp;hellip;   b c g l o b &amp;hellip;   c d h m p c &amp;hellip;   &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip;    With rot13 hello world become uryyb jbeyq</description>
     </item>
     
     <item>
@@ -109,7 +109,7 @@ generally we add the amount of rotation to the function name:
       <guid>/posts/glossary/ctf/</guid>
       <description>CTF stand for Capture The Flag(s).
 It&amp;rsquo;s a type of game/exercise were you, the player need to find the flag.
-The flag is generally a string, but it can represented in other way.</description>
+The flag is generally a string, but it can be represented in other way.</description>
     </item>
     
     <item>
@@ -118,7 +118,7 @@ The flag is generally a string, but it can represented in other way.</descriptio
       <pubDate>Mon, 27 Jul 2020 23:03:11 +0200</pubDate>
       
       <guid>/posts/glossary/vm/</guid>
-      <description>VM stand for Virtual Machine, it&amp;rsquo;s a &amp;ldquo;machine&amp;rdquo; that will be run inside another machine. Crazy right ?
+      <description>VM stand for Virtual Machine, it&amp;rsquo;s a “machine” that will be run inside another machine. Crazy right ?
 To use a virtual Machine we some software like VirtualBox or VMWare</description>
     </item>
     

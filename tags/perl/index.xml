@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Perl on My blog</title>
+    <link>/tags/perl/</link>
+    <description>Recent content in Perl on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 03 Aug 2020 15:57:10 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Snowcrash - Level12</title>
+      <link>/posts/snowcrash/level12/</link>
+      <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level12/</guid>
+      <description>On our home directory, we have access to a Perl script.
+The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub t { $nn = $_[1]; $xx = $_[0]; $xx =~ tr/a-z/A-Z/; $xx =~ s/\s.*//; @output = `egrep &amp;#34;^$xx&amp;#34; /tmp/xd 2&amp;gt;&amp;amp;1`; foreach $line (@output) { ($f, $s) = split(/:/, $line); if($s =~ $nn) { return 1; } } return 0; } sub n { if($_[0] == 1) { print(&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Snowcrash - Level04</title>
+      <link>/posts/snowcrash/level04/</link>
+      <pubDate>Sun, 02 Aug 2020 21:25:56 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level04/</guid>
+      <description>We have a file level04.pl with the setuid set
+#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub x { $y = $_[0]; print `echo $y 2&amp;gt;&amp;amp;1`; } x(param(&amp;#34;x&amp;#34;)); Quick explanation The script take a parameter x.
+That parameter is included in the string `echo $y 2&amp;gt;&amp;amp;1` (where y is our x value).
+Then execute that string has a shell command then print its output.
+Normally the script should print what we give it to params x.</description>
+    </item>
+    
+  </channel>
+</rss>

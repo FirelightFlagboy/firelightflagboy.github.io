@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="florian ">
-<meta name="description" content="On our home dir, we have a binary level13.
+<meta name="description" content="On our home DIR, we have a binary level13.
 By executing it, we see that he check if we have the correct UID for using it
 $ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid=2013(level13) groups=2013(level13),100(users) Pseudo Code #define UID 4242  void main(void) { uid_t uid; char *token; uid = getuid(); if (uid != UID) { printf(&amp;#34;UID %d started us but we we expect %d\n&amp;#34;, getuid(), UID); exit(1); } token = ft_des(&amp;#34;boe]!" />
-<meta name="keywords" content=", exploit, reverse engineering" />
+<meta name="keywords" content=", Exploit, Reverse Engineering, C, System, ASM" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/snowcrash/level13/" />
@@ -35,7 +35,7 @@ $ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid
 
 
 <meta itemprop="name" content="Snowcrash - Level13">
-<meta itemprop="description" content="On our home dir, we have a binary level13.
+<meta itemprop="description" content="On our home DIR, we have a binary level13.
 By executing it, we see that he check if we have the correct UID for using it
 $ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid=2013(level13) groups=2013(level13),100(users) Pseudo Code #define UID 4242  void main(void) { uid_t uid; char *token; uid = getuid(); if (uid != UID) { printf(&#34;UID %d started us but we we expect %d\n&#34;, getuid(), UID); exit(1); } token = ft_des(&#34;boe]!">
 <meta itemprop="datePublished" content="2020-08-03T15:58:10+02:00" />
@@ -45,27 +45,27 @@ $ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid
 
 
 
-<meta itemprop="keywords" content="exploit,reverse engineering," />
+<meta itemprop="keywords" content="Exploit,Reverse Engineering,C,System,ASM," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="Snowcrash - Level13"/>
-<meta name="twitter:description" content="On our home dir, we have a binary level13.
+<meta name="twitter:description" content="On our home DIR, we have a binary level13.
 By executing it, we see that he check if we have the correct UID for using it
 $ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid=2013(level13) groups=2013(level13),100(users) Pseudo Code #define UID 4242  void main(void) { uid_t uid; char *token; uid = getuid(); if (uid != UID) { printf(&#34;UID %d started us but we we expect %d\n&#34;, getuid(), UID); exit(1); } token = ft_des(&#34;boe]!"/>
 
 
 
     <meta property="og:title" content="Snowcrash - Level13" />
-<meta property="og:description" content="On our home dir, we have a binary level13.
+<meta property="og:description" content="On our home DIR, we have a binary level13.
 By executing it, we see that he check if we have the correct UID for using it
 $ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid=2013(level13) groups=2013(level13),100(users) Pseudo Code #define UID 4242  void main(void) { uid_t uid; char *token; uid = getuid(); if (uid != UID) { printf(&#34;UID %d started us but we we expect %d\n&#34;, getuid(), UID); exit(1); } token = ft_des(&#34;boe]!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/snowcrash/level13/" />
 <meta property="og:image" content=""/>
 <meta property="article:published_time" content="2020-08-03T15:58:10+02:00" />
-<meta property="article:modified_time" content="2020-08-03T15:58:10+02:00" /><meta property="og:site_name" content="My blog" /><meta property="og:see_also" content="/posts/snowcrash/level14/" /><meta property="og:see_also" content="/posts/snowcrash/level12/" /><meta property="og:see_also" content="/posts/snowcrash/level11/" /><meta property="og:see_also" content="/posts/snowcrash/level10/" /><meta property="og:see_also" content="/posts/snowcrash/level09/" />
+<meta property="article:modified_time" content="2020-08-03T15:58:10+02:00" /><meta property="og:site_name" content="My blog" />
 
 
 
@@ -155,7 +155,7 @@ $ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid
       
 
       <div class="post-content">
-        <p>On our home dir, we have a binary <code>level13</code>.<br>
+        <p>On our home DIR, we have a binary <code>level13</code>.<br>
 By executing it, we see that he check if we have the correct UID for using it</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./level13
 UID <span style="color:#ae81ff">2013</span> started us but we we expect <span style="color:#ae81ff">4242</span>
@@ -191,7 +191,7 @@ Starting program: /home/user/level13/level13
 Breakpoint 1, 0x0804858f in main <span style="color:#f92672">()</span>
 <span style="color:#f92672">(</span>gdb<span style="color:#f92672">)</span> call <span style="color:#f92672">(</span>char*<span style="color:#f92672">)</span>ft_des<span style="color:#f92672">(</span>0x80486ef<span style="color:#f92672">)</span>
 $2 <span style="color:#f92672">=</span> 0x804b028 <span style="color:#e6db74">&#34;[ ... output omitted ... ]&#34;</span>
-</code></pre></div><p>But it exist some other solution, like:</p>
+</code></pre></div><p>But it exists some other solution, like:</p>
 <ul>
 <li>Injecting a handcrafted lib to overwrite <code>getuid()</code></li>
 <li>rewrite the binary to change the check of UID</li>
@@ -207,7 +207,7 @@ $2 <span style="color:#f92672">=</span> 0x804b028 <span style="color:#e6db74">&#
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="tags/exploit/">exploit</a></span><span class="tag"><a href="tags/reverse-engineering/">reverse engineering</a></span>
+          </svg><span class="tag"><a href="tags/exploit/">Exploit</a></span><span class="tag"><a href="tags/reverse-engineering/">Reverse Engineering</a></span><span class="tag"><a href="tags/c/">C</a></span><span class="tag"><a href="tags/system/">System</a></span><span class="tag"><a href="tags/asm/">ASM</a></span>
         </p>
 
       <p>

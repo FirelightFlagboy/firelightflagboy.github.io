@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on My blog</title>
+    <link>/tags/c/</link>
+    <description>Recent content in C on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 03 Aug 2020 15:59:10 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Snowcrash - Level14</title>
+      <link>/posts/snowcrash/level14/</link>
+      <pubDate>Mon, 03 Aug 2020 15:59:10 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level14/</guid>
+      <description>On connection, we arrived on a empty home dir.
+$ ls -l total 0 After searching for a file that is related to flag14 but found nothing.
+We try to inspect getflag, the binary that give us the flag for all the previous level
+Pseudo Code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75  #include &amp;lt;stdio.</description>
+    </item>
+    
+    <item>
+      <title>Snowcrash - Level13</title>
+      <link>/posts/snowcrash/level13/</link>
+      <pubDate>Mon, 03 Aug 2020 15:58:10 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level13/</guid>
+      <description>On our home DIR, we have a binary level13.
+By executing it, we see that he check if we have the correct UID for using it
+$ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid=2013(level13) groups=2013(level13),100(users) Pseudo Code #define UID 4242  void main(void) { uid_t uid; char *token; uid = getuid(); if (uid != UID) { printf(&amp;#34;UID %d started us but we we expect %d\n&amp;#34;, getuid(), UID); exit(1); } token = ft_des(&amp;#34;boe]!</description>
+    </item>
+    
+    <item>
+      <title>Snowcrash - Level10</title>
+      <link>/posts/snowcrash/level10/</link>
+      <pubDate>Mon, 03 Aug 2020 15:55:09 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level10/</guid>
+      <description>On connection, we are greeted by the 2 following file.
+$ ls -l total 16 -rwsr-sr-x+ 1 flag10 level10 10817 Mar 5 2016 level10 -rw------- 1 flag10 flag10 26 Mar 5 2016 token Pseudo code The following Pseudo code is generated from level10
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49  int main(int argc, char **argv) { char *host; char *file; int socketfd; int fd; int rc; char buffer [4096]; sockaddr_in addr; if (argc &amp;lt; 3) { errx(1, &amp;#34;%s file host\n\tsends file to host if you have access to it\n&amp;#34;, argv[0]); } file = argv[1]; host = argv[2]; if (access(argv[1], R_OK) == 0) { printf(&amp;#34;Connecting to %s:6969 .</description>
+    </item>
+    
+    <item>
+      <title>Snowcrash - Level07</title>
+      <link>/posts/snowcrash/level07/</link>
+      <pubDate>Mon, 03 Aug 2020 15:52:09 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level07/</guid>
+      <description>On the home directory, we have a file level07 with the following pseudo-code
+int main() { char *cmd; asprintf(&amp;amp;cmd, &amp;#34;/bin/echo %s &amp;#34;, getenv(&amp;#34;LOGNAME&amp;#34;)) return system(cmd); } Explanation level07 retrieve the value LOGNAME from the env table,
+then join the string at the end of /bin/echo and execute it
+ Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the Env table  system(char *command) executes a command specified in command by calling /bin/sh -c command</description>
+    </item>
+    
+    <item>
+      <title>Snowcrash - Level03</title>
+      <link>/posts/snowcrash/level03/</link>
+      <pubDate>Sun, 02 Aug 2020 15:06:27 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level03/</guid>
+      <description>On the Home directory of level03 we have an executable file with the setuid file permission set
+$ ls -l total 12 -rwsr-sr-x 1 flag03 level03 8627 Mar 5 2016 level03 Analyzing level03 By using the debugger gdb, we can disassemble level03 and inspect his ASM code.
+1 2 3 4 5 6 7 8 9 10 11 12  $ gdb level03 -q Reading symbols from level03...done. Dump of assembler code for function main: (gdb) disas main .</description>
+    </item>
+    
+  </channel>
+</rss>

