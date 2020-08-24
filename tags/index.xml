@@ -2,283 +2,283 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My blog</title>
-    <link>/tags/</link>
+    <link>https://firelightflagboy.github.io/tags/</link>
     <description>Recent content in Tags on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>System</title>
-      <link>/tags/system/</link>
+      <link>https://firelightflagboy.github.io/tags/system/</link>
       <pubDate>Thu, 20 Aug 2020 12:04:27 +0200</pubDate>
       
-      <guid>/tags/system/</guid>
+      <guid>https://firelightflagboy.github.io/tags/system/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>/tags/docker/</link>
+      <link>https://firelightflagboy.github.io/tags/docker/</link>
       <pubDate>Tue, 18 Aug 2020 11:24:50 +0200</pubDate>
       
-      <guid>/tags/docker/</guid>
+      <guid>https://firelightflagboy.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>json</title>
-      <link>/tags/json/</link>
+      <link>https://firelightflagboy.github.io/tags/json/</link>
       <pubDate>Tue, 18 Aug 2020 11:24:50 +0200</pubDate>
       
-      <guid>/tags/json/</guid>
+      <guid>https://firelightflagboy.github.io/tags/json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>minecraft</title>
-      <link>/tags/minecraft/</link>
+      <link>https://firelightflagboy.github.io/tags/minecraft/</link>
       <pubDate>Tue, 18 Aug 2020 11:24:50 +0200</pubDate>
       
-      <guid>/tags/minecraft/</guid>
+      <guid>https://firelightflagboy.github.io/tags/minecraft/</guid>
       <description></description>
     </item>
     
     <item>
       <title>networking</title>
-      <link>/tags/networking/</link>
+      <link>https://firelightflagboy.github.io/tags/networking/</link>
       <pubDate>Tue, 18 Aug 2020 11:24:50 +0200</pubDate>
       
-      <guid>/tags/networking/</guid>
+      <guid>https://firelightflagboy.github.io/tags/networking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>/tags/python/</link>
+      <link>https://firelightflagboy.github.io/tags/python/</link>
       <pubDate>Tue, 18 Aug 2020 11:24:50 +0200</pubDate>
       
-      <guid>/tags/python/</guid>
+      <guid>https://firelightflagboy.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CTF</title>
-      <link>/tags/ctf/</link>
+      <link>https://firelightflagboy.github.io/tags/ctf/</link>
       <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
       
-      <guid>/tags/ctf/</guid>
+      <guid>https://firelightflagboy.github.io/tags/ctf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exploit</title>
-      <link>/tags/exploit/</link>
+      <link>https://firelightflagboy.github.io/tags/exploit/</link>
       <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
       
-      <guid>/tags/exploit/</guid>
+      <guid>https://firelightflagboy.github.io/tags/exploit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TOCTOU</title>
-      <link>/tags/toctou/</link>
+      <link>https://firelightflagboy.github.io/tags/toctou/</link>
       <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
       
-      <guid>/tags/toctou/</guid>
+      <guid>https://firelightflagboy.github.io/tags/toctou/</guid>
       <description></description>
     </item>
     
     <item>
       <title>File</title>
-      <link>/tags/file/</link>
+      <link>https://firelightflagboy.github.io/tags/file/</link>
       <pubDate>Mon, 03 Aug 2020 18:26:16 +0200</pubDate>
       
-      <guid>/tags/file/</guid>
+      <guid>https://firelightflagboy.github.io/tags/file/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ASM</title>
-      <link>/tags/asm/</link>
+      <link>https://firelightflagboy.github.io/tags/asm/</link>
       <pubDate>Mon, 03 Aug 2020 15:59:10 +0200</pubDate>
       
-      <guid>/tags/asm/</guid>
+      <guid>https://firelightflagboy.github.io/tags/asm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C</title>
-      <link>/tags/c/</link>
+      <link>https://firelightflagboy.github.io/tags/c/</link>
       <pubDate>Mon, 03 Aug 2020 15:59:10 +0200</pubDate>
       
-      <guid>/tags/c/</guid>
+      <guid>https://firelightflagboy.github.io/tags/c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reverse Engineering</title>
-      <link>/tags/reverse-engineering/</link>
+      <link>https://firelightflagboy.github.io/tags/reverse-engineering/</link>
       <pubDate>Mon, 03 Aug 2020 15:59:10 +0200</pubDate>
       
-      <guid>/tags/reverse-engineering/</guid>
+      <guid>https://firelightflagboy.github.io/tags/reverse-engineering/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Arbitrary Code Execution</title>
-      <link>/tags/arbitrary-code-execution/</link>
+      <link>https://firelightflagboy.github.io/tags/arbitrary-code-execution/</link>
       <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
       
-      <guid>/tags/arbitrary-code-execution/</guid>
+      <guid>https://firelightflagboy.github.io/tags/arbitrary-code-execution/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Perl</title>
-      <link>/tags/perl/</link>
+      <link>https://firelightflagboy.github.io/tags/perl/</link>
       <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
       
-      <guid>/tags/perl/</guid>
+      <guid>https://firelightflagboy.github.io/tags/perl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shell Script</title>
-      <link>/tags/shell-script/</link>
+      <link>https://firelightflagboy.github.io/tags/shell-script/</link>
       <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
       
-      <guid>/tags/shell-script/</guid>
+      <guid>https://firelightflagboy.github.io/tags/shell-script/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LUA</title>
-      <link>/tags/lua/</link>
+      <link>https://firelightflagboy.github.io/tags/lua/</link>
       <pubDate>Mon, 03 Aug 2020 15:56:10 +0200</pubDate>
       
-      <guid>/tags/lua/</guid>
+      <guid>https://firelightflagboy.github.io/tags/lua/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Forensic</title>
-      <link>/tags/forensic/</link>
+      <link>https://firelightflagboy.github.io/tags/forensic/</link>
       <pubDate>Mon, 03 Aug 2020 15:54:09 +0200</pubDate>
       
-      <guid>/tags/forensic/</guid>
+      <guid>https://firelightflagboy.github.io/tags/forensic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PHP</title>
-      <link>/tags/php/</link>
+      <link>https://firelightflagboy.github.io/tags/php/</link>
       <pubDate>Mon, 03 Aug 2020 15:44:15 +0200</pubDate>
       
-      <guid>/tags/php/</guid>
+      <guid>https://firelightflagboy.github.io/tags/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Regex</title>
-      <link>/tags/regex/</link>
+      <link>https://firelightflagboy.github.io/tags/regex/</link>
       <pubDate>Mon, 03 Aug 2020 15:44:15 +0200</pubDate>
       
-      <guid>/tags/regex/</guid>
+      <guid>https://firelightflagboy.github.io/tags/regex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>BINARY</title>
-      <link>/tags/binary/</link>
+      <link>https://firelightflagboy.github.io/tags/binary/</link>
       <pubDate>Sun, 02 Aug 2020 17:02:58 +0200</pubDate>
       
-      <guid>/tags/binary/</guid>
+      <guid>https://firelightflagboy.github.io/tags/binary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>UNIX</title>
-      <link>/tags/unix/</link>
+      <link>https://firelightflagboy.github.io/tags/unix/</link>
       <pubDate>Sun, 02 Aug 2020 17:02:49 +0200</pubDate>
       
-      <guid>/tags/unix/</guid>
+      <guid>https://firelightflagboy.github.io/tags/unix/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cryptography</title>
-      <link>/tags/cryptography/</link>
+      <link>https://firelightflagboy.github.io/tags/cryptography/</link>
       <pubDate>Tue, 28 Jul 2020 22:10:15 +0200</pubDate>
       
-      <guid>/tags/cryptography/</guid>
+      <guid>https://firelightflagboy.github.io/tags/cryptography/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Admin Sys</title>
-      <link>/tags/admin-sys/</link>
+      <link>https://firelightflagboy.github.io/tags/admin-sys/</link>
       <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
       
-      <guid>/tags/admin-sys/</guid>
+      <guid>https://firelightflagboy.github.io/tags/admin-sys/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cracking</title>
-      <link>/tags/cracking/</link>
+      <link>https://firelightflagboy.github.io/tags/cracking/</link>
       <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
       
-      <guid>/tags/cracking/</guid>
+      <guid>https://firelightflagboy.github.io/tags/cracking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSH</title>
-      <link>/tags/ssh/</link>
+      <link>https://firelightflagboy.github.io/tags/ssh/</link>
       <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
       
-      <guid>/tags/ssh/</guid>
+      <guid>https://firelightflagboy.github.io/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Encoding</title>
-      <link>/tags/encoding/</link>
+      <link>https://firelightflagboy.github.io/tags/encoding/</link>
       <pubDate>Tue, 28 Jul 2020 18:38:17 +0200</pubDate>
       
-      <guid>/tags/encoding/</guid>
+      <guid>https://firelightflagboy.github.io/tags/encoding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OS</title>
-      <link>/tags/os/</link>
+      <link>https://firelightflagboy.github.io/tags/os/</link>
       <pubDate>Mon, 27 Jul 2020 23:03:11 +0200</pubDate>
       
-      <guid>/tags/os/</guid>
+      <guid>https://firelightflagboy.github.io/tags/os/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Virtualization</title>
-      <link>/tags/virtualization/</link>
+      <link>https://firelightflagboy.github.io/tags/virtualization/</link>
       <pubDate>Mon, 27 Jul 2020 23:03:11 +0200</pubDate>
       
-      <guid>/tags/virtualization/</guid>
+      <guid>https://firelightflagboy.github.io/tags/virtualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>introduction</title>
-      <link>/tags/introduction/</link>
+      <link>https://firelightflagboy.github.io/tags/introduction/</link>
       <pubDate>Mon, 27 Jul 2020 11:08:35 +0200</pubDate>
       
-      <guid>/tags/introduction/</guid>
+      <guid>https://firelightflagboy.github.io/tags/introduction/</guid>
       <description></description>
     </item>
     

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LUA on My blog</title>
-    <link>/tags/lua/</link>
+    <link>https://firelightflagboy.github.io/tags/lua/</link>
     <description>Recent content in LUA on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 03 Aug 2020 15:56:10 +0200</lastBuildDate>
     
-	<atom:link href="/tags/lua/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/tags/lua/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Snowcrash - Level11</title>
-      <link>/posts/snowcrash/level11/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level11/</link>
       <pubDate>Mon, 03 Aug 2020 15:56:10 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level11/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level11/</guid>
       <description>On connection, we have access to a LUA script that is already running and its content is located in level11.lua.
 The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) local server = assert(socket.bind(&amp;#34;127.0.0.1&amp;#34;, 5151)) function hash(pass) prog = io.popen(&amp;#34;echo &amp;#34;..pass..&amp;#34; | sha1sum&amp;#34;, &amp;#34;r&amp;#34;) data = prog:read(&amp;#34;*all&amp;#34;) prog:close() data = string.sub(data, 1, 40) return data end while 1 do local client = server:accept() client:send(&amp;#34;Password: &amp;#34;) client:settimeout(60) local l, err = client:receive() if not err then print(&amp;#34;trying &amp;#34; .</description>
     </item>

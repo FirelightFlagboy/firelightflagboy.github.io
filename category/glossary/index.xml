@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Glossary on My blog</title>
-    <link>/category/glossary/</link>
+    <link>https://firelightflagboy.github.io/category/glossary/</link>
     <description>Recent content in Glossary on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
     
-	<atom:link href="/category/glossary/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/category/glossary/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What is ACL</title>
-      <link>/posts/glossary/acl/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/acl/</link>
       <pubDate>Thu, 20 Aug 2020 12:04:27 +0200</pubDate>
       
-      <guid>/posts/glossary/acl/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/acl/</guid>
       <description>ACL for Access Control List is a list of permission. That list can specify whom have access to the file and the operations permitted on it.
 ACL can be retrieved using the command getfacl, here is the following output of that command:
 getfacl: Removing leading &amp;#39;/&amp;#39; from absolute path names # file: opt/openarenaserver # owner: root # group: root user::rwx user:level05:rwx user:flag05:rwx group::r-x mask::rwx other::r-x default:user::rwx default:user:level05:rwx default:user:flag05:rwx default:group::r-x default:mask::rwx default:other::r-x Source  Wikipedia  </description>
@@ -25,10 +25,10 @@ getfacl: Removing leading &amp;#39;/&amp;#39; from absolute path names # file: o
     
     <item>
       <title>What is TOCTOU</title>
-      <link>/posts/glossary/toctou/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/toctou/</link>
       <pubDate>Mon, 17 Aug 2020 14:23:18 +0200</pubDate>
       
-      <guid>/posts/glossary/toctou/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/toctou/</guid>
       <description>TOCTOU mean Time-of-Check to Time-of-Use. It&amp;rsquo;s a bug where it involves checking the state of the system and using the result.
 Example if (access(&amp;#34;file&amp;#34;, W_OK) != 0) { exit(1); } fd = open(&amp;#34;file&amp;#34;, O_WRONLY); write(fd, buffer, sizeof(buffer)); Here an attacker can create a symlink after the access but before the open call, resulting in a malicious file to be open.
 Synonyms  TOCTTOU TOC/TOU  Source  Wikipedia  </description>
@@ -36,10 +36,10 @@ Synonyms  TOCTTOU TOC/TOU  Source  Wikipedia  </description>
     
     <item>
       <title>What is Symlink</title>
-      <link>/posts/glossary/symlink/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/symlink/</link>
       <pubDate>Mon, 03 Aug 2020 18:26:16 +0200</pubDate>
       
-      <guid>/posts/glossary/symlink/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/symlink/</guid>
       <description>A symbolic link is a file that contains a reference to another file.
 That reference take form as a path in its absolute or relative form.
 A symlink may contains a path that point to nothing
@@ -48,20 +48,20 @@ Synonym  symlink soft link  </description>
     
     <item>
       <title>What is Environment Table</title>
-      <link>/posts/glossary/env_table/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/env_table/</link>
       <pubDate>Sun, 02 Aug 2020 17:02:58 +0200</pubDate>
       
-      <guid>/posts/glossary/env_table/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/env_table/</guid>
       <description>An Environment Table is a table that is accessible by each process
 Some Environment variable to know about    name description     PATH used to list each directory to search for binary   HOME a directory to be considered as the home directory of the current user   PWD the current working directory    Source  Wikipedia  </description>
     </item>
     
     <item>
       <title>What is File Permission</title>
-      <link>/posts/glossary/file_permission/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/file_permission/</link>
       <pubDate>Sun, 02 Aug 2020 17:02:49 +0200</pubDate>
       
-      <guid>/posts/glossary/file_permission/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/file_permission/</guid>
       <description>Each file as his own permission set.
 It allows to
  control the ability of the users to view, change, navigate, and execute the contents of the file system
@@ -71,30 +71,30 @@ $ ls -l total 16 -rw-rw-r-- 1 level03 level03 0 Aug 2 17:22 foo with ls -l the 1
     
     <item>
       <title>What is Rainbow table</title>
-      <link>/posts/glossary/rainbow_table/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/rainbow_table/</link>
       <pubDate>Tue, 28 Jul 2020 22:10:15 +0200</pubDate>
       
-      <guid>/posts/glossary/rainbow_table/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/rainbow_table/</guid>
       <description>A Rainbow table is a table of precomputed-hash values generated from hash function. It is generally used to crack password.
 Source  Wikipedia  </description>
     </item>
     
     <item>
       <title>What is Brute Force Attack</title>
-      <link>/posts/glossary/brute_force/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/brute_force/</link>
       <pubDate>Tue, 28 Jul 2020 22:10:10 +0200</pubDate>
       
-      <guid>/posts/glossary/brute_force/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/brute_force/</guid>
       <description>In cryptography, a brute force attack is when an attacker submit as many as possible passwords with the hope to guess the right password
 Source  Wikipedia  </description>
     </item>
     
     <item>
       <title>What is Hash Function</title>
-      <link>/posts/glossary/hash_function/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/hash_function/</link>
       <pubDate>Tue, 28 Jul 2020 21:48:30 +0200</pubDate>
       
-      <guid>/posts/glossary/hash_function/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/hash_function/</guid>
       <description>A hash function is a function that can take data of arbitrary size and output data to fixed size. The output of a hash function is called:
  hash value hashes digest  For example a hash function can be used to map name to index in a fixed-size table (hash table) we call this process hashing
 Source  Wikipedia  </description>
@@ -102,10 +102,10 @@ Source  Wikipedia  </description>
     
     <item>
       <title>What is Rot Permutation</title>
-      <link>/posts/glossary/rot_permutation/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/rot_permutation/</link>
       <pubDate>Tue, 28 Jul 2020 18:38:17 +0200</pubDate>
       
-      <guid>/posts/glossary/rot_permutation/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/rot_permutation/</guid>
       <description>A Rot Permutation or Cesar Permutation is a method to transform a phrase into another by permuting char with another nth letter
 generally we add the amount of rotation to the function name:
  rotXX | rot-XX where XX is the rotation count
@@ -114,10 +114,10 @@ generally we add the amount of rotation to the function name:
     
     <item>
       <title>What is Ctf</title>
-      <link>/posts/glossary/ctf/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/ctf/</link>
       <pubDate>Mon, 27 Jul 2020 23:14:17 +0200</pubDate>
       
-      <guid>/posts/glossary/ctf/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/ctf/</guid>
       <description>CTF stand for Capture The Flag(s).
 It&amp;rsquo;s a type of game/exercise were you, the player need to find the flag.
 The flag is generally a string, but it can be represented in other way.</description>
@@ -125,10 +125,10 @@ The flag is generally a string, but it can be represented in other way.</descrip
     
     <item>
       <title>What is Vm</title>
-      <link>/posts/glossary/vm/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/vm/</link>
       <pubDate>Mon, 27 Jul 2020 23:03:11 +0200</pubDate>
       
-      <guid>/posts/glossary/vm/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/vm/</guid>
       <description>VM stand for Virtual Machine, it&amp;rsquo;s a “machine” that will be run inside another machine. Crazy right ?
 To use a virtual Machine we some software like VirtualBox or VMWare</description>
     </item>

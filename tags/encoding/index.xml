@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Encoding on My blog</title>
-    <link>/tags/encoding/</link>
+    <link>https://firelightflagboy.github.io/tags/encoding/</link>
     <description>Recent content in Encoding on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 28 Jul 2020 18:38:17 +0200</lastBuildDate>
     
-	<atom:link href="/tags/encoding/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/tags/encoding/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What is Rot Permutation</title>
-      <link>/posts/glossary/rot_permutation/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/rot_permutation/</link>
       <pubDate>Tue, 28 Jul 2020 18:38:17 +0200</pubDate>
       
-      <guid>/posts/glossary/rot_permutation/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/rot_permutation/</guid>
       <description>A Rot Permutation or Cesar Permutation is a method to transform a phrase into another by permuting char with another nth letter
 generally we add the amount of rotation to the function name:
  rotXX | rot-XX where XX is the rotation count

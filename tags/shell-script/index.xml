@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell Script on My blog</title>
-    <link>/tags/shell-script/</link>
+    <link>https://firelightflagboy.github.io/tags/shell-script/</link>
     <description>Recent content in Shell Script on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 03 Aug 2020 15:57:10 +0200</lastBuildDate>
     
-	<atom:link href="/tags/shell-script/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/tags/shell-script/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Snowcrash - Level12</title>
-      <link>/posts/snowcrash/level12/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level12/</link>
       <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level12/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level12/</guid>
       <description>On our home directory, we have access to a Perl script.
 The script #!/usr/bin/env perl # localhost:4646 use CGI qw{param}; print &amp;#34;Content-type: text/html\n\n&amp;#34;; sub t { $nn = $_[1]; $xx = $_[0]; $xx =~ tr/a-z/A-Z/; $xx =~ s/\s.*//; @output = `egrep &amp;#34;^$xx&amp;#34; /tmp/xd 2&amp;gt;&amp;amp;1`; foreach $line (@output) { ($f, $s) = split(/:/, $line); if($s =~ $nn) { return 1; } } return 0; } sub n { if($_[0] == 1) { print(&amp;#34;.</description>
     </item>
     
     <item>
       <title>Snowcrash - Level11</title>
-      <link>/posts/snowcrash/level11/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level11/</link>
       <pubDate>Mon, 03 Aug 2020 15:56:10 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level11/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level11/</guid>
       <description>On connection, we have access to a LUA script that is already running and its content is located in level11.lua.
 The server #!/usr/bin/env lua local socket = require(&amp;#34;socket&amp;#34;) local server = assert(socket.bind(&amp;#34;127.0.0.1&amp;#34;, 5151)) function hash(pass) prog = io.popen(&amp;#34;echo &amp;#34;..pass..&amp;#34; | sha1sum&amp;#34;, &amp;#34;r&amp;#34;) data = prog:read(&amp;#34;*all&amp;#34;) prog:close() data = string.sub(data, 1, 40) return data end while 1 do local client = server:accept() client:send(&amp;#34;Password: &amp;#34;) client:settimeout(60) local l, err = client:receive() if not err then print(&amp;#34;trying &amp;#34; .</description>
     </item>
     
     <item>
       <title>Snowcrash - Level08</title>
-      <link>/posts/snowcrash/level08/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level08/</link>
       <pubDate>Mon, 03 Aug 2020 15:53:09 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level08/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level08/</guid>
       <description>On the home DIR, we have 2 files level08 with is following pseudo-code and token who is only readable be flag08.
 $ ls -l total 16 -rwsr-s---+ 1 flag08 level08 8617 Mar 5 2016 level08 -rw------- 1 flag08 flag08 26 Mar 5 2016 token The Pseudo Code Here is the pseudo code for the file level08:
 int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]; if (argc == 1) { errx(1, &amp;#34;%s [file to read]\n&amp;#34;, argv[0]); } needle = strstr(argv[1], &amp;#34;token&amp;#34;); if (needle !</description>
@@ -45,10 +45,10 @@ int main(int argc,char **argv) { char *needle; int fd; ssize_t n; char buf[1024]
     
     <item>
       <title>Snowcrash - Level07</title>
-      <link>/posts/snowcrash/level07/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level07/</link>
       <pubDate>Mon, 03 Aug 2020 15:52:09 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level07/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level07/</guid>
       <description>On the home directory, we have a file level07 with the following pseudo-code
 int main() { char *cmd; asprintf(&amp;amp;cmd, &amp;#34;/bin/echo %s &amp;#34;, getenv(&amp;#34;LOGNAME&amp;#34;)) return system(cmd); } Explanation level07 retrieve the value LOGNAME from the env table,
 then join the string at the end of /bin/echo and execute it
@@ -57,10 +57,10 @@ then join the string at the end of /bin/echo and execute it
     
     <item>
       <title>Snowcrash - Level05</title>
-      <link>/posts/snowcrash/level05/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level05/</link>
       <pubDate>Mon, 03 Aug 2020 14:35:25 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level05/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level05/</guid>
       <description>When connecting to level05, we are greeted be the following line
 You have new mail. The mail $ cat /var/mail/level05 */2 * * * * su -c &amp;#34;sh /usr/sbin/openarenaserver&amp;#34; - flag05 The mail content is a Crontab instruction that execute
 sh /usr/sbin/openarenaserver as the user flag05 every 2 minute
@@ -69,10 +69,10 @@ The script #!/bin/sh  for i in /opt/openarenaserver/* ; do (ulimit -t 5; bash -x
     
     <item>
       <title>Snowcrash - Level03</title>
-      <link>/posts/snowcrash/level03/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level03/</link>
       <pubDate>Sun, 02 Aug 2020 15:06:27 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level03/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level03/</guid>
       <description>On the Home directory of level03 we have an executable file with the setuid file permission set
 $ ls -l total 12 -rwsr-sr-x 1 flag03 level03 8627 Mar 5 2016 level03 Analyzing level03 By using the debugger gdb, we can disassemble level03 and inspect his ASM code.
 1 2 3 4 5 6 7 8 9 10 11 12  $ gdb level03 -q Reading symbols from level03...done. Dump of assembler code for function main: (gdb) disas main .</description>
@@ -80,10 +80,10 @@ $ ls -l total 12 -rwsr-sr-x 1 flag03 level03 8627 Mar 5 2016 level03 Analyzing l
     
     <item>
       <title>Snowcrash - Level01</title>
-      <link>/posts/snowcrash/level01/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level01/</link>
       <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level01/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level01/</guid>
       <description>When looking the file /etc/passwd, we see that the user flag01 has is hash password written in the deprecated password column
 $ grep flag01 /etc/passwd flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash It exists some tools to decrypt hash that used different attack method like brute force or wordlist. I will use john for this level.
 We extract the line that contains the hash to password.txt
@@ -92,10 +92,10 @@ $ ssh -p 4242 level01@snowcrash grep flag01 /etc/passwd &amp;gt; password.txt [ 
     
     <item>
       <title>Snowcrash - Level00</title>
-      <link>/posts/snowcrash/level00/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level00/</link>
       <pubDate>Mon, 27 Jul 2020 22:51:34 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level00/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level00/</guid>
       <description>On connection to level00, we arrive at an empty home directory
 An interesting file Because we don&amp;rsquo;t have any file present in the home directory, we search for file related to the user flag00, our target.
 First we search for with flag00 as owner

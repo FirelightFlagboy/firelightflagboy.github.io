@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System on My blog</title>
-    <link>/tags/system/</link>
+    <link>https://firelightflagboy.github.io/tags/system/</link>
     <description>Recent content in System on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
     
-	<atom:link href="/tags/system/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/tags/system/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What is ACL</title>
-      <link>/posts/glossary/acl/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/acl/</link>
       <pubDate>Thu, 20 Aug 2020 12:04:27 +0200</pubDate>
       
-      <guid>/posts/glossary/acl/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/acl/</guid>
       <description>ACL for Access Control List is a list of permission. That list can specify whom have access to the file and the operations permitted on it.
 ACL can be retrieved using the command getfacl, here is the following output of that command:
 getfacl: Removing leading &amp;#39;/&amp;#39; from absolute path names # file: opt/openarenaserver # owner: root # group: root user::rwx user:level05:rwx user:flag05:rwx group::r-x mask::rwx other::r-x default:user::rwx default:user:level05:rwx default:user:flag05:rwx default:group::r-x default:mask::rwx default:other::r-x Source  Wikipedia  </description>
@@ -25,10 +25,10 @@ getfacl: Removing leading &amp;#39;/&amp;#39; from absolute path names # file: o
     
     <item>
       <title>What is Symlink</title>
-      <link>/posts/glossary/symlink/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/symlink/</link>
       <pubDate>Mon, 03 Aug 2020 18:26:16 +0200</pubDate>
       
-      <guid>/posts/glossary/symlink/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/symlink/</guid>
       <description>A symbolic link is a file that contains a reference to another file.
 That reference take form as a path in its absolute or relative form.
 A symlink may contains a path that point to nothing
@@ -37,10 +37,10 @@ Synonym  symlink soft link  </description>
     
     <item>
       <title>Snowcrash - Level13</title>
-      <link>/posts/snowcrash/level13/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level13/</link>
       <pubDate>Mon, 03 Aug 2020 15:58:10 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level13/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level13/</guid>
       <description>On our home DIR, we have a binary level13.
 By executing it, we see that he check if we have the correct UID for using it
 $ ./level13 UID 2013 started us but we we expect 4242 $ id uid=2013(level13) gid=2013(level13) groups=2013(level13),100(users) Pseudo Code #define UID 4242  void main(void) { uid_t uid; char *token; uid = getuid(); if (uid != UID) { printf(&amp;#34;UID %d started us but we we expect %d\n&amp;#34;, getuid(), UID); exit(1); } token = ft_des(&amp;#34;boe]!</description>

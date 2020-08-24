@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PHP on My blog</title>
-    <link>/tags/php/</link>
+    <link>https://firelightflagboy.github.io/tags/php/</link>
     <description>Recent content in PHP on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 03 Aug 2020 15:44:15 +0200</lastBuildDate>
     
-	<atom:link href="/tags/php/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Snowcrash - Level06</title>
-      <link>/posts/snowcrash/level06/</link>
+      <link>https://firelightflagboy.github.io/posts/snowcrash/level06/</link>
       <pubDate>Mon, 03 Aug 2020 15:44:15 +0200</pubDate>
       
-      <guid>/posts/snowcrash/level06/</guid>
+      <guid>https://firelightflagboy.github.io/posts/snowcrash/level06/</guid>
       <description>On the home directory, we have 2 files level06.php with the following content and level06 which is a wrapper around level06.php to run it as the user flag06, thanks to his setuid
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  #!/usr/bin/php &amp;lt;?php function y($m) { $m = preg_replace(&amp;#34;/\./&amp;#34;, &amp;#34; x &amp;#34;, $m); $m = preg_replace(&amp;#34;/@/&amp;#34;, &amp;#34; y&amp;#34;, $m); return $m; } function x($y, $z) { $a = file_get_contents($y); $a = preg_replace(&amp;#34;/(\[x (.</description>
     </item>

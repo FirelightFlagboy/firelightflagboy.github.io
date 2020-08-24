@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cryptography on My blog</title>
-    <link>/tags/cryptography/</link>
+    <link>https://firelightflagboy.github.io/tags/cryptography/</link>
     <description>Recent content in Cryptography on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 28 Jul 2020 22:10:15 +0200</lastBuildDate>
     
-	<atom:link href="/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What is Rainbow table</title>
-      <link>/posts/glossary/rainbow_table/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/rainbow_table/</link>
       <pubDate>Tue, 28 Jul 2020 22:10:15 +0200</pubDate>
       
-      <guid>/posts/glossary/rainbow_table/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/rainbow_table/</guid>
       <description>A Rainbow table is a table of precomputed-hash values generated from hash function. It is generally used to crack password.
 Source  Wikipedia  </description>
     </item>
     
     <item>
       <title>What is Brute Force Attack</title>
-      <link>/posts/glossary/brute_force/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/brute_force/</link>
       <pubDate>Tue, 28 Jul 2020 22:10:10 +0200</pubDate>
       
-      <guid>/posts/glossary/brute_force/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/brute_force/</guid>
       <description>In cryptography, a brute force attack is when an attacker submit as many as possible passwords with the hope to guess the right password
 Source  Wikipedia  </description>
     </item>
     
     <item>
       <title>What is Hash Function</title>
-      <link>/posts/glossary/hash_function/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/hash_function/</link>
       <pubDate>Tue, 28 Jul 2020 21:48:30 +0200</pubDate>
       
-      <guid>/posts/glossary/hash_function/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/hash_function/</guid>
       <description>A hash function is a function that can take data of arbitrary size and output data to fixed size. The output of a hash function is called:
  hash value hashes digest  For example a hash function can be used to map name to index in a fixed-size table (hash table) we call this process hashing
 Source  Wikipedia  </description>

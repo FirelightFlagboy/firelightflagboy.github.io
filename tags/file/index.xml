@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>File on My blog</title>
-    <link>/tags/file/</link>
+    <link>https://firelightflagboy.github.io/tags/file/</link>
     <description>Recent content in File on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 03 Aug 2020 18:26:16 +0200</lastBuildDate>
     
-	<atom:link href="/tags/file/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/tags/file/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What is Symlink</title>
-      <link>/posts/glossary/symlink/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/symlink/</link>
       <pubDate>Mon, 03 Aug 2020 18:26:16 +0200</pubDate>
       
-      <guid>/posts/glossary/symlink/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/symlink/</guid>
       <description>A symbolic link is a file that contains a reference to another file.
 That reference take form as a path in its absolute or relative form.
 A symlink may contains a path that point to nothing
@@ -26,10 +26,10 @@ Synonym  symlink soft link  </description>
     
     <item>
       <title>What is File Permission</title>
-      <link>/posts/glossary/file_permission/</link>
+      <link>https://firelightflagboy.github.io/posts/glossary/file_permission/</link>
       <pubDate>Sun, 02 Aug 2020 17:02:49 +0200</pubDate>
       
-      <guid>/posts/glossary/file_permission/</guid>
+      <guid>https://firelightflagboy.github.io/posts/glossary/file_permission/</guid>
       <description>Each file as his own permission set.
 It allows to
  control the ability of the users to view, change, navigate, and execute the contents of the file system
