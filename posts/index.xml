@@ -6,8 +6,133 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
+        <lastBuildDate>Fri, 21 Aug 2020 13:07:38 +0200</lastBuildDate>
         <atom:link href="https://firelightflagboy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Ansible Basic Tutorial</title>
+            <link>https://firelightflagboy.github.io/posts/ansible-tutorial/</link>
+            <pubDate>Fri, 21 Aug 2020 13:07:38 +0200</pubDate>
+            
+            <guid>https://firelightflagboy.github.io/posts/ansible-tutorial/</guid>
+            <description>Hi, for this tutorial, I will present you how to use Ansible
+What is Ansible Ansible can be defined with the first line with the following sentences
+ Ansible is an IT automation tool. It can configure systems, deploy software, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.
+@docs.ansible.com
+ Basic requirements For Ansible to work, we need 2 things
+ A Unix host A target with a ssh server and python3  Setup Ansible If you not already have Ansible do the following or see the Ansible installation Guide</description>
+            <content type="html"><![CDATA[<p>Hi, for this tutorial, I will present you how to use Ansible</p>
+<h2 id="what-is-ansible">What is Ansible</h2>
+<p>Ansible can be defined with the first line with the following sentences</p>
+<blockquote>
+<p>Ansible is an IT automation tool. It can configure systems, deploy software, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.<br>
+<a href="https://docs.ansible.com/ansible/latest/index.html">@docs.ansible.com</a></p>
+</blockquote>
+<h2 id="basic-requirements">Basic requirements</h2>
+<p>For Ansible to work, we need 2 things</p>
+<ul>
+<li>A Unix host</li>
+<li>A target with a <strong>ssh server</strong> and <strong>python3</strong></li>
+</ul>
+<h2 id="setup-ansible">Setup Ansible</h2>
+<p>If you not already have Ansible do the following or see the <a href="(https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installation-guide)">Ansible installation Guide</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt update
+sudo apt install ansible
+</code></pre></div><h3 id="add-our-target-to-ansible-inventory">Add our target to Ansible inventory</h3>
+<p>For Ansible to be able to communicate with our target, we need to add our target to an “inventory” file.<br>
+That file can be any file (you will need to use <code>-i &lt;FILE&gt;</code> to specify the file) or use <code>/etc/ansible/hosts</code>.</p>
+<p>We can do that by simply adding the following line</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">server.org</span>
+</code></pre></div><blockquote>
+<p>Here <code>server.org</code> is the address of my target host</p>
+</blockquote>
+<p>Or you can create a group if you want to set up multiple server in a row.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[webgroup]</span>
+<span style="color:#a6e22e">server.org</span>
+<span style="color:#a6e22e">another_server.org</span>
+</code></pre></div><p>More about Ansible inventory <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html">here</a>.</p>
+<p>I added the following content to <code>ansible_inventory.ini</code> (you can also edit <code>/etc/ansible/hosts</code>)</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[server]</span>
+<span style="color:#a6e22e">server.org</span>
+
+<span style="color:#66d9ef">[server:vars]</span>
+<span style="color:#a6e22e">ansible_python_interpreter</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/bin/python3</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>The line 4-5 is to set the <code>python</code> interpreter and avoid
+the warning that our target is using <code>python2</code></p>
+<h3 id="check-our-inventory">Check our inventory</h3>
+<p>Now, we check if Ansible can ping our target</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ansible -i ansible_inventory.ini server -m ping
+server.org | SUCCESS <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;changed&#34;</span>: false,
+    <span style="color:#e6db74">&#34;ping&#34;</span>: <span style="color:#e6db74">&#34;pong&#34;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p>The above output show everything is fine</p>
+</blockquote>
+<h2 id="our-first-playbook">Our first Playbook</h2>
+<p>Now that our basic Ansible configuration work, we can now begin the plat of resistance:<br>
+Working with playbooks.</p>
+<h3 id="what-is-a-playbook">What is a Playbook</h3>
+<p>A Playbooks is a file written in YAML that will be used by Ansible to do some work</p>
+<blockquote>
+<p>Playbooks are Ansible’s configuration, deployment, and orchestration language.<br>
+<a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks.html">@ansible_playbooks</a></p>
+</blockquote>
+<p>Each main action is defined by an <code>hosts</code> to target and a list of <code>tasks</code> to execute
+in that <code>hosts</code>, each tasks specify a module with his arguments.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">hosts</span>: &lt;hosts to target<span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">  tasks: &lt;tasks to do on that hosts&gt;</span>
+
+</code></pre></div><h3 id="ansible-say-hello">Ansible say hello</h3>
+<p>For our first Playbook, I will make my server say hello.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">hosts</span>: server
+  <span style="color:#66d9ef">tasks</span>:
+    - <span style="color:#66d9ef">name</span>: say hello world
+      <span style="color:#66d9ef">shell</span>:
+        <span style="color:#66d9ef">cmd</span>: <span style="color:#e6db74">&#34;echo hello world &gt; greetings&#34;</span>
+</code></pre></div><p>Here, my main action target the group <code>server</code> which have my ssh server as entry (<a href="#add-our-target-to-ansible-inventory">see</a>).
+The task that will be executed is a basic shell command that will write <code>hello world</code> in <code>greetings</code></p>
+<p>To execute a Playbook, we use the command <code>ansible-playbook</code> with the path of our Playbook.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ansible-playbook -i ansible_inventory.ini hello_world.yml
+
+PLAY <span style="color:#f92672">[</span>server<span style="color:#f92672">]</span> *******************************************************************************************
+
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> **********************************************************************************
+ok: <span style="color:#f92672">[</span>server.org<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>say hello world<span style="color:#f92672">]</span> **********************************************************************************
+changed: <span style="color:#f92672">[</span>server.org<span style="color:#f92672">]</span>
+
+PLAY RECAP **********************************************************************************************
+server.org                 : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+
+</code></pre></div><p>In my target server, I have the <code>greetings</code> file with the content <code>hello world</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ls
+greetings
+$ cat greetings
+hello world
+</code></pre></div><h2 id="source">Source</h2>
+<ul>
+<li><a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#playbooks-intro">Ansible Playbook intro</a>
+<ul>
+<li><a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#hosts-and-users">Ansible Playbook Hosts</a></li>
+<li><a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#tasks-list">Ansible Playbook Tasks list</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>What is ACL</title>

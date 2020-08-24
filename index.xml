@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 13:07:38 +0200</lastBuildDate>
     
 	<atom:link href="https://firelightflagboy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ansible Basic Tutorial</title>
+      <link>https://firelightflagboy.github.io/posts/ansible-tutorial/</link>
+      <pubDate>Fri, 21 Aug 2020 13:07:38 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/posts/ansible-tutorial/</guid>
+      <description>Hi, for this tutorial, I will present you how to use Ansible
+What is Ansible Ansible can be defined with the first line with the following sentences
+ Ansible is an IT automation tool. It can configure systems, deploy software, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.
+@docs.ansible.com
+ Basic requirements For Ansible to work, we need 2 things
+ A Unix host A target with a ssh server and python3  Setup Ansible If you not already have Ansible do the following or see the Ansible installation Guide</description>
+    </item>
     
     <item>
       <title>What is ACL</title>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Admin Sys on My blog</title>
-    <link>https://firelightflagboy.github.io/tags/admin-sys/</link>
-    <description>Recent content in Admin Sys on My blog</description>
+    <title>Ansible on My blog</title>
+    <link>https://firelightflagboy.github.io/tags/ansible/</link>
+    <description>Recent content in Ansible on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Fri, 21 Aug 2020 13:07:38 +0200</lastBuildDate>
     
-	<atom:link href="https://firelightflagboy.github.io/tags/admin-sys/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://firelightflagboy.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -24,18 +24,6 @@ What is Ansible Ansible can be defined with the first line with the following se
 @docs.ansible.com
  Basic requirements For Ansible to work, we need 2 things
  A Unix host A target with a ssh server and python3  Setup Ansible If you not already have Ansible do the following or see the Ansible installation Guide</description>
-    </item>
-    
-    <item>
-      <title>Snowcrash - Level01</title>
-      <link>https://firelightflagboy.github.io/posts/snowcrash/level01/</link>
-      <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
-      
-      <guid>https://firelightflagboy.github.io/posts/snowcrash/level01/</guid>
-      <description>When looking the file /etc/passwd, we see that the user flag01 has is hash password written in the deprecated password column
-$ grep flag01 /etc/passwd flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash It exists some tools to decrypt hash that used different attack method like brute force or wordlist. I will use john for this level.
-We extract the line that contains the hash to password.txt
-$ ssh -p 4242 level01@snowcrash grep flag01 /etc/passwd &amp;gt; password.txt [ .</description>
     </item>
     
   </channel>

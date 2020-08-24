@@ -7,10 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 20 Aug 2020 12:04:27 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 13:07:38 +0200</lastBuildDate>
     
 	<atom:link href="https://firelightflagboy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Admin Sys</title>
+      <link>https://firelightflagboy.github.io/tags/admin-sys/</link>
+      <pubDate>Fri, 21 Aug 2020 13:07:38 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/tags/admin-sys/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ansible</title>
+      <link>https://firelightflagboy.github.io/tags/ansible/</link>
+      <pubDate>Fri, 21 Aug 2020 13:07:38 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://firelightflagboy.github.io/tags/linux/</link>
+      <pubDate>Fri, 21 Aug 2020 13:07:38 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell Script</title>
+      <link>https://firelightflagboy.github.io/tags/shell-script/</link>
+      <pubDate>Fri, 21 Aug 2020 13:07:38 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/tags/shell-script/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>https://firelightflagboy.github.io/tags/ssh/</link>
+      <pubDate>Fri, 21 Aug 2020 13:07:38 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>System</title>
@@ -148,15 +193,6 @@
     </item>
     
     <item>
-      <title>Shell Script</title>
-      <link>https://firelightflagboy.github.io/tags/shell-script/</link>
-      <pubDate>Mon, 03 Aug 2020 15:57:10 +0200</pubDate>
-      
-      <guid>https://firelightflagboy.github.io/tags/shell-script/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>LUA</title>
       <link>https://firelightflagboy.github.io/tags/lua/</link>
       <pubDate>Mon, 03 Aug 2020 15:56:10 +0200</pubDate>
@@ -220,29 +256,11 @@
     </item>
     
     <item>
-      <title>Admin Sys</title>
-      <link>https://firelightflagboy.github.io/tags/admin-sys/</link>
-      <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
-      
-      <guid>https://firelightflagboy.github.io/tags/admin-sys/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Cracking</title>
       <link>https://firelightflagboy.github.io/tags/cracking/</link>
       <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
       
       <guid>https://firelightflagboy.github.io/tags/cracking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SSH</title>
-      <link>https://firelightflagboy.github.io/tags/ssh/</link>
-      <pubDate>Tue, 28 Jul 2020 21:36:02 +0200</pubDate>
-      
-      <guid>https://firelightflagboy.github.io/tags/ssh/</guid>
       <description></description>
     </item>
     
