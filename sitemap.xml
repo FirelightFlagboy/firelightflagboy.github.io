@@ -3,6 +3,71 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://firelightflagboy.github.io/category/</loc>
+    <lastmod>2020-09-24T17:35:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/tags/clean-code/</loc>
+    <lastmod>2020-09-24T17:35:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/category/glossary/</loc>
+    <lastmod>2020-09-24T17:35:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/</loc>
+    <lastmod>2020-09-24T17:35:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/posts/</loc>
+    <lastmod>2020-09-24T17:35:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/tags/</loc>
+    <lastmod>2020-09-24T17:35:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/posts/glossary/srp/</loc>
+    <lastmod>2020-09-24T17:35:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/posts/technical-test/add-n-prime/</loc>
+    <lastmod>2020-09-23T11:28:52+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/tags/java/</loc>
+    <lastmod>2020-09-23T11:28:52+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/tags/math/</loc>
+    <lastmod>2020-09-23T11:28:52+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/series/</loc>
+    <lastmod>2020-09-23T11:28:52+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/series/technical-test/</loc>
+    <lastmod>2020-09-23T11:28:52+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firelightflagboy.github.io/tags/unittest/</loc>
+    <lastmod>2020-09-23T11:28:52+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://firelightflagboy.github.io/tags/admin-sys/</loc>
     <lastmod>2020-08-21T13:07:38+02:00</lastmod>
   </url>
@@ -23,22 +88,7 @@
   </url>
   
   <url>
-    <loc>https://firelightflagboy.github.io/category/</loc>
-    <lastmod>2020-08-21T13:07:38+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://firelightflagboy.github.io/tags/linux/</loc>
-    <lastmod>2020-08-21T13:07:38+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firelightflagboy.github.io/</loc>
-    <lastmod>2020-08-21T13:07:38+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firelightflagboy.github.io/posts/</loc>
     <lastmod>2020-08-21T13:07:38+02:00</lastmod>
   </url>
   
@@ -53,18 +103,8 @@
   </url>
   
   <url>
-    <loc>https://firelightflagboy.github.io/tags/</loc>
-    <lastmod>2020-08-21T13:07:38+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://firelightflagboy.github.io/category/tutorial/</loc>
     <lastmod>2020-08-21T13:07:38+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firelightflagboy.github.io/category/glossary/</loc>
-    <lastmod>2020-08-20T12:04:27+02:00</lastmod>
   </url>
   
   <url>
@@ -159,11 +199,6 @@
   
   <url>
     <loc>https://firelightflagboy.github.io/tags/reverse-engineering/</loc>
-    <lastmod>2020-08-03T15:59:10+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firelightflagboy.github.io/series/</loc>
     <lastmod>2020-08-03T15:59:10+02:00</lastmod>
   </url>
   

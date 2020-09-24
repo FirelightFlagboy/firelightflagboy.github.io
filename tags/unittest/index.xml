@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UnitTest on My blog</title>
+    <link>https://firelightflagboy.github.io/tags/unittest/</link>
+    <description>Recent content in UnitTest on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 23 Sep 2020 11:28:52 +0200</lastBuildDate>
+    
+	<atom:link href="https://firelightflagboy.github.io/tags/unittest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Add N Prime</title>
+      <link>https://firelightflagboy.github.io/posts/technical-test/add-n-prime/</link>
+      <pubDate>Wed, 23 Sep 2020 11:28:52 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/posts/technical-test/add-n-prime/</guid>
+      <description>This is the recap of a live coding during a meeting with a company.
+I was in front of a jury of 3 people.
+The goal of this test was more for the jury to know how I work on a specific feature/project, rather than creating an optimized code in live.
+Assessment Write a function in Java that take 1 integer argument N and return 1 integer argument. The returned integer is the sum of N prime number.</description>
+    </item>
+    
+  </channel>
+</rss>

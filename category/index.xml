@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 21 Aug 2020 13:07:38 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2020 17:35:56 +0200</lastBuildDate>
     
 	<atom:link href="https://firelightflagboy.github.io/category/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Glossary</title>
+      <link>https://firelightflagboy.github.io/category/glossary/</link>
+      <pubDate>Thu, 24 Sep 2020 17:35:56 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/category/glossary/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Admin Sys</title>
@@ -27,15 +36,6 @@
       <pubDate>Fri, 21 Aug 2020 13:07:38 +0200</pubDate>
       
       <guid>https://firelightflagboy.github.io/category/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Glossary</title>
-      <link>https://firelightflagboy.github.io/category/glossary/</link>
-      <pubDate>Thu, 20 Aug 2020 12:04:27 +0200</pubDate>
-      
-      <guid>https://firelightflagboy.github.io/category/glossary/</guid>
       <description></description>
     </item>
     

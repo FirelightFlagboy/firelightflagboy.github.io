@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 21 Aug 2020 13:07:38 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2020 17:35:56 +0200</lastBuildDate>
     
 	<atom:link href="https://firelightflagboy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Clean Code</title>
+      <link>https://firelightflagboy.github.io/tags/clean-code/</link>
+      <pubDate>Thu, 24 Sep 2020 17:35:56 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/tags/clean-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://firelightflagboy.github.io/tags/java/</link>
+      <pubDate>Wed, 23 Sep 2020 11:28:52 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>https://firelightflagboy.github.io/tags/math/</link>
+      <pubDate>Wed, 23 Sep 2020 11:28:52 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UnitTest</title>
+      <link>https://firelightflagboy.github.io/tags/unittest/</link>
+      <pubDate>Wed, 23 Sep 2020 11:28:52 +0200</pubDate>
+      
+      <guid>https://firelightflagboy.github.io/tags/unittest/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Admin Sys</title>

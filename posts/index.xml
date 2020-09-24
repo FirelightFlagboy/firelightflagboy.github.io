@@ -6,8 +6,438 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 21 Aug 2020 13:07:38 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 24 Sep 2020 17:35:56 +0200</lastBuildDate>
         <atom:link href="https://firelightflagboy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>What is SRP</title>
+            <link>https://firelightflagboy.github.io/posts/glossary/srp/</link>
+            <pubDate>Thu, 24 Sep 2020 17:35:56 +0200</pubDate>
+            
+            <guid>https://firelightflagboy.github.io/posts/glossary/srp/</guid>
+            <description>SRP stand for Single Responsibility Principle.
+What is the meaning behind SRP The class/module should have only one responsibility or one reason to change.
+Example class Book { public String getTitle() { ... } public String getAuthor() { ... } public void turnPage() { ... } public void printCurrentPage() { ... } } Here the class Book as two different uses:
+ Book Management Data presentation  Corrected class Book { public String getTitle() { .</description>
+            <content type="html"><![CDATA[<p>SRP stand for Single Responsibility Principle.</p>
+<h2 id="what-is-the-meaning-behind-srp">What is the meaning behind SRP</h2>
+<p>The class/module should have only one responsibility or one reason to change.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Book</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getTitle</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getAuthor</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">turnPage</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printCurrentPage</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Here the class <code>Book</code> as two different uses:</p>
+<ul>
+<li>Book Management</li>
+<li>Data presentation</li>
+</ul>
+<h3 id="corrected">Corrected</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Book</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getTitle</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getAuthor</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">turnPage</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> Page <span style="color:#a6e22e">getCurrentPage</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Printer</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printPage</span><span style="color:#f92672">(</span>Page page<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PlainTextPrinter</span> <span style="color:#66d9ef">implements</span> Printer <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printPage</span><span style="color:#f92672">(</span>Page page<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HtmlPrinter</span> <span style="color:#66d9ef">implements</span> Printer <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printPage</span><span style="color:#f92672">(</span>Page page<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>See sparing <strong>Data Representation</strong> from <strong>Business logic</strong> give us more flexibility.</p>
+<h2 id="source">Source</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Single-responsibility_principle">wiki - SRP</a></li>
+<li><a href="https://code.tutsplus.com/tutorials/solid-part-1-the-single-responsibility-principle--net-36074">code tuts - SRP</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Add N Prime</title>
+            <link>https://firelightflagboy.github.io/posts/technical-test/add-n-prime/</link>
+            <pubDate>Wed, 23 Sep 2020 11:28:52 +0200</pubDate>
+            
+            <guid>https://firelightflagboy.github.io/posts/technical-test/add-n-prime/</guid>
+            <description>This is the recap of a live coding during a meeting with a company.
+I was in front of a jury of 3 people.
+The goal of this test was more for the jury to know how I work on a specific feature/project, rather than creating an optimized code in live.
+Assessment Write a function in Java that take 1 integer argument N and return 1 integer argument. The returned integer is the sum of N prime number.</description>
+            <content type="html"><![CDATA[<p>This is the recap of a live coding during a meeting with a company.<br>
+I was in front of a jury of 3 people.</p>
+<p>The goal of this test was more for the jury to know how I work on a specific feature/project, rather than creating an optimized code in live.</p>
+<h2 id="assessment">Assessment</h2>
+<p>Write a function in Java that take 1 integer argument <strong>N</strong> and return 1 integer argument.
+The returned integer is the sum of <strong>N</strong> prime number.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">AddNPrime</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">n</span>) <span style="color:#66d9ef">int</span> {}
+</code></pre></div><h3 id="what-is-a-prime-number">What is a prime number</h3>
+<p>A prime number is a number that can only be divided by 2 numbers: 1 and itself.</p>
+<h4 id="corollary">Corollary</h4>
+<p>Since a prime number must be divided by 2 numbers: 1 is not a prime number.</p>
+<h4 id="list-of-first-prime-number">List of first prime number</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>7</td>
+<td>11</td>
+<td>13</td>
+</tr>
+<tr>
+<td>17</td>
+<td>19</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-isprime">Create IsPrime</h2>
+<p>To begin the assessment, I decided to create a utility method to know if a number is prime.
+I decided to create the class <code>Nprime</code> and name the method <code>isPrime</code> (pretty straight forward).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nprime</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> <span style="color:#f92672">++</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p>At this step, <code>isPrime</code> doesn&rsquo;t respect the <a href="#corollary">corollary</a> for a prime number.
+This is resolve in a later in <a href="#isprime-now-respect-the-corollary">step</a>.</p>
+</blockquote>
+<p>Now that I have create the method, I need to test it.</p>
+<p>I asked which function to use for an assertion.<br>
+They suggest me a simple <code>System.out.println</code> or <code>assert</code>.<br>
+I choose <code>assert</code>: <em>a wrong choice I made</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testIsPrime</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test is prime&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span>5<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span>9<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    testIsPrime<span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;good&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>So, by executing my test, I see no error</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ javac Main.java
+$ java Main
+good
+</code></pre></div><h2 id="create-nextprime">Create NextPrime</h2>
+<p>With the utility function <code>isPrime</code>, I need another one to determine the next prime number.
+I decided the meaningful name <code>nextPrime</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nprime</span> <span style="color:#f92672">{</span>
+  <span style="color:#f92672">...</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nextPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>isPrime<span style="color:#f92672">(++</span>n<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">)</span>
+      <span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> n<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>With the method done, I create more test to ensure the quality of my code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+  <span style="color:#f92672">...</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testNextPrime</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test next prime&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">nextPrime</span><span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">nextPrime</span><span style="color:#f92672">(</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">nextPrime</span><span style="color:#f92672">(</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> 3<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">nextPrime</span><span style="color:#f92672">(</span>9<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> 11<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    testIsPrime<span style="color:#f92672">();</span>
+    testNextPrime<span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;good&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Again, running the test show no error</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ javac Main.java
+$ java Main
+good
+</code></pre></div><h2 id="create-addnprime">Create AddNPrime</h2>
+<p>Now I have all the method needed to create the main function of the assessment: <code>addNPrime</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nprime</span> <span style="color:#f92672">{</span>
+  <span style="color:#f92672">...</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> prime <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      prime <span style="color:#f92672">=</span> nextPrime<span style="color:#f92672">(</span>prime<span style="color:#f92672">);</span>
+      sum <span style="color:#f92672">+=</span> prime<span style="color:#f92672">;</span>
+      n<span style="color:#f92672">--;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> sum<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Again, new test.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+  <span style="color:#f92672">...</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testAddNPrime</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test add n prime&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span>1<span style="color:#f92672">),</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span>2<span style="color:#f92672">),</span> 5<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span>3<span style="color:#f92672">),</span> 10<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span>4<span style="color:#f92672">),</span> 17<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    testIsPrime<span style="color:#f92672">();</span>
+    testNextPrime<span style="color:#f92672">();</span>
+    testAddNPrime<span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;good&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>And no error</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ javac Main.java
+$ java Main
+good
+</code></pre></div><h2 id="new-demand">New Demand</h2>
+<p>At this step, I finish the assessment.<br>
+The jury create a new task:</p>
+<p>Improve the method <code>addNPrime()</code> to receive another integer argument which will be a step,
+e.g.: with <code>N = 2</code> and <code>step = 1</code> as argument: it will:</p>
+<ol>
+<li>count 2</li>
+<li>skip 3</li>
+<li>count 5</li>
+<li>returning 7</li>
+</ol>
+<h2 id="method-overload">Method Overload</h2>
+<p>For this new task, I decided It is more interesting to do a method overload than just rewriting the method and test.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nprime</span> <span style="color:#f92672">{</span>
+  <span style="color:#f92672">...</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> addNPrime<span style="color:#f92672">(</span>n<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> step<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> prime <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">do</span> <span style="color:#f92672">{</span>
+        prime <span style="color:#f92672">=</span> nextPrime<span style="color:#f92672">(</span>prime<span style="color:#f92672">);</span>
+        i<span style="color:#f92672">++;</span>
+      <span style="color:#f92672">}</span> <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> step<span style="color:#f92672">);</span>
+      sum <span style="color:#f92672">+=</span> prime<span style="color:#f92672">;</span>
+      n<span style="color:#f92672">--;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> sum<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Who say new method, say new test suite.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+  <span style="color:#f92672">...</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testAddNPrimeStep</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test add n prime step&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 1<span style="color:#f92672">),</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> 1<span style="color:#f92672">),</span> 7<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span>3<span style="color:#f92672">,</span> 1<span style="color:#f92672">),</span> 18<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span>4<span style="color:#f92672">,</span> 1<span style="color:#f92672">),</span> 31<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    testIsPrime<span style="color:#f92672">();</span>
+    testNextPrime<span style="color:#f92672">();</span>
+    testAddNPrime<span style="color:#f92672">();</span>
+    testAddNPrimeStep<span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;good&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>No error, but there is a catch.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ javac Main.java
+$ java Main
+good
+</code></pre></div><h3 id="something-is-wrong">Something is wrong</h3>
+<p>When testing <code>Nprime.addPrime(4, 1)</code> the result should be <strong>35</strong> (2 + 5 + 11 + 17) not <strong>31</strong><br>
+But <code>assert</code> did not raise any exception (I was executing without <code>-ea</code> to enable assertion) because <code>assert</code> was disabled.</p>
+<h2 id="use-systemout-instead-of-assert">Use System.out instead of Assert</h2>
+<p>To correct this error, I fall back to a simple <code>System.out.println</code> and get the following output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ java Main
+test is prime
+got true, expected false
+got true, expected true
+got true, expected true
+got false, expected false
+test is next prime
+got 1, expected <span style="color:#ae81ff">2</span>
+got 2, expected <span style="color:#ae81ff">2</span>
+got 3, expected <span style="color:#ae81ff">3</span>
+got 11, expected <span style="color:#ae81ff">11</span>
+test is add n prime
+got 3, expected <span style="color:#ae81ff">2</span>
+got 8, expected <span style="color:#ae81ff">5</span>
+got 15, expected <span style="color:#ae81ff">10</span>
+got 26, expected <span style="color:#ae81ff">17</span>
+test is add n prime step
+got 3, expected <span style="color:#ae81ff">2</span>
+got 8, expected <span style="color:#ae81ff">7</span>
+got 15, expected <span style="color:#ae81ff">18</span>
+got 26, expected <span style="color:#ae81ff">35</span>
+good
+</code></pre></div><p>Ouch, I got error since the begining without knowing It (bad <code>assert</code> and my misunderstanding of it) in <code>isPrime()</code>.</p>
+<h2 id="isprime-now-respect-the-corollary">IsPrime now respect the Corollary</h2>
+<p>The error in <code>isPrime()</code> was caused because I didn&rsquo;t check if <code>n</code> is <strong>1</strong> (see <a href="#corollary">corrolary</a>)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nprime</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  <span style="color:#f92672">...</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Now <code>isPrime</code> and <code>nextPrime</code> behave more like intended.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ java Main
+test is prime
+got false, expected false
+got true, expected true
+got true, expected true
+got false, expected false
+test is next prime
+got 2, expected <span style="color:#ae81ff">2</span>
+got 2, expected <span style="color:#ae81ff">2</span>
+got 3, expected <span style="color:#ae81ff">3</span>
+got 11, expected <span style="color:#ae81ff">11</span>
+test is add n prime
+got 3, expected <span style="color:#ae81ff">2</span>
+got 8, expected <span style="color:#ae81ff">5</span>
+got 15, expected <span style="color:#ae81ff">10</span>
+got 26, expected <span style="color:#ae81ff">17</span>
+test is add n prime step
+got 3, expected <span style="color:#ae81ff">2</span>
+got 8, expected <span style="color:#ae81ff">7</span>
+got 15, expected <span style="color:#ae81ff">18</span>
+got 26, expected <span style="color:#ae81ff">35</span>
+good
+</code></pre></div><h2 id="feedback">Feedback</h2>
+<p>At this step, the test is finished. What left is to see how we can push the test further.</p>
+<p>The jury appreciate that I use a unit test approach but reproach me for not having made more segregation in my class <code>Nprime</code>.</p>
+<h2 id="refactoring-the-test-output">Refactoring the Test Output</h2>
+<p>I did not like how the main generate a lot of output.
+I decided to refactor the <code>Main</code> class to use a <code>test()</code> method.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">(</span>Object got<span style="color:#f92672">,</span> Object expected<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>got <span style="color:#f92672">!=</span> expected<span style="color:#f92672">)</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;got %s, expected %s&#34;</span><span style="color:#f92672">,</span> got<span style="color:#f92672">,</span> expected<span style="color:#f92672">));</span>
+    <span style="color:#66d9ef">else</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testIsPrime</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test is prime &#34;</span><span style="color:#f92672">);</span>
+    test<span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span>1<span style="color:#f92672">),</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+    test<span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span>2<span style="color:#f92672">),</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+    test<span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span>5<span style="color:#f92672">),</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+    test<span style="color:#f92672">(</span>Nprime<span style="color:#f92672">.</span><span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span>9<span style="color:#f92672">),</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+  <span style="color:#f92672">...</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Now the output is a lot clearer than before.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ java Main
+test is prime ....
+test is next prime ....
+test is add n prime got 3, expected <span style="color:#ae81ff">2</span>
+got 8, expected <span style="color:#ae81ff">5</span>
+got 15, expected <span style="color:#ae81ff">10</span>
+got 26, expected <span style="color:#ae81ff">17</span>
+
+test is add n prime step got 3, expected <span style="color:#ae81ff">2</span>
+got 8, expected <span style="color:#ae81ff">7</span>
+got 15, expected <span style="color:#ae81ff">18</span>
+got 26, expected <span style="color:#ae81ff">35</span>
+
+</code></pre></div><h2 id="correct-addnprime-error">Correct AddNPrime error</h2>
+<p>the error in <code>addNPrime</code> was caused because:</p>
+<ol>
+<li><code>prime</code> was initialized at 2, so 2 was always skipped.</li>
+<li>I skiped the number before doing the addition.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nprime</span> <span style="color:#f92672">{</span>
+  <span style="color:#f92672">...</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> step<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> prime <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      prime <span style="color:#f92672">=</span> nextPrime<span style="color:#f92672">(</span>prime<span style="color:#f92672">);</span>
+      sum <span style="color:#f92672">+=</span> prime<span style="color:#f92672">;</span>
+      prime <span style="color:#f92672">=</span> skipPrime<span style="color:#f92672">(</span>prime<span style="color:#f92672">,</span> step<span style="color:#f92672">);</span>
+      n<span style="color:#f92672">--;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> sum<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">skipPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> prime<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> step<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>step <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      prime <span style="color:#f92672">=</span> nextPrime<span style="color:#f92672">(</span>prime<span style="color:#f92672">);</span>
+      <span style="color:#f92672">--</span>step<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> prime<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>This time, we do not have any error</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ java Main
+test is prime ....
+test is next prime ....
+test is add n prime ....
+test is add n prime step ....
+</code></pre></div><h2 id="create-a-new-class">Create a new class</h2>
+<p>From the feedback, I segregate <code>Nprime</code> by creating a new class that contain only
+the method related to math.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PrimeMath</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">addNPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> step<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">skipPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> prime<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> step<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Now <code>Nprime</code> is a lot clearer and respect the <a href="/posts/glossary/srp">SRP</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nprime</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nextPrime</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>The assessment although simple, can be quite tedious if you do not have organized thought: a plan.<br>
+Even a simple exercise/feature can be push way further.</p>
+<p>When developing, it&rsquo;s better to stick with something tried&rsquo;n&rsquo;true than something you think know how it works: see <a href="#something-is-wrong">how assert betrayed me</a>.</p>
+<p>I think the live coding sessions would have been easier, if I was able to use a testing framework like <code>Junit</code>.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Ansible Basic Tutorial</title>
